@@ -3,54 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WellPayPortal</title>
+    <title>@ViewData["Title"] - Well-Pay</title>
 
-    <!-- Hojas de estilo estándar de Bootstrap y del sitio -->
+    <!-- Google Fonts (Plus Jakarta Sans para un look moderno) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS de Bootstrap y el sitio -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WellPayPortal.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+    <header class="sticky-top bg-white border-bottom border-light shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
 
-                <!-- 1. Logo Temporal (Texto) -->
-                <a class="navbar-brand fw-bold text-primary" asp-area="" asp-controller="Home" asp-action="Index">
-                    WellPayPortal
+                <!-- Logo de Well-Pay -->
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold fs-4 text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="badge bg-wellpay text-white p-2 rounded-3 me-1">
+                        <i class="bi bi-credit-card-2-front-fill fs-5"></i>
+                    </span>
+                    WELL-PAY
                 </a>
 
-                <!-- 2. Menú Hamburguesa (para móviles) -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                <!-- Botón hamburguesa (móviles) -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
                         aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Contenido colapsable (Menú + Botón) -->
+                <!-- Menú colapsable -->
                 <div class="collapse navbar-collapse" id="navbarMain">
 
-                    <!-- 3. Menú Principal -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="btn btn-primary fw-bold px-4" asp-area="" asp-controller="Home" asp-action="Index">
-                             Menú principal
+                    <!-- Enlaces centrados como en el diseño -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle px-3" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios
                             </a>
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item py-2" href="#">Pagos e Integraciones</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Cobros Automáticos</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Transferencias SINPE</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            <a class="nav-link text-dark px-3" href="#como-funciona">Cómo funciona</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Servicios</a>
+                            <a class="nav-link text-dark px-3" href="#nosotros">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Nosotros</a>
+                            <a class="nav-link text-dark px-3" href="#contacto">Contacto</a>
                         </li>
                     </ul>
 
-                    <!-- 4. Botón Comenzar -->
+                    <!-- Botón de acción principal verde -->
                     <div class="d-flex">
-                        <a class="btn btn-primary fw-bold px-4" asp-area="" asp-controller="Home" asp-action="Index">
-                            Comenzar
+                        <a class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm" asp-area="" asp-controller="Home" asp-action="Index">
+                            Solicitar afiliación
                         </a>
                     </div>
 
@@ -59,14 +75,12 @@
         </nav>
     </header>
 
-    <!-- Área dinámica donde se cargan las vistas (Index, etc.) -->
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <!-- Contenido dinámico (Index.cshtml) -->
+    <main role="main">
+        @RenderBody()
+    </main>
 
-    <!-- Scripts de Bootstrap y jQuery requeridos -->
+    <!-- Scripts requeridos -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

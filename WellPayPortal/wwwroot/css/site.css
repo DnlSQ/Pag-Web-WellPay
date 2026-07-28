@@ -1,22 +1,351 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* =========================================
+   1. ESTILOS BASE Y FUENTES
+   ========================================= */
 body {
-  margin-bottom: 60px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
 }
+
+:root {
+    --wellpay-green: #00c992;
+    --wellpay-green-hover: #00b382;
+    --wellpay-navy: #0d1b2a;
+}
+
+.bg-wellpay {
+    background-color: var(--wellpay-green) !important;
+}
+
+.bg-navy {
+    background-color: var(--wellpay-navy) !important;
+}
+
+.text-wellpay {
+    color: var(--wellpay-green) !important;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* =========================================
+   2. BOTONES PRINCIPALES
+   ========================================= */
+.btn-wellpay {
+    background-color: var(--wellpay-green);
+    color: #ffffff;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-wellpay:hover {
+    background-color: var(--wellpay-green-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.text-primary-custom {
+    color: #2b56f5;
+}
+
+.btn-outline-primary-custom {
+    border: 1px solid #dcdfe4;
+    color: #1e293b;
+    background-color: #ffffff;
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+/* Botón píldora opcional */
+.btn-outline-wellpay {
+    color: var(--wellpay-green);
+    border: 1px solid var(--wellpay-green);
+    border-radius: 50rem;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-wellpay:hover {
+    background-color: var(--wellpay-green);
+    color: #ffffff;
+}
+
+/* =========================================
+   3. BADGE SUPERIOR CON PUNTO VERDE
+   ========================================= */
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--wellpay-green);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.style-badge {
+    border: 1px solid rgba(0, 201, 146, 0.2);
+}
+
+/* =========================================
+   4. BOTONES DEL DASHBOARD (SIDEBAR)
+   ========================================= */
+.btn-dashboard-item {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-dashboard-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+}
+
+.btn-dashboard-item.active {
+    background-color: var(--wellpay-green) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* =========================================
+   5. MOCKUP Y SOMBRA DEL DASHBOARD
+   ========================================= */
+.dashboard-card-mockup {
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12) !important;
+    border: none !important;
+}
+
+.hover-pointer {
+    cursor: pointer;
+}
+
+/* =========================================
+   6. EFECTO GLOW BASE (HERO DASHBOARD)
+   ========================================= */
+.glow-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Luz Verde superior (Hero) */
+.glow-top-right {
+    width: 280px;
+    height: 280px;
+    top: -40px;
+    right: -20px;
+    background: radial-gradient(circle, #73edd1 0%, #00c992 100%);
+}
+
+/* Luz Azul inferior (Hero) */
+.glow-bottom-right {
+    width: 380px;
+    height: 300px;
+    bottom: -60px;
+    right: -40px;
+    background: radial-gradient(circle, #70a6ff 0%, #3a7bd5 100%);
+}
+
+/* =========================================
+   7. CARRUSEL INFINITO DE LOGOS
+   ========================================= */
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    padding: 5px 0;
+}
+
+.logo-slider::before,
+.logo-slider::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-slider::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-slide-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll-left 35s linear infinite;
+}
+
+.logo-slider:hover .logo-slide-track {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(90%);
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================================
+   8. SECCIÓN DE SERVICIOS (TARJETAS + HOVER GLOW)
+   ========================================= */
+.max-w-700 {
+    max-width: 700px;
+}
+
+.service-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Efecto Hover: Elevación + Resplandor (Glow individual al pasar el cursor) */
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 201, 146, 0.4) !important;
+    box-shadow: 
+        0 12px 24px -6px rgba(0, 0, 0, 0.06),
+        0 0 25px 2px rgba(0, 201, 146, 0.25),
+        0 0 50px 10px rgba(43, 86, 245, 0.12) !important;
+}
+
+.service-icon-shape {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bg-light-green {
+    background-color: #e6faf5;
+}
+
+.bg-light-blue {
+    background-color: #ecf0fe;
+}
+
+.bg-light-orange {
+    background-color: #fff4e6;
+}
+
+.text-orange-custom {
+    color: #ff9f43;
+}
+
+.fs-7 {
+    font-size: 0.875rem;
+}
+
+.fs-8 {
+    font-size: 0.75rem;
+}
+
+/* =========================================
+   9. EFECTO GLOW AMBIENTAL PARA SERVICIOS (4 ESQUINAS)
+   ========================================= */
+
+/* 1. Esquina Superior Derecha (Azul / Verde) */
+.glow-services-top-right {
+    width: 450px;
+    height: 450px;
+    top: -100px;
+    right: -120px;
+    background: radial-gradient(circle, rgba(112, 166, 255, 0.22) 0%, rgba(0, 201, 146, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(90px);
+}
+
+/* 2. Esquina Superior Izquierda (Verde WellPay) */
+.glow-services-top-left {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -120px;
+    background: radial-gradient(circle, rgba(0, 201, 146, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(95px);
+}
+
+/* 3. Esquina Inferior Derecha (Verde WellPay) */
+.glow-services-bottom-right {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    right: -120px;
+    background: radial-gradient(circle, rgba(0, 201, 146, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(95px);
+}
+
+/* 4. Esquina Inferior Izquierda (Azul Soft) */
+.glow-services-bottom-left {
+    width: 450px;
+    height: 450px;
+    bottom: -100px;
+    left: -120px;
+    background: radial-gradient(circle, rgba(112, 166, 255, 0.2) 0%, rgba(0, 201, 146, 0.12) 50%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(90px);
+}
+
+/* Responsividad Móvil */
+@media (max-width: 575.98px) {
+    .service-card {
+        padding: 1.5rem !important;
+    }
+
+    .service-icon-shape {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 1rem !important;
+    }
+
+    .service-icon-shape i {
+        font-size: 1.5rem !important;
+    }
+}
+
+/*viejo*/

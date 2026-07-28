@@ -1,8 +1,351 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- SECCIÓN HERO PRINCIPAL CON GLOW -->
+<section class="py-3 py-lg-4 position-relative overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center g-4">
+
+            <!-- COLUMNA IZQUIERDA: Textos y Botones -->
+            <div class="col-lg-6">
+                <!-- Badge Verde -->
+                <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
+                    <span class="dot-indicator"></span>
+                    <small style="font-size: 0.75rem; letter-spacing: 0.5px;">SOLUCIONES FINANCIERAS PARA EMPRESAS</small>
+                </div>
+
+                <!-- Título Principal -->
+                <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
+                    Conectá tu empresa con el sistema financiero <br class="d-none d-md-inline" />
+                    <span class="text-wellpay">de Costa Rica.</span>
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="lead text-secondary mb-3 fs-6 fw-normal">
+                    Procesá pagos, cobros y transferencias en tiempo real mediante una única integración.
+                </p>
+
+                <!-- Botones de Acción -->
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm">
+                        Solicitar afiliación
+                    </a>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary-custom btn-lg px-4 py-2 fs-6 fw-bold rounded-3 d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-play-circle text-primary-custom fs-5"></i>
+                        Conocer servicios
+                    </a>
+                </div>
+
+                <!-- Tres Características (Iconos abajo) -->
+                <div class="row g-2 pt-1">
+                    <div class="col-sm-4 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success">
+                            <i class="bi bi-lightning-charge-fill fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold fs-7 lh-1">En tiempo real</div>
+                            <small class="text-muted" style="font-size: 0.72rem;">Operaciones 24/7</small>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success">
+                            <i class="bi bi-shield-check fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold fs-7 lh-1">Seguro</div>
+                            <small class="text-muted" style="font-size: 0.72rem;">Infraestructura robusta</small>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success">
+                            <i class="bi bi-code-slash fs-5"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold fs-7 lh-1">Fácil integración</div>
+                            <small class="text-muted" style="font-size: 0.72rem;">API moderna y flexible</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: Dashboard con Resplandor (Glow) -->
+            <div class="col-lg-6 position-relative">
+                <div class="glow-shape glow-top-right"></div>
+                <div class="glow-shape glow-bottom-right"></div>
+
+                <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light position-relative" style="z-index: 2;">
+                    <div class="row g-0">
+
+                        <!-- Sidebar Oscuro -->
+                        <div class="col-4 bg-navy p-3 text-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="fw-bold fs-6 mb-3 d-flex align-items-center gap-2">
+                                    <i class="bi bi-credit-card-2-front text-wellpay fs-5"></i>
+                                    <span>WELL-PAY</span>
+                                </div>
+
+                                <div class="d-grid gap-1 dashboard-buttons">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item active text-start text-white">
+                                        <i class="bi bi-house me-2"></i>Inicio
+                                    </a>
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                        <i class="bi bi-wallet2 me-2"></i>Cuentas
+                                    </a>
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                        <i class="bi bi-arrow-down-left-square me-2"></i>Pagos
+                                    </a>
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                        <i class="bi bi-arrow-up-right-square me-2"></i>Cobros
+                                    </a>
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                        <i class="bi bi-bar-chart me-2"></i>Reportes
+                                    </a>
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                        <i class="bi bi-code-slash me-2"></i>Desarrollo
+                                    </a>
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                        <i class="bi bi-gear me-2"></i>Ajustes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Blanco -->
+                        <div class="col-8 bg-white p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="fw-bold m-0 text-dark">Resumen</h6>
+                                <div class="d-flex gap-2 text-muted">
+                                    <i class="bi bi-bell hover-pointer"></i>
+                                    <i class="bi bi-person-circle hover-pointer"></i>
+                                </div>
+                            </div>
+
+                            <div class="row g-2 mb-2">
+                                <div class="col-6">
+                                    <div class="bg-light p-2 rounded-3 border border-light-subtle">
+                                        <small class="text-muted d-block" style="font-size:0.65rem;">Saldo disponible</small>
+                                        <strong class="fs-6 fw-extrabold text-dark">₡ 12.458.750,00</strong>
+                                        <small class="d-block text-muted" style="font-size:0.6rem;">Colones</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-light p-2 rounded-3 border border-light-subtle">
+                                        <small class="text-muted d-block" style="font-size:0.65rem;">Movimientos hoy</small>
+                                        <strong class="fs-6 fw-extrabold text-dark">28</strong>
+                                        <small class="d-block text-muted" style="font-size:0.6rem;">Transacciones</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <small class="fw-bold text-dark" style="font-size:0.75rem;">Últimas transacciones</small>
+                                <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-primary fw-semibold" style="font-size:0.65rem;">Ver todas</a>
+                            </div>
+
+                            <div class="d-flex flex-column gap-1" style="font-size: 0.7rem;">
+                                <div class="d-flex align-items-center justify-content-between p-1 border-bottom">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-arrow-up-right"></i></span>
+                                        <div>
+                                            <div class="fw-bold text-dark">Pago recibido - Cliente A</div>
+                                            <small class="text-muted" style="font-size: 0.6rem;">Hoy, 10:45 a. m.</small>
+                                        </div>
+                                    </div>
+                                    <span class="fw-bold text-success">+ ₡125.000,00</span>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-between p-1 border-bottom">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="badge bg-danger-subtle text-danger p-1 rounded-circle"><i class="bi bi-arrow-down-left"></i></span>
+                                        <div>
+                                            <div class="fw-bold text-dark">Transferencia - Proveedor B</div>
+                                            <small class="text-muted" style="font-size: 0.6rem;">Hoy, 9:30 a. m.</small>
+                                        </div>
+                                    </div>
+                                    <span class="fw-bold text-danger">- ₡75.000,00</span>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-between p-1">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-arrow-up-right"></i></span>
+                                        <div>
+                                            <div class="fw-bold text-dark">SINPE Móvil - Cliente C</div>
+                                            <small class="text-muted" style="font-size: 0.6rem;">Ayer, 4:15 p. m.</small>
+                                        </div>
+                                    </div>
+                                    <span class="fw-bold text-success">+ ₡300.000,00</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN DE LOGOS COMPACTA -->
+<section class="pt-4 pb-3 bg-white  overflow-hidden">
+    <div class="container text-center mb-2">
+        <h6 class="fw-bold text-dark fs-6 m-0" style="letter-spacing: 0.5px;">
+            Empresas que confían en Well-Pay
+        </h6>
+    </div>
+
+    <div class="logo-slider">
+        <div class="logo-slide-track">
+            <!-- ORIGINAL -->
+            <div class="logo-item"><img src="~/images/logos/CORIPORT.png" alt="CORIPORT" /></div>
+            <div class="logo-item"><img src="~/images/logos/Monex.png" alt="Monex" /></div>
+            <div class="logo-item"><img src="~/images/logos/FloridaBebidas.png" alt="Florida Bebidas" /></div>
+            <div class="logo-item"><img src="~/images/logos/Coopecaja.png" alt="Coopecaja" /></div>
+            <div class="logo-item"><img src="~/images/logos/UniversidadLatina.png" alt="Universidad Latina" /></div>
+
+            <!-- DUPLICADO -->
+            <div class="logo-item"><img src="~/images/logos/CORIPORT.png" alt="CORIPORT" /></div>
+            <div class="logo-item"><img src="~/images/logos/Monex.png" alt="Monex" /></div>
+            <div class="logo-item"><img src="~/images/logos/FloridaBebidas.png" alt="Florida Bebidas" /></div>
+            <div class="logo-item"><img src="~/images/logos/Coopecaja.png" alt="Coopecaja" /></div>
+            <div class="logo-item"><img src="~/images/logos/UniversidadLatina.png" alt="Universidad Latina" /></div>
+        </div>
+    </div>
+</section>
+<!-- =========================================
+     SECCIÓN: NUESTROS SERVICIOS (CON GLOW DE FONDO)
+     ========================================= -->
+
+<section class="py-5 bg-white position-relative overflow-hidden">
+
+    <!-- Luces de fondo (Glow) en las 4 esquinas -->
+    <div class="glow-shape glow-services-top-right"></div>
+    <div class="glow-shape glow-services-top-left"></div>
+    <div class="glow-shape glow-services-bottom-right"></div>
+    <div class="glow-shape glow-services-bottom-left"></div>
+
+    <div class="container py-3 position-relative" style="z-index: 2;">
+
+        <!-- Fila Superior: Títulos Centrados -->
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <!-- Badge Verde -->
+                <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
+                    <small style="font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase;">Nuestros servicios</small>
+                </div>
+
+                <!-- Título Grande -->
+                <h2 class="display-5 fw-extrabold text-dark mb-4 lh-sm">
+                    Todos los servicios financieros <br class="d-none d-md-inline" />
+                    <span class="text-wellpay">desde una sola plataforma</span>
+                </h2>
+
+                <!-- Subtítulo -->
+                <p class="lead text-secondary fs-6 fw-normal max-w-700 mx-auto">
+                    Integre los servicios financieros que su empresa necesita mediante una única plataforma moderna, segura y preparada para operar en tiempo real.
+                </p>
+            </div>
+        </div>
+
+        <!-- Fila Inferior: Cuadrícula de Tarjetas -->
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+            <!-- Tarjeta 1: IBAN -->
+            <div class="col">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle d-flex flex-column align-items-center text-center"
+                     style="border-radius:40px;">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
+                        <i class="bi bi-bank2 fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Creación de cuentas IBAN</h5>
+                    <p class="text-muted fs-7 mb-4 flex-grow-1">Cree cuentas IBAN empresariales para operar dentro del sistema financiero costarricense.</p>
+                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-chevron-right fs-8"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: PIN -->
+            <div class="col">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle d-flex flex-column align-items-center text-center"
+                     style="border-radius:40px;">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
+                        <i class="bi bi-lightning-charge-fill fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Pago Inmediato (PIN)</h5>
+                    <p class="text-muted fs-7 mb-4 flex-grow-1">Realice pagos inmediatos entre entidades financieras de forma segura.</p>
+                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-chevron-right fs-8"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: DTR -->
+            <div class="col">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle d-flex flex-column align-items-center text-center"
+                     style="border-radius:40px;">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
+                        <i class="bi bi-arrow-repeat fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Débito en Tiempo Real (DTR)</h5>
+                    <p class="text-muted fs-7 mb-4 flex-grow-1">Automatice los cobros mediante Débito en Tiempo Real.</p>
+                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-chevron-right fs-8"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: SINPE Móvil -->
+            <div class="col">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle d-flex flex-column align-items-center text-center"
+                     style="border-radius:40px;">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
+                        <i class="bi bi-phone fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">SINPE Móvil</h5>
+                    <p class="text-muted fs-7 mb-4 flex-grow-1">Envíe y reciba dinero utilizando SINPE Móvil.</p>
+                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-chevron-right fs-8"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5: Pagos Masivos -->
+            <div class="col">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle d-flex flex-column align-items-center text-center"
+                     style="border-radius:40px;">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
+                        <i class="bi bi-send-fill fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Pagos Masivos</h5>
+                    <p class="text-muted fs-7 mb-4 flex-grow-1">Procese cientos de pagos desde un único archivo.</p>
+                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-chevron-right fs-8"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6: Cobros Masivos -->
+            <div class="col">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle d-flex flex-column align-items-center text-center"
+                     style="border-radius:40px;">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
+                        <i class="bi bi-download fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Cobros Masivos</h5>
+                    <p class="text-muted fs-7 mb-4 flex-grow-1">Centralice el cobro de múltiples clientes.</p>
+                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-chevron-right fs-8"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- viejo -->

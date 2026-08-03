@@ -65,9 +65,9 @@
 
                     <!-- Botón de acción principal verde -->
                     <div class="d-flex">
-                        <a class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm" asp-area="" asp-controller="Home" asp-action="Index">
+                        <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
                             Solicitar afiliación
-                        </a>
+                        </button>
                     </div>
 
                 </div>
@@ -83,6 +83,8 @@
     <!-- Scripts requeridos -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Librería para alertas elegantes -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

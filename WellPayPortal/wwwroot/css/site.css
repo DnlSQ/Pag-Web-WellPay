@@ -347,5 +347,69 @@ body {
         font-size: 1.5rem !important;
     }
 }
+/* =========================================
+   10. MODAL FLOTANTE ESTILO STRIPE
+   ========================================= */
+
+/* Fondo borroso (Glassmorphism) para el backdrop */
+.modal-backdrop.show {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(13, 27, 42, 0.4);
+    opacity: 1 !important;
+}
+
+/* Tarjeta flotante con elevación suave estilo Stripe */
+.modal-stripe .modal-content {
+    background: #ffffff;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3) !important;
+    animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animación de entrada suave */
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Labels minimalistas */
+.form-label-custom {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+/* Inputs con acabado tipo Stripe */
+.form-control-stripe {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+    color: #1e293b;
+    transition: all 0.2s ease-in-out;
+}
+
+    .form-control-stripe::placeholder {
+        color: #94a3b8;
+        font-size: 0.85rem;
+    }
+
+    /* Efecto de foco y resplandor al escribir (Focus Glow) */
+    .form-control-stripe:focus {
+        background-color: #ffffff;
+        border-color: var(--wellpay-green);
+        box-shadow: 0 0 0 4px rgba(0, 201, 146, 0.15);
+        outline: none;
+    }
 
 /*viejo*/

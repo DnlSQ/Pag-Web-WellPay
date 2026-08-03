@@ -22,15 +22,15 @@
                 </h1>
 
                 <!-- Subtítulo -->
-                <p class="lead text-secondary mb-3 fs-6 fw-normal">
+                <p class="lead text-secondary mb-4 fs-6 fw-normal">
                     Procesá pagos, cobros y transferencias en tiempo real mediante una única integración.
                 </p>
 
                 <!-- Botones de Acción -->
-                <div class="d-flex flex-wrap gap-3 mb-4">
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm">
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
                         Solicitar afiliación
-                    </a>
+                    </button>
                     <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary-custom btn-lg px-4 py-2 fs-6 fw-bold rounded-3 d-inline-flex align-items-center gap-2">
                         <i class="bi bi-play-circle text-primary-custom fs-5"></i>
                         Conocer servicios
@@ -69,8 +69,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div> <!-- Fin Columna Izquierda -->
             <!-- COLUMNA DERECHA: Dashboard con Resplandor (Glow) -->
             <div class="col-lg-6 position-relative">
                 <div class="glow-shape glow-top-right"></div>
@@ -183,14 +182,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> <!-- Fin Columna Derecha -->
 
         </div>
     </div>
 </section>
 
 <!-- SECCIÓN DE LOGOS COMPACTA -->
-<section class="pt-4 pb-3 bg-white  overflow-hidden">
+<section class="pt-4 pb-3 bg-white overflow-hidden">
     <div class="container text-center mb-2">
         <h6 class="fw-bold text-dark fs-6 m-0" style="letter-spacing: 0.5px;">
             Empresas que confían en Well-Pay
@@ -215,6 +214,7 @@
         </div>
     </div>
 </section>
+
 <!-- =========================================
      SECCIÓN: NUESTROS SERVICIOS (CON GLOW DE FONDO)
      ========================================= -->
@@ -347,5 +347,85 @@
     </div>
 </section>
 
+<!-- MODAL FLOTANTE ESTILO STRIPE - SOLICITAR AFILIACIÓN -->
+<div class="modal fade modal-stripe" id="afiliacionModal" tabindex="-1" aria-labelledby="afiliacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
 
-<!-- viejo -->
+            <!-- Encabezado con Logo y Botón de Cerrar -->
+            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2 fw-extrabold text-dark fs-5">
+                    <span class="badge bg-wellpay text-white p-2 rounded-3">
+                        <i class="bi bi-credit-card-2-front-fill fs-6"></i>
+                    </span>
+                    <span>WELL-PAY</span>
+                </div>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Cuerpo del Formulario -->
+            <div class="modal-body pt-3">
+                <div class="mb-4">
+                    <h3 class="fw-extrabold text-dark m-0 fs-4">Solicitá tu afiliación</h3>
+                    <p class="text-muted fs-7 mb-0">Completá los datos para iniciar el proceso de integración con tu empresa.</p>
+                </div>
+
+                <form id="formAfiliacion">
+                    <div class="row g-3">
+                        <!-- Nombre -->
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label-custom">Nombre</label>
+                            <input type="text" class="form-control form-control-stripe" id="nombre" required />
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="col-md-6">
+                            <label for="apellidos" class="form-label-custom">Apellidos</label>
+                            <input type="text" class="form-control form-control-stripe" id="apellidos" required />
+                        </div>
+
+                        <!-- Cédula -->
+                        <div class="col-md-6">
+                            <label for="cedula" class="form-label-custom">Cédula / Identificación</label>
+                            <input type="text" class="form-control form-control-stripe" id="cedula"  required />
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label-custom">Teléfono</label>
+                            <input type="tel" class="form-control form-control-stripe" id="telefono" required />
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="col-12">
+                            <label for="correo" class="form-label-custom">Correo electrónico</label>
+                            <input type="email" class="form-control form-control-stripe" id="correo" required />
+                        </div>
+
+                        <!-- Dirección -->
+                        <div class="col-12">
+                            <label for="direccion" class="form-label-custom">Dirección física</label>
+                            <textarea class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Botón Enviar -->
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-wellpay btn-lg fs-6 fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
+                            <span>Enviar solicitud</span>
+                            <i class="bi bi-arrow-right fs-5"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer con Leyenda -->
+            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+                <small class="text-muted fs-8">
+                    <i class="bi bi-shield-lock text-wellpay me-1"></i> Tus datos están protegidos con encriptación de grado bancario.
+                </small>
+            </div>
+
+        </div>
+    </div>
+</div>

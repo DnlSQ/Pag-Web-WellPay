@@ -413,3 +413,55 @@ body {
     }
 
 /*viejo*/
+/* ========================================
+   BOTÓN INICIAR SESIÓN - NAVBAR
+   ======================================== */
+
+.btn-login-wellpay {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    color: #0b2942;
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+
+    /* Hover */
+    .btn-login-wellpay:hover {
+        color: #00a98f;
+        background-color: rgba(0, 169, 143, 0.08);
+        transform: translateX(2px);
+    }
+
+
+    /* Flecha */
+    .btn-login-wellpay i {
+        transition: transform 0.25s ease;
+    }
+
+
+    /* Movimiento de flecha */
+    .btn-login-wellpay:hover i {
+        transform: translateX(3px);
+    }
+
+
+/* ========================================
+   VERSIÓN MÓVIL
+   ======================================== */
+
+@media (max-width: 991.98px) {
+
+    .btn-login-wellpay {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 18px;
+        margin-bottom: 4px;
+    }
+}

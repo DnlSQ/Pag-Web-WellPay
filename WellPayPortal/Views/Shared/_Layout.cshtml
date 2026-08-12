@@ -5,72 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Well-Pay</title>
 
-    <!-- Google Fonts (Plus Jakarta Sans para un look moderno) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS de Bootstrap y el sitio -->
+    <!-- Bootstrap y estilos del sitio -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WellPayPortal.styles.css" asp-append-version="true" />
 </head>
+
 <body>
+
     <header class="sticky-top bg-white border-bottom border-light shadow-sm">
         <nav class="navbar navbar-expand-lg navbar-light py-3">
             <div class="container">
 
-                <!-- Logo de Well-Pay -->
-                <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold fs-4 text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                <!-- Logo Well-Pay -->
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold fs-4 text-dark"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+
                     <span class="badge bg-wellpay text-white p-2 rounded-3 me-1">
                         <i class="bi bi-credit-card-2-front-fill fs-5"></i>
                     </span>
+
                     WELL-PAY
                 </a>
 
-                <!-- Botón hamburguesa (móviles) -->
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
-                        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Botón hamburguesa para móviles -->
+                <button class="navbar-toggler border-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMain"
+                        aria-controls="navbarMain"
+                        aria-expanded="false"
+                        aria-label="Abrir menú">
+
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Menú colapsable -->
+                <!-- Menú -->
                 <div class="collapse navbar-collapse" id="navbarMain">
 
-                    <!-- Enlaces centrados como en el diseño -->
+                    <!-- Navegación principal -->
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+
+                        <!-- Servicios -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-dark dropdown-toggle px-3" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <a class="nav-link text-dark dropdown-toggle px-3"
+                               href="#"
+                               id="servicesDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
                                 Servicios
                             </a>
-                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item py-2" href="#">Creación de cuentas IBAN</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Pago inmediato (PIN)</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Débito en tiempo real (DTR)</a></li>
-                                <li><a class="dropdown-item py-2" href="#">SINPE móvil</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Pagos masivos</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Cobros masivos</a></li>
+
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3"
+                                aria-labelledby="servicesDropdown">
+
+                                <li>
+                                    <a class="dropdown-item py-2" href="#">
+                                        Creación de cuentas IBAN
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item py-2" href="#">
+                                        Pago inmediato (PIN)
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item py-2" href="#">
+                                        Débito en tiempo real (DTR)
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item py-2" href="#">
+                                        SINPE móvil
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item py-2" href="#">
+                                        Pagos masivos
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item py-2" href="#">
+                                        Cobros masivos
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
+
+                        <!-- Cómo funciona -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark px-3" href="#como-funciona">Cómo funciona</a>
+                            <a class="nav-link text-dark px-3"
+                               href="#como-funciona">
+                                Cómo funciona
+                            </a>
                         </li>
+
+                        <!-- Nosotros -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark px-3" href="#nosotros">Nosotros</a>
+                            <a class="nav-link text-dark px-3"
+                               href="#nosotros">
+                                Nosotros
+                            </a>
                         </li>
+
+                        <!-- Contacto -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark px-3" href="#contacto">Contacto</a>
+                            <a class="nav-link text-dark px-3"
+                               href="#contacto">
+                                Contacto
+                            </a>
                         </li>
+
                     </ul>
 
-                    <!-- Botón de acción principal verde -->
-                    <div class="d-flex">
-                        <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                    <!-- Acciones -->
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 mt-3 mt-lg-0">
+
+                        <!-- Iniciar sesión -->
+                        <a href="https://qa.paymentpower.net/wellpay/portal/login"
+                           class="btn-login-wellpay">
+                            Iniciar sesión
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                        <!-- Solicitar afiliación -->
+                        <button type="button"
+                                class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm"
+                                data-bs-toggle="modal"
+                                data-bs-target="#afiliacionModal">
+
                             Solicitar afiliación
                         </button>
+
                     </div>
 
                 </div>
@@ -78,18 +164,22 @@
         </nav>
     </header>
 
-    <!-- Contenido dinámico (Index.cshtml) -->
+    <!-- Contenido de cada página -->
     <main role="main">
         @RenderBody()
     </main>
 
-    <!-- Scripts requeridos -->
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Librería para alertas elegantes -->
+
+    <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

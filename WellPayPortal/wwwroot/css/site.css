@@ -465,3 +465,259 @@ body {
         margin-bottom: 4px;
     }
 }
+/* =========================================
+   SEGURIDAD WELL-PAY
+========================================= */
+
+.security-section {
+    position: relative;
+    background: #f8fbfc;
+}
+
+
+/* Glow de fondo */
+
+.security-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.security-glow-right {
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: 30px;
+    background: rgba(0, 190, 160, 0.13);
+}
+
+.security-glow-left {
+    width: 350px;
+    height: 350px;
+    left: -180px;
+    bottom: -100px;
+    background: rgba(48, 116, 245, 0.10);
+}
+
+
+/* Texto principal */
+
+.security-main-description {
+    max-width: 520px;
+    line-height: 1.8;
+}
+
+
+/* Link */
+
+.security-more-link {
+    color: #0b2942;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+    .security-more-link:hover {
+        color: #00a98f;
+        transform: translateX(3px);
+    }
+
+    .security-more-link i {
+        transition: transform 0.25s ease;
+    }
+
+    .security-more-link:hover i {
+        transform: translateX(4px);
+    }
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.security-card {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(11, 41, 66, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 10px 35px rgba(20, 52, 74, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+
+    .security-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(0, 169, 143, 0.30);
+        box-shadow: 0 20px 45px rgba(20, 52, 74, 0.10);
+    }
+
+
+/* Iconos */
+
+.security-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 18px;
+    background: linear-gradient( 135deg, rgba(0, 169, 143, 0.14), rgba(52, 120, 246, 0.10) );
+    color: #00a98f;
+    font-size: 1.55rem;
+}
+
+
+.security-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BLOQUE PCI DSS
+========================================= */
+
+.pci-highlight {
+    position: relative;
+    padding: 42px 46px;
+    overflow: hidden;
+    border-radius: 30px;
+    background: linear-gradient( 135deg, #0b2942 0%, #123f59 55%, #075c65 100% );
+    color: white;
+    box-shadow: 0 20px 55px rgba(11, 41, 66, 0.18);
+}
+
+
+    /* Efecto decorativo */
+
+    .pci-highlight::after {
+        content: "";
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        right: -80px;
+        top: -120px;
+        border-radius: 50%;
+        background: rgba(70, 225, 195, 0.12);
+        filter: blur(10px);
+        pointer-events: none;
+    }
+
+
+.pci-label {
+    color: #5ee0c8;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+
+.pci-highlight h3 {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+.pci-highlight p {
+    position: relative;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.75;
+    max-width: 800px;
+}
+
+
+/* Badge PCI */
+
+.pci-badge-custom {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+
+    .pci-badge-custom i {
+        color: #5ee0c8;
+        font-size: 2rem;
+    }
+
+
+    .pci-badge-custom div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+
+    .pci-badge-custom small {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.72rem;
+    }
+
+
+    .pci-badge-custom strong {
+        color: white;
+        font-size: 1.15rem;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    .security-main-description {
+        max-width: 100%;
+    }
+
+    .pci-highlight {
+        padding: 36px;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .security-section {
+        text-align: center;
+    }
+
+    .security-card {
+        padding: 26px;
+        text-align: left;
+    }
+
+    .security-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .security-card h5 {
+        text-align: center;
+    }
+
+    .security-card p {
+        text-align: center;
+    }
+
+    .pci-highlight {
+        padding: 30px 24px;
+        text-align: center;
+    }
+
+    .pci-badge-custom {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -156,12 +156,12 @@
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="securityDropdown">
-                                <li><a class="dropdown-item py-2" href="#seguridad">Seguridad en Well-Pay</a></li>
-                                <li><a class="dropdown-item py-2" href="#">PCI DSS</a></li>
-                                <li><a class="dropdown-item py-2" href="#">3-D Secure (3DS)</a></li>
-                                <li><a class="dropdown-item py-2" href="#">SUGEF</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Protección de datos</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Seguridad de las transacciones</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay">Seguridad en Well-Pay</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss">PCI DSS</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="3d-secure">3-D Secure (3DS)</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="sugef">SUGEF</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="proteccion-datos">Protección de datos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-transacciones">Seguridad de las transacciones</a></li>
                             </ul>
                         </li>
 
@@ -177,18 +177,18 @@
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="aboutDropdown">
-                                <li><a class="dropdown-item py-2" href="#nosotros">Quiénes somos</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Misión</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Visión</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="quienes-somos">Quiénes somos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="mision">Misión</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="vision">Visión</a></li>
 
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle py-2" href="#">Trabaja con nosotros</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" href="#">Postulación</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="postulacion">Postulación</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a class="dropdown-item py-2" href="#">Contacto</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="contacto">Contacto</a></li>
                             </ul>
                         </li>
 
@@ -252,8 +252,8 @@
                             <li><a class="footer-link" href="#">Desarrolladores</a></li>
                         </ul>
                         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a class="footer-link" href="#seguridad">Seguridad</a></li>
-                            <li><a class="footer-link" href="#nosotros">Nosotros</a></li>
+                            <li><a class="footer-link" asp-controller="Seguridad" asp-action="Index">Seguridad</a></li>
+                            <li><a class="footer-link" asp-controller="Nosotros" asp-action="Index">Nosotros</a></li>
                             <li><a class="footer-link" asp-controller="Home" asp-action="Privacy">Privacidad</a></li>
                         </ul>
                     </div>
@@ -286,6 +286,88 @@
             </div>
         </div>
     </footer>
+    <!-- MODAL FLOTANTE ESTILO STRIPE - SOLICITAR AFILIACIÓN (compartido en todas las páginas) -->
+<div class="modal fade modal-stripe" id="afiliacionModal" tabindex="-1" aria-labelledby="afiliacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
+
+            <!-- Encabezado con Logo y Botón de Cerrar -->
+            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2 fw-extrabold text-dark fs-5">
+                    <span class="badge bg-wellpay text-white p-2 rounded-3">
+                        <i class="bi bi-credit-card-2-front-fill fs-6"></i>
+                    </span>
+                    <span>WELL-PAY</span>
+                </div>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Cuerpo del Formulario -->
+            <div class="modal-body pt-3">
+                <div class="mb-4">
+                    <h3 class="fw-extrabold text-dark m-0 fs-4">Solicitá tu afiliación</h3>
+                    <p class="text-muted fs-7 mb-0">Completá los datos para iniciar el proceso de integración con tu empresa.</p>
+                </div>
+
+                <form id="formAfiliacion">
+                    <div class="row g-3">
+                        <!-- Nombre -->
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label-custom">Nombre</label>
+                            <input type="text" class="form-control form-control-stripe" id="nombre" required />
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="col-md-6">
+                            <label for="apellidos" class="form-label-custom">Apellidos</label>
+                            <input type="text" class="form-control form-control-stripe" id="apellidos" required />
+                        </div>
+
+                        <!-- Cédula -->
+                        <div class="col-md-6">
+                            <label for="cedula" class="form-label-custom">Cédula / Identificación</label>
+                            <input type="text" class="form-control form-control-stripe" id="cedula"  required />
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label-custom">Teléfono</label>
+                            <input type="tel" class="form-control form-control-stripe" id="telefono" required />
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="col-12">
+                            <label for="correo" class="form-label-custom">Correo electrónico</label>
+                            <input type="email" class="form-control form-control-stripe" id="correo" required />
+                        </div>
+
+                        <!-- Dirección -->
+                        <div class="col-12">
+                            <label for="direccion" class="form-label-custom">Dirección física</label>
+                            <textarea class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Botón Enviar -->
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-wellpay btn-lg fs-6 fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
+                            <span>Enviar solicitud</span>
+                            <i class="bi bi-arrow-right fs-5"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer con Leyenda -->
+            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+                <small class="text-muted fs-8">
+                    <i class="bi bi-shield-lock text-wellpay me-1"></i> Tus datos están protegidos con encriptación de grado bancario.
+                </small>
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

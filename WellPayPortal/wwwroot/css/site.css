@@ -740,7 +740,19 @@ html {
 }
 
 #seguridad,
-#nosotros {
+#nosotros,
+#quienes-somos,
+#mision,
+#vision,
+#trabaja-con-nosotros,
+#postulacion,
+#contacto,
+#seguridad-wellpay,
+#pci-dss,
+#3d-secure,
+#sugef,
+#proteccion-datos,
+#seguridad-transacciones {
     scroll-margin-top: 90px;
 }
 

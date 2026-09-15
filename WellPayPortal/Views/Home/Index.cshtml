@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Inicio";
 }
 
@@ -12,7 +12,7 @@
                 <!-- Badge Verde -->
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <span class="dot-indicator"></span>
-                    <small style="font-size: 0.75rem; letter-spacing: 0.5px;">SOLUCIONES FINANCIERAS PARA EMPRESAS</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px;">SOLUCIONES FINANCIERAS PARA EMPRESAS</small>
                 </div>
 
                 <!-- Título Principal -->
@@ -262,7 +262,7 @@
             <div class="col-lg-8">
                 <!-- Badge Verde -->
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase;">Nuestros servicios</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Nuestros servicios</small>
                 </div>
 
                 <!-- Título Grande -->
@@ -395,7 +395,7 @@
                 <!-- Badge -->
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <i class="bi bi-shield-check"></i>
-                    <small style="font-size: 0.75rem; letter-spacing: 0.5px;">
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px;">
                         SEGURIDAD
                     </small>
                 </div>
@@ -416,7 +416,7 @@
 
                 <!-- Link -->
                 <!-- TODO: apuntar a la página/sección de Seguridad cuando exista (punto 3) -->
-                <a href="#"
+                <a asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay"
                    class="security-more-link d-inline-flex align-items-center gap-2 mt-3">
 
                     Conocer más sobre seguridad
@@ -590,7 +590,7 @@
 
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase;">Nosotros</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Nosotros</small>
                 </div>
 
                 <h2 class="display-5 fw-extrabold text-dark mb-4 lh-sm">
@@ -650,87 +650,4 @@
         </div>
     </div>
 </section>
-
-<!-- MODAL FLOTANTE ESTILO STRIPE - SOLICITAR AFILIACIÓN -->
-<div class="modal fade modal-stripe" id="afiliacionModal" tabindex="-1" aria-labelledby="afiliacionModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
-
-            <!-- Encabezado con Logo y Botón de Cerrar -->
-            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center gap-2 fw-extrabold text-dark fs-5">
-                    <span class="badge bg-wellpay text-white p-2 rounded-3">
-                        <i class="bi bi-credit-card-2-front-fill fs-6"></i>
-                    </span>
-                    <span>WELL-PAY</span>
-                </div>
-                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <!-- Cuerpo del Formulario -->
-            <div class="modal-body pt-3">
-                <div class="mb-4">
-                    <h3 class="fw-extrabold text-dark m-0 fs-4">Solicitá tu afiliación</h3>
-                    <p class="text-muted fs-7 mb-0">Completá los datos para iniciar el proceso de integración con tu empresa.</p>
-                </div>
-
-                <form id="formAfiliacion">
-                    <div class="row g-3">
-                        <!-- Nombre -->
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label-custom">Nombre</label>
-                            <input type="text" class="form-control form-control-stripe" id="nombre" required />
-                        </div>
-
-                        <!-- Apellidos -->
-                        <div class="col-md-6">
-                            <label for="apellidos" class="form-label-custom">Apellidos</label>
-                            <input type="text" class="form-control form-control-stripe" id="apellidos" required />
-                        </div>
-
-                        <!-- Cédula -->
-                        <div class="col-md-6">
-                            <label for="cedula" class="form-label-custom">Cédula / Identificación</label>
-                            <input type="text" class="form-control form-control-stripe" id="cedula"  required />
-                        </div>
-
-                        <!-- Teléfono -->
-                        <div class="col-md-6">
-                            <label for="telefono" class="form-label-custom">Teléfono</label>
-                            <input type="tel" class="form-control form-control-stripe" id="telefono" required />
-                        </div>
-
-                        <!-- Correo Electrónico -->
-                        <div class="col-12">
-                            <label for="correo" class="form-label-custom">Correo electrónico</label>
-                            <input type="email" class="form-control form-control-stripe" id="correo" required />
-                        </div>
-
-                        <!-- Dirección -->
-                        <div class="col-12">
-                            <label for="direccion" class="form-label-custom">Dirección física</label>
-                            <textarea class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Botón Enviar -->
-                    <div class="d-grid gap-2 mt-4">
-                        <button type="submit" class="btn btn-wellpay btn-lg fs-6 fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
-                            <span>Enviar solicitud</span>
-                            <i class="bi bi-arrow-right fs-5"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Footer con Leyenda -->
-            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <small class="text-muted fs-8">
-                    <i class="bi bi-shield-lock text-wellpay me-1"></i> Tus datos están protegidos con encriptación de grado bancario.
-                </small>
-            </div>
-
-        </div>
-    </div>
-</div>
 

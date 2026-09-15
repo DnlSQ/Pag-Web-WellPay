@@ -11,6 +11,8 @@ body {
     --wellpay-green: #00c992;
     --wellpay-green-hover: #00b382;
     --wellpay-navy: #0d1b2a;
+    --wellpay-blue: #5b8def;
+    --wellpay-blue-hover: #4a7ce0;
 }
 
 .bg-wellpay {
@@ -46,7 +48,7 @@ body {
 }
 
 .text-primary-custom {
-    color: #2b56f5;
+    color: var(--wellpay-blue);
 }
 
 .btn-outline-primary-custom {
@@ -133,28 +135,48 @@ body {
 .glow-shape {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.65;
+    filter: blur(90px);
+    opacity: 0.75;
     pointer-events: none;
     z-index: 1;
 }
 
 /* Luz Verde superior (Hero) */
 .glow-top-right {
-    width: 280px;
-    height: 280px;
-    top: -40px;
-    right: -20px;
-    background: radial-gradient(circle, #73edd1 0%, #00c992 100%);
+    width: 480px;
+    height: 480px;
+    top: -120px;
+    right: 80px;
+    background: radial-gradient(circle, #73edd1 0%, var(--wellpay-green) 55%, transparent 75%);
+    animation: glow-drift-a 6s ease-in-out infinite;
 }
 
 /* Luz Azul inferior (Hero) */
 .glow-bottom-right {
-    width: 380px;
-    height: 300px;
-    bottom: -60px;
-    right: -40px;
-    background: radial-gradient(circle, #70a6ff 0%, #3a7bd5 100%);
+    width: 520px;
+    height: 460px;
+    bottom: -140px;
+    right: -60px;
+    background: radial-gradient(circle, #a9c6ff 0%, var(--wellpay-blue) 55%, transparent 75%);
+    animation: glow-drift-b 7.5s ease-in-out infinite;
+}
+
+@keyframes glow-drift-a {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-40px, 45px) scale(1.15);
+    }
+}
+
+@keyframes glow-drift-b {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(45px, -35px) scale(1.12);
+    }
 }
 
 /* =========================================
@@ -248,7 +270,7 @@ body {
     box-shadow: 
         0 12px 24px -6px rgba(0, 0, 0, 0.06),
         0 0 25px 2px rgba(0, 201, 146, 0.25),
-        0 0 50px 10px rgba(43, 86, 245, 0.12) !important;
+        0 0 50px 10px rgba(91, 141, 239, 0.15) !important;
 }
 
 .service-icon-shape {
@@ -262,18 +284,6 @@ body {
 
 .bg-light-green {
     background-color: #e6faf5;
-}
-
-.bg-light-blue {
-    background-color: #ecf0fe;
-}
-
-.bg-light-orange {
-    background-color: #fff4e6;
-}
-
-.text-orange-custom {
-    color: #ff9f43;
 }
 
 .fs-7 {
@@ -290,42 +300,42 @@ body {
 
 /* 1. Esquina Superior Derecha (Azul / Verde) */
 .glow-services-top-right {
-    width: 450px;
-    height: 450px;
-    top: -100px;
-    right: -120px;
-    background: radial-gradient(circle, rgba(112, 166, 255, 0.22) 0%, rgba(0, 201, 146, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
-    filter: blur(90px);
+    width: 550px;
+    height: 550px;
+    top: -140px;
+    right: -150px;
+    background: radial-gradient(circle, rgba(91, 141, 239, 0.4) 0%, rgba(0, 201, 146, 0.26) 45%, rgba(255, 255, 255, 0) 78%);
+    filter: blur(100px);
 }
 
 /* 2. Esquina Superior Izquierda (Verde WellPay) */
 .glow-services-top-left {
-    width: 400px;
-    height: 400px;
-    top: -100px;
-    left: -120px;
-    background: radial-gradient(circle, rgba(0, 201, 146, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
-    filter: blur(95px);
+    width: 480px;
+    height: 480px;
+    top: -130px;
+    left: -150px;
+    background: radial-gradient(circle, rgba(0, 201, 146, 0.34) 0%, rgba(0, 201, 146, 0.1) 45%, rgba(255, 255, 255, 0) 78%);
+    filter: blur(105px);
 }
 
 /* 3. Esquina Inferior Derecha (Verde WellPay) */
 .glow-services-bottom-right {
-    width: 400px;
-    height: 400px;
-    bottom: -100px;
-    right: -120px;
-    background: radial-gradient(circle, rgba(0, 201, 146, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
-    filter: blur(95px);
+    width: 480px;
+    height: 480px;
+    bottom: -130px;
+    right: -150px;
+    background: radial-gradient(circle, rgba(0, 201, 146, 0.34) 0%, rgba(0, 201, 146, 0.1) 45%, rgba(255, 255, 255, 0) 78%);
+    filter: blur(105px);
 }
 
 /* 4. Esquina Inferior Izquierda (Azul Soft) */
 .glow-services-bottom-left {
-    width: 450px;
-    height: 450px;
-    bottom: -100px;
-    left: -120px;
-    background: radial-gradient(circle, rgba(112, 166, 255, 0.2) 0%, rgba(0, 201, 146, 0.12) 50%, rgba(255, 255, 255, 0) 70%);
-    filter: blur(90px);
+    width: 550px;
+    height: 550px;
+    bottom: -140px;
+    left: -150px;
+    background: radial-gradient(circle, rgba(91, 141, 239, 0.36) 0%, rgba(0, 201, 146, 0.22) 45%, rgba(255, 255, 255, 0) 78%);
+    filter: blur(100px);
 }
 
 /* Responsividad Móvil */
@@ -544,10 +554,13 @@ body {
 
 
     .security-card:hover {
-        transform: translateY(-6px);
-        border-color: rgba(0, 169, 143, 0.30);
-        box-shadow: 0 20px 45px rgba(20, 52, 74, 0.10);
-    }
+    transform: translateY(-6px);
+    border-color: rgba(0, 201, 146, 0.30);
+    box-shadow: 
+        0 20px 45px rgba(20, 52, 74, 0.10),
+        0 0 25px 2px rgba(0, 201, 146, 0.22),
+        0 0 50px 10px rgba(91, 141, 239, 0.15);
+}
 
 
 /* Iconos */
@@ -726,23 +739,9 @@ html {
     scroll-behavior: smooth;
 }
 
-#como-funciona,
-#nosotros,
-#contacto {
+#seguridad,
+#nosotros {
     scroll-margin-top: 90px;
-}
-
-/* =========================================
-   SECCIÓN CÓMO FUNCIONA
-   ========================================= */
-.step-number-shape {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 800;
 }
 
 /* =========================================
@@ -759,7 +758,10 @@ html {
 
 .value-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 
+        0 10px 24px rgba(0, 0, 0, 0.06),
+        0 0 25px 2px rgba(0, 201, 146, 0.22),
+        0 0 50px 10px rgba(91, 141, 239, 0.15) !important;
 }
 
 /* =========================================
@@ -806,15 +808,6 @@ html {
 
     footer .navbar-brand {
         justify-content: center;
-    }
-}
-
-@media (max-width: 575.98px) {
-
-    .step-number-shape {
-        width: 48px;
-        height: 48px;
-        font-size: 1.2rem;
     }
 }
 
@@ -866,3 +859,4 @@ html {
         transform: rotate(0deg);
     }
 }
+

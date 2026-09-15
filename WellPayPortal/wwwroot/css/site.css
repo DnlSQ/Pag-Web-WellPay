@@ -194,11 +194,7 @@ body {
     display: flex;
     align-items: center;
     width: max-content;
-    animation: scroll-left 35s linear infinite;
-}
-
-.logo-slider:hover .logo-slide-track {
-    animation-play-state: paused;
+    animation: scroll-left 160s linear infinite;
 }
 
 .logo-item {
@@ -206,20 +202,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 130px;
+    height: 60px;
+    flex-shrink: 0;
 }
 
 .logo-item img {
-    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
+    height: auto;
     object-fit: contain;
-    filter: grayscale(90%);
-    opacity: 0.7;
     transition: all 0.2s ease;
 }
 
 .logo-item img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
     transform: scale(1.05);
 }
 
@@ -719,5 +716,153 @@ body {
     .pci-badge-custom {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* =========================================
+   NAVEGACIÓN: SCROLL SUAVE + OFFSET DEL HEADER
+   ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+#como-funciona,
+#nosotros,
+#contacto {
+    scroll-margin-top: 90px;
+}
+
+/* =========================================
+   SECCIÓN CÓMO FUNCIONA
+   ========================================= */
+.step-number-shape {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+/* =========================================
+   SECCIÓN NOSOTROS
+   ========================================= */
+.bg-light-subtle {
+    background-color: #f8fafc;
+}
+
+.value-card {
+    border-radius: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--wellpay-green);
+}
+
+/* =========================================
+   RESPONSIVE: NAVEGACIÓN Y NUEVAS SECCIONES
+   ========================================= */
+@media (max-width: 991.98px) {
+
+    #como-funciona,
+    #nosotros,
+    #contacto {
+        scroll-margin-top: 70px;
+    }
+
+    .value-card {
+        padding: 24px 16px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    #nosotros .row.g-3.mt-2 > div {
+        margin-bottom: 12px;
+    }
+
+    footer .col-lg-3,
+    footer .col-lg-2,
+    footer .col-lg-4 {
+        text-align: center;
+    }
+
+    footer .navbar-brand {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .step-number-shape {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+}
+
+/* =========================================
+   SUBMENÚS ANIDADOS DEL NAVBAR (2do nivel)
+   ========================================= */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-item.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dropdown-submenu > .dropdown-item.dropdown-toggle::after {
+    transform: rotate(-90deg);
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    margin-left: 0.25rem;
+}
+
+.dropdown-submenu > .dropdown-menu.show {
+    display: block;
+}
+
+/* En pantallas angostas o menú colapsado: el submenú se acomoda debajo, sin desbordar */
+@media (max-width: 991.98px) {
+    .dropdown-submenu > .dropdown-menu {
+        position: static;
+        left: 0;
+        margin-left: 1rem;
+        box-shadow: none !important;
+        border-left: 2px solid var(--wellpay-green);
+        border-radius: 0 !important;
+    }
+
+    .dropdown-submenu > .dropdown-item.dropdown-toggle::after {
+        transform: rotate(0deg);
     }
 }

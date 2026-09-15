@@ -44,6 +44,35 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- 2. MANEJO Y VALIDACIÓN DEL FORMULARIO DE AFILIACIÓN ---
     const formAfiliacion = document.getElementById('formAfiliacion');
 
+    // --- 0. SUBMENÚS ANIDADOS DEL NAVBAR (2do nivel) ---
+    document.querySelectorAll('.dropdown-submenu > .dropdown-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const submenu = this.nextElementSibling;
+            const parentMenu = this.closest('.dropdown-menu');
+
+            // Cierra otros submenús abiertos al mismo nivel antes de abrir este
+            parentMenu.querySelectorAll(':scope > .dropdown-submenu > .dropdown-menu.show').forEach(function (open) {
+                if (open !== submenu) {
+                    open.classList.remove('show');
+                }
+            });
+
+            submenu.classList.toggle('show');
+        });
+    });
+
+    // Cierra los submenús abiertos cuando el dropdown padre se cierra
+    document.querySelectorAll('.navbar-nav > .nav-item.dropdown').forEach(function (item) {
+        item.addEventListener('hidden.bs.dropdown', function () {
+            item.querySelectorAll('.dropdown-menu.show').forEach(function (menu) {
+                menu.classList.remove('show');
+            });
+        });
+    });
+
     if (formAfiliacion) {
         formAfiliacion.addEventListener('submit', function (e) {
             e.preventDefault(); // Evita recargar la página

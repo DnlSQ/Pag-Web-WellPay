@@ -60,7 +60,6 @@
 
                         <!-- Servicios -->
                         <li class="nav-item dropdown">
-
                             <a class="nav-link text-dark dropdown-toggle px-3"
                                href="#"
                                id="servicesDropdown"
@@ -70,70 +69,127 @@
                                 Servicios
                             </a>
 
-                            <ul class="dropdown-menu border-0 shadow-sm rounded-3"
-                                aria-labelledby="servicesDropdown">
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item py-2" href="#">Creación de cuentas IBAN</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Pago Inmediato (PIN)</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Débito en Tiempo Real (DTR)</a></li>
+                                <li><a class="dropdown-item py-2" href="#">SINPE Móvil</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Verificador SINPE</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Pagos Masivos</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Cobros Masivos</a></li>
 
-                                <li>
-                                    <a class="dropdown-item py-2" href="#">
-                                        Creación de cuentas IBAN
-                                    </a>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Pagos con tarjeta</a>
+                                    <ul class="dropdown-menu border-0 shadow-sm rounded-3">
+                                        <li><a class="dropdown-item py-2" href="#">Checkout</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Link de pagos</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Cargos recurrentes</a></li>
+                                    </ul>
                                 </li>
 
-                                <li>
-                                    <a class="dropdown-item py-2" href="#">
-                                        Pago inmediato (PIN)
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item py-2" href="#">
-                                        Débito en tiempo real (DTR)
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item py-2" href="#">
-                                        SINPE móvil
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item py-2" href="#">
-                                        Pagos masivos
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item py-2" href="#">
-                                        Cobros masivos
-                                    </a>
-                                </li>
-
+                                <li><a class="dropdown-item py-2" href="#">Datáfonos físicos</a></li>
                             </ul>
                         </li>
 
-                        <!-- Cómo funciona -->
-                        <li class="nav-item">
-                            <a class="nav-link text-dark px-3"
-                               href="#como-funciona">
-                                Cómo funciona
+                        <!-- Soluciones -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle px-3"
+                               href="#"
+                               id="solutionsDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Soluciones
                             </a>
+
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="solutionsDropdown">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Soluciones para negocios</a>
+                                    <ul class="dropdown-menu border-0 shadow-sm rounded-3">
+                                        <li><a class="dropdown-item py-2" href="#">Médicos</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Dentistas</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Comercios</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Restaurantes</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Profesionales independientes</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Inteligencia Artificial</a>
+                                    <ul class="dropdown-menu border-0 shadow-sm rounded-3">
+                                        <li><a class="dropdown-item py-2" href="#">Reportes financieros</a></li>
+                                        <li><a class="dropdown-item py-2" href="#">Score de riesgo</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Desarrolladores -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle px-3"
+                               href="#"
+                               id="developersDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Desarrolladores
+                            </a>
+
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="developersDropdown">
+                                <li><a class="dropdown-item py-2" href="#">Documentación</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Integración de servicios</a></li>
+                                <li><a class="dropdown-item py-2" href="#">API</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Sandbox / Ambiente de pruebas</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Guías de integración</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Seguridad -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle px-3"
+                               href="#"
+                               id="securityDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Seguridad
+                            </a>
+
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="securityDropdown">
+                                <li><a class="dropdown-item py-2" href="#seguridad">Seguridad en Well-Pay</a></li>
+                                <li><a class="dropdown-item py-2" href="#">PCI DSS</a></li>
+                                <li><a class="dropdown-item py-2" href="#">3-D Secure (3DS)</a></li>
+                                <li><a class="dropdown-item py-2" href="#">SUGEF</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Protección de datos</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Seguridad de las transacciones</a></li>
+                            </ul>
                         </li>
 
                         <!-- Nosotros -->
-                        <li class="nav-item">
-                            <a class="nav-link text-dark px-3"
-                               href="#nosotros">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle px-3"
+                               href="#"
+                               id="aboutDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
                                 Nosotros
                             </a>
-                        </li>
 
-                        <!-- Contacto -->
-                        <li class="nav-item">
-                            <a class="nav-link text-dark px-3"
-                               href="#contacto">
-                                Contacto
-                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item py-2" href="#nosotros">Quiénes somos</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Misión</a></li>
+                                <li><a class="dropdown-item py-2" href="#">Visión</a></li>
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Trabaja con nosotros</a>
+                                    <ul class="dropdown-menu border-0 shadow-sm rounded-3">
+                                        <li><a class="dropdown-item py-2" href="#">Postulación</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item py-2" href="#">Contacto</a></li>
+                            </ul>
                         </li>
 
                     </ul>
@@ -169,6 +225,68 @@
         @RenderBody()
     </main>
 
+    <!-- Footer -->
+    <footer class="bg-navy text-white pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold fs-4 text-white mb-3" asp-area="" asp-controller="Home" asp-action="Index">
+                        <span class="badge bg-wellpay text-white p-2 rounded-3 me-1">
+                            <i class="bi bi-credit-card-2-front-fill fs-5"></i>
+                        </span>
+                        WELL-PAY
+                    </a>
+                    <p class="text-secondary fs-7 mb-0">
+                        Soluciones financieras para conectar a tu empresa con el sistema de pagos de Costa Rica.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold text-white mb-3 text-center">Enlaces</h6>
+                    <div class="d-flex justify-content-center gap-5">
+                        <!-- TODO: apuntar Servicios/Soluciones/Desarrolladores a sus secciones o páginas cuando existan -->
+                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                            <li><a class="footer-link" href="#">Servicios</a></li>
+                            <li><a class="footer-link" href="#">Soluciones</a></li>
+                            <li><a class="footer-link" href="#">Desarrolladores</a></li>
+                        </ul>
+                        <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                            <li><a class="footer-link" href="#seguridad">Seguridad</a></li>
+                            <li><a class="footer-link" href="#nosotros">Nosotros</a></li>
+                            <li><a class="footer-link" asp-controller="Home" asp-action="Privacy">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Contacto</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <!-- TODO: reemplazar por los datos reales -->
+                        <li><a class="footer-link" href="mailto:contacto@well-pay.com"><i class="bi bi-envelope-fill me-2"></i>contacto@well-pay.com</a></li>
+                        <li><a class="footer-link" href="tel:+50600000000"><i class="bi bi-telephone-fill me-2"></i>+506 0000-0000</a></li>
+                        <li class="text-secondary"><i class="bi bi-geo-alt-fill me-2"></i>San José, Costa Rica</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Acceso</h6>
+                    <a href="https://qa.paymentpower.net/wellpay/portal/login" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                        Iniciar sesión
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4" />
+
+            <div class="text-center text-secondary fs-8">
+                &copy; @DateTime.Now.Year Well-Pay. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
@@ -180,6 +298,24 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Cierra el menú móvil automáticamente al tocar un enlace de navegación -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarCollapse = document.getElementById('navbarMain');
+            if (!navbarCollapse) return;
+
+            var navLinks = navbarCollapse.querySelectorAll('a.nav-link:not(.dropdown-toggle), .dropdown-item');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (navbarCollapse.classList.contains('show')) {
+                        var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

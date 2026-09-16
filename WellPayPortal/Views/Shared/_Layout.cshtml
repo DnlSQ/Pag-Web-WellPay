@@ -70,24 +70,24 @@
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item py-2" href="#">Creación de cuentas IBAN</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Pago Inmediato (PIN)</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Débito en Tiempo Real (DTR)</a></li>
-                                <li><a class="dropdown-item py-2" href="#">SINPE Móvil</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Verificador SINPE</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Pagos Masivos</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Cobros Masivos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban">Creación de cuentas IBAN</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin">Pago Inmediato (PIN)</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr">Débito en Tiempo Real (DTR)</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil">SINPE Móvil</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe">Verificador SINPE</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos">Pagos Masivos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos">Cobros Masivos</a></li>
 
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle py-2" href="#">Pagos con tarjeta</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" href="#">Checkout</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Link de pagos</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Cargos recurrentes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout">Checkout</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos">Link de pagos</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes">Cargos recurrentes</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a class="dropdown-item py-2" href="#">Datáfonos físicos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos">Datáfonos físicos</a></li>
                             </ul>
                         </li>
 
@@ -106,19 +106,19 @@
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle py-2" href="#">Soluciones para negocios</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" href="#">Médicos</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Dentistas</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Comercios</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Restaurantes</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Profesionales independientes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="medicos">Médicos</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="dentistas">Dentistas</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="comercios">Comercios</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="restaurantes">Restaurantes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes">Profesionales independientes</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle py-2" href="#">Inteligencia Artificial</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" href="#">Reportes financieros</a></li>
-                                        <li><a class="dropdown-item py-2" href="#">Score de riesgo</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros">Reportes financieros</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo">Score de riesgo</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -136,11 +136,11 @@
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="developersDropdown">
-                                <li><a class="dropdown-item py-2" href="#">Documentación</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Integración de servicios</a></li>
-                                <li><a class="dropdown-item py-2" href="#">API</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Sandbox / Ambiente de pruebas</a></li>
-                                <li><a class="dropdown-item py-2" href="#">Guías de integración</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion">Documentación</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="integracion-servicios">Integración de servicios</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="api">API</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="sandbox">Sandbox / Ambiente de pruebas</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="guias-integracion">Guías de integración</a></li>
                             </ul>
                         </li>
 
@@ -245,11 +245,10 @@
                 <div class="col-lg-4 col-md-6">
                     <h6 class="fw-bold text-white mb-3 text-center">Enlaces</h6>
                     <div class="d-flex justify-content-center gap-5">
-                        <!-- TODO: apuntar Servicios/Soluciones/Desarrolladores a sus secciones o páginas cuando existan -->
                         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a class="footer-link" href="#">Servicios</a></li>
-                            <li><a class="footer-link" href="#">Soluciones</a></li>
-                            <li><a class="footer-link" href="#">Desarrolladores</a></li>
+                            <li><a class="footer-link" asp-controller="Servicios" asp-action="Index">Servicios</a></li>
+                            <li><a class="footer-link" asp-controller="Soluciones" asp-action="Index">Soluciones</a></li>
+                            <li><a class="footer-link" asp-controller="Desarrolladores" asp-action="Index">Desarrolladores</a></li>
                         </ul>
                         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
                             <li><a class="footer-link" asp-controller="Seguridad" asp-action="Index">Seguridad</a></li>

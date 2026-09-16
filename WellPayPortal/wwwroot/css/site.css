@@ -139,6 +139,8 @@ body {
     opacity: 0.75;
     pointer-events: none;
     z-index: 1;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 /* Luz Verde superior (Hero) */
@@ -284,6 +286,10 @@ body {
 
 .bg-light-green {
     background-color: #e6faf5;
+}
+
+.bg-light-blue {
+    background-color: #eef3fe;
 }
 
 .fs-7 {
@@ -752,8 +758,81 @@ html {
 #3d-secure,
 #sugef,
 #proteccion-datos,
-#seguridad-transacciones {
+#seguridad-transacciones,
+#desarrolladores,
+#documentacion,
+#integracion-servicios,
+#api,
+#sandbox,
+#guias-integracion,
+#soluciones,
+#soluciones-para-negocios,
+#medicos,
+#dentistas,
+#comercios,
+#restaurantes,
+#profesionales-independientes,
+#inteligencia-artificial,
+#reportes-financieros,
+#score-de-riesgo,
+#servicios,
+#creacion-cuentas-iban,
+#pago-inmediato-pin,
+#debito-tiempo-real-dtr,
+#sinpe-movil,
+#verificador-sinpe,
+#pagos-masivos,
+#cobros-masivos,
+#pagos-con-tarjeta,
+#checkout,
+#link-de-pagos,
+#cargos-recurrentes,
+#datafonos-fisicos {
     scroll-margin-top: 90px;
+}
+
+/* =========================================
+   BLOQUE DE CÓDIGO ESTILO TERMINAL (API)
+   ========================================= */
+.code-card {
+    background: var(--wellpay-navy);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(13, 27, 42, 0.25);
+}
+
+.code-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.code-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.code-card-title {
+    margin-left: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    font-family: monospace;
+}
+
+.code-card-body {
+    margin: 0;
+    padding: 20px;
+    color: #d5f7ec;
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 /* =========================================
@@ -871,4 +950,3 @@ html {
         transform: rotate(0deg);
     }
 }
-

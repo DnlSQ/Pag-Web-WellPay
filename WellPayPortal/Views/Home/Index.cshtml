@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewData["Title"] = "Inicio";
 }
 
@@ -31,10 +31,6 @@
                     <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
                         Solicitar afiliación
                     </button>
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary-custom btn-lg px-4 py-2 fs-6 fw-bold rounded-3 d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-play-circle text-primary-custom fs-5"></i>
-                        Conocer servicios
-                    </a>
                 </div>
 
                 <!-- Tres Características (Iconos abajo) -->
@@ -290,7 +286,7 @@
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Creación de cuentas IBAN</h5>
                     <p class="text-muted fs-7 mb-4 flex-grow-1">Cree cuentas IBAN empresariales para operar dentro del sistema financiero costarricense.</p>
-                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
                         Más información <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -305,7 +301,7 @@
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Pago Inmediato (PIN)</h5>
                     <p class="text-muted fs-7 mb-4 flex-grow-1">Realice pagos inmediatos entre entidades financieras de forma segura.</p>
-                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
                         Más información <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -320,7 +316,7 @@
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Débito en Tiempo Real (DTR)</h5>
                     <p class="text-muted fs-7 mb-4 flex-grow-1">Automatice los cobros mediante Débito en Tiempo Real.</p>
-                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
                         Más información <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -335,7 +331,7 @@
                     </div>
                     <h5 class="fw-bold text-dark mb-2">SINPE Móvil</h5>
                     <p class="text-muted fs-7 mb-4 flex-grow-1">Envíe y reciba dinero utilizando SINPE Móvil.</p>
-                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
                         Más información <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -350,7 +346,7 @@
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Pagos Masivos</h5>
                     <p class="text-muted fs-7 mb-4 flex-grow-1">Procese cientos de pagos desde un único archivo.</p>
-                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
                         Más información <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -365,7 +361,7 @@
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Cobros Masivos</h5>
                     <p class="text-muted fs-7 mb-4 flex-grow-1">Centralice el cobro de múltiples clientes.</p>
-                    <a href="#" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" class="btn btn-outline-wellpay fs-7 py-2 px-3 fw-semibold d-inline-flex align-items-center gap-1">
                         Más información <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>

@@ -792,6 +792,116 @@ html {
 }
 
 /* =========================================
+   IMAGEN CANDADO (POPUP PCI DSS): FLOTACIÓN + BRILLO
+   ========================================= */
+.security-visual-wrap {
+    position: relative;
+    display: inline-block;
+    max-width: 220px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    animation: security-float 6s ease-in-out infinite;
+}
+
+.security-visual-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.security-visual-wrap::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 35%;
+    height: 220%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+    transform: rotate(15deg);
+    animation: security-shine 3.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes security-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes security-shine {
+    0% {
+        left: -60%;
+    }
+    45% {
+        left: 130%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+/* =========================================
+   IMAGEN PLANETA (HERO SEGURIDAD): EFECTO RADAR
+   ========================================= */
+.security-hero-globe {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    width: 220px;
+    z-index: 1;
+}
+
+.security-visual-radar {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.security-visual-radar img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.security-visual-radar::before,
+.security-visual-radar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--wellpay-blue);
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+    z-index: 1;
+    animation: security-radar-ping 3s ease-out infinite;
+}
+
+.security-visual-radar::after {
+    animation-delay: 1.5s;
+}
+
+@keyframes security-radar-ping {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* =========================================
    BLOQUE DE CÓDIGO ESTILO TERMINAL (API)
    ========================================= */
 .code-card {

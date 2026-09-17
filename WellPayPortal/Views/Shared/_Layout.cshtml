@@ -309,41 +309,42 @@
                 </div>
 
                 <form id="formAfiliacion">
+                    @Html.AntiForgeryToken()
                     <div class="row g-3">
                         <!-- Nombre -->
                         <div class="col-md-6">
                             <label for="nombre" class="form-label-custom">Nombre</label>
-                            <input type="text" class="form-control form-control-stripe" id="nombre" required />
+                            <input type="text" name="Nombre" class="form-control form-control-stripe" id="nombre" required />
                         </div>
 
                         <!-- Apellidos -->
                         <div class="col-md-6">
                             <label for="apellidos" class="form-label-custom">Apellidos</label>
-                            <input type="text" class="form-control form-control-stripe" id="apellidos" required />
+                            <input type="text" name="Apellidos" class="form-control form-control-stripe" id="apellidos" required />
                         </div>
 
                         <!-- Cédula -->
                         <div class="col-md-6">
                             <label for="cedula" class="form-label-custom">Cédula / Identificación</label>
-                            <input type="text" class="form-control form-control-stripe" id="cedula"  required />
+                            <input type="text" name="Cedula" class="form-control form-control-stripe" id="cedula"  required />
                         </div>
 
                         <!-- Teléfono -->
                         <div class="col-md-6">
                             <label for="telefono" class="form-label-custom">Teléfono</label>
-                            <input type="tel" class="form-control form-control-stripe" id="telefono" required />
+                            <input type="tel" name="Telefono" class="form-control form-control-stripe" id="telefono" required />
                         </div>
 
                         <!-- Correo Electrónico -->
                         <div class="col-12">
                             <label for="correo" class="form-label-custom">Correo electrónico</label>
-                            <input type="email" class="form-control form-control-stripe" id="correo" required />
+                            <input type="email" name="Correo" class="form-control form-control-stripe" id="correo" required />
                         </div>
 
                         <!-- Dirección -->
                         <div class="col-12">
                             <label for="direccion" class="form-label-custom">Dirección física</label>
-                            <textarea class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
+                            <textarea name="Direccion" class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
                         </div>
                     </div>
 

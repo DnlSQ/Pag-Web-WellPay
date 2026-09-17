@@ -154,17 +154,88 @@
                     <p class="text-muted mb-3">
                         Enviános tu currículum y contanos en qué área te gustaría aportar tu talento.
                     </p>
-                    <a href="mailto:trabajaconnosotros@well-pay.com"
-                       class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm">
+                    <button type="button"
+                            class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm"
+                            data-bs-toggle="modal" data-bs-target="#postulacionModal">
                         Enviar mi CV
                         <i class="bi bi-arrow-right ms-1"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
 
     </div>
 </section>
+
+<!-- MODAL - POSTULACIÓN -->
+<div class="modal fade modal-stripe" id="postulacionModal" tabindex="-1" aria-labelledby="postulacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
+
+            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                <h4 class="modal-title fw-bold text-dark" id="postulacionModalLabel">Postulación</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body pt-2">
+                <p class="text-muted mb-4">
+                    Contanos un poco sobre vos y adjuntá tu currículum en PDF.
+                </p>
+
+                <form id="formPostulacion" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="postulacionNombre" class="form-label-custom">Nombre completo</label>
+                            <input type="text" name="Nombre" class="form-control form-control-stripe" id="postulacionNombre" required />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="postulacionTelefono" class="form-label-custom">Teléfono</label>
+                            <input type="tel" name="Telefono" class="form-control form-control-stripe" id="postulacionTelefono" required />
+                        </div>
+
+                        <div class="col-12">
+                            <label for="postulacionCorreo" class="form-label-custom">Correo electrónico</label>
+                            <input type="email" name="Correo" class="form-control form-control-stripe" id="postulacionCorreo" required />
+                        </div>
+
+                        <div class="col-12">
+                            <label for="postulacionArea" class="form-label-custom">Área de interés</label>
+                            <select name="AreaInteres" class="form-control form-control-stripe" id="postulacionArea" required>
+                                <option value="" selected disabled>Seleccioná un área...</option>
+                                <option value="Desarrollo / Tecnología">Desarrollo / Tecnología</option>
+                                <option value="Ventas / Comercial">Ventas / Comercial</option>
+                                <option value="Atención al cliente">Atención al cliente</option>
+                                <option value="Administración / Finanzas">Administración / Finanzas</option>
+                                <option value="Otra">Otra</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="postulacionCv" class="form-label-custom">Currículum (PDF, máx. 5MB)</label>
+                            <input type="file" name="Cv" class="form-control form-control-stripe" id="postulacionCv" accept="application/pdf" required />
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-wellpay btn-lg fs-6 fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
+                            <span>Enviar postulación</span>
+                            <i class="bi bi-arrow-right fs-5"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+                <small class="text-muted fs-8">
+                    <i class="bi bi-shield-lock text-wellpay me-1"></i> Tu información y CV se envían de forma segura.
+                </small>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <!-- ============================================================
      CONTACTO

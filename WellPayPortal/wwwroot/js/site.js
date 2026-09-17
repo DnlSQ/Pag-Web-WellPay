@@ -98,31 +98,158 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // 🟢 SI TODO ESTÁ CORRECTO:
+            // 🟢 CAMPOS VÁLIDOS: enviar de verdad al servidor
+            const form = this;
+            const botonEnviar = form.querySelector('button[type="submit"]');
+            const textoOriginalBoton = botonEnviar.innerHTML;
+            botonEnviar.disabled = true;
+            botonEnviar.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
 
-            // 1. Ocultar el modal de Bootstrap
-            const modalElement = document.getElementById('afiliacionModal');
-            if (modalElement) {
-                const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
-                modalInstance.hide();
+            const datos = new FormData(form);
+
+            fetch('/Afiliacion/Enviar', {
+                method: 'POST',
+                body: datos
+            })
+                .then(function (respuesta) {
+                    return respuesta.json().then(function (json) {
+                        return { ok: respuesta.ok, json: json };
+                    });
+                })
+                .then(function (resultado) {
+                    if (!resultado.ok || !resultado.json.ok) {
+                        throw new Error(resultado.json.mensaje || 'No se pudo enviar la solicitud.');
+                    }
+
+                    // Ocultar el modal de Bootstrap
+                    const modalElement = document.getElementById('afiliacionModal');
+                    if (modalElement) {
+                        const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+                        modalInstance.hide();
+                    }
+
+                    form.reset();
+                    form.classList.remove('was-validated');
+
+                    Swal.fire({
+                        title: '¡Solicitud enviada con éxito!',
+                        text: 'Nos pondremos en contacto contigo lo antes posible para continuar con el proceso.',
+                        icon: 'success',
+                        confirmButtonText: 'Aceptar',
+                        confirmButtonColor: '#00c992', // Verde Well-Pay
+                        customClass: {
+                            popup: 'rounded-4 shadow-lg border-0',
+                            confirmButton: 'px-4 py-2 rounded-3 fw-bold'
+                        }
+                    });
+                })
+                .catch(function (error) {
+                    Swal.fire({
+                        title: 'No se pudo enviar',
+                        text: error.message || 'Ocurrió un error inesperado. Intenta de nuevo.',
+                        icon: 'error',
+                        confirmButtonText: 'Entendido',
+                        confirmButtonColor: '#dc3545',
+                        customClass: {
+                            popup: 'rounded-4 shadow-lg border-0',
+                            confirmButton: 'btn btn-danger px-4 py-2 rounded-3 fw-bold'
+                        }
+                    });
+                })
+                .finally(function () {
+                    botonEnviar.disabled = false;
+                    botonEnviar.innerHTML = textoOriginalBoton;
+                });
+        });
+    }
+
+
+    // --- FORMULARIO DE POSTULACIÓN ---
+    const formPostulacion = document.getElementById('formPostulacion');
+
+    if (formPostulacion) {
+        formPostulacion.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+
+                Swal.fire({
+                    title: '¡Campos incompletos!',
+                    text: 'Por favor, completa todos los campos y adjuntá tu CV en PDF antes de enviar.',
+                    icon: 'warning',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#ffc107',
+                    customClass: {
+                        popup: 'rounded-4 shadow-lg border-0',
+                        confirmButton: 'btn btn-warning px-4 py-2 rounded-3 fw-bold text-dark'
+                    }
+                });
+
+                this.classList.add('was-validated');
+                return;
             }
 
-            // 2. Limpiar todos los campos del formulario
-            this.reset();
-            this.classList.remove('was-validated');
+            const form = this;
+            const botonEnviar = form.querySelector('button[type="submit"]');
+            const textoOriginalBoton = botonEnviar.innerHTML;
+            botonEnviar.disabled = true;
+            botonEnviar.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
 
-            // 3. Mostrar la alerta de éxito con SweetAlert2
-            Swal.fire({
-                title: '¡Solicitud enviada con éxito!',
-                text: 'Nos pondremos en contacto contigo lo antes posible para continuar con el proceso.',
-                icon: 'success',
-                confirmButtonText: 'Aceptar',
-                confirmButtonColor: '#00c992', // Verde Well-Pay
-                customClass: {
-                    popup: 'rounded-4 shadow-lg border-0',
-                    confirmButton: 'px-4 py-2 rounded-3 fw-bold'
-                }
-            });
+            const datos = new FormData(form);
+
+            fetch('/Postulacion/Enviar', {
+                method: 'POST',
+                body: datos
+            })
+                .then(function (respuesta) {
+                    return respuesta.json().then(function (json) {
+                        return { ok: respuesta.ok, json: json };
+                    });
+                })
+                .then(function (resultado) {
+                    if (!resultado.ok || !resultado.json.ok) {
+                        throw new Error(resultado.json.mensaje || 'No se pudo enviar tu postulación.');
+                    }
+
+                    const modalElement = document.getElementById('postulacionModal');
+                    if (modalElement) {
+                        const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+                        modalInstance.hide();
+                    }
+
+                    form.reset();
+                    form.classList.remove('was-validated');
+
+                    Swal.fire({
+                        title: '¡Postulación enviada!',
+                        text: 'Gracias por tu interés en Well-Pay. Revisaremos tu perfil y te contactaremos si aplica.',
+                        icon: 'success',
+                        confirmButtonText: 'Aceptar',
+                        confirmButtonColor: '#00c992',
+                        customClass: {
+                            popup: 'rounded-4 shadow-lg border-0',
+                            confirmButton: 'px-4 py-2 rounded-3 fw-bold'
+                        }
+                    });
+                })
+                .catch(function (error) {
+                    Swal.fire({
+                        title: 'No se pudo enviar',
+                        text: error.message || 'Ocurrió un error inesperado. Intenta de nuevo.',
+                        icon: 'error',
+                        confirmButtonText: 'Entendido',
+                        confirmButtonColor: '#dc3545',
+                        customClass: {
+                            popup: 'rounded-4 shadow-lg border-0',
+                            confirmButton: 'btn btn-danger px-4 py-2 rounded-3 fw-bold'
+                        }
+                    });
+                })
+                .finally(function () {
+                    botonEnviar.disabled = false;
+                    botonEnviar.innerHTML = textoOriginalBoton;
+                });
         });
     }
 

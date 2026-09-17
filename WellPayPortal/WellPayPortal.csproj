@@ -4,11 +4,16 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>c23f372b-1eb9-4eac-a46b-0b67150dbead</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Folder Include="wwwroot\fonts\" />
 		<Folder Include="wwwroot\vendor\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MailKit" Version="4.16.0" />
 	</ItemGroup>
 
 </Project>

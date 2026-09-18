@@ -7,13 +7,19 @@
     <div class="glow-shape glow-top-right"></div>
     <div class="glow-shape glow-bottom-right"></div>
 
+    <div class="hero-side-visual d-none d-lg-block" style="width: 320px; right: 150px;">
+        <div class="security-visual-wrap" style="max-width: 320px;">
+            <img src="~/images/logos/logo.png" alt="Well-Pay" />
+        </div>
+    </div>
+
     <div class="container py-4 position-relative text-center" style="z-index: 2;">
         <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
             <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Nosotros</small>
         </div>
 
         <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-            Conocé a <span class="text-wellpay">Well-Pay</span>
+            Conocé a <span class="text-primary-custom">Well-Pay</span>
         </h1>
 
         <p class="lead text-secondary fs-6 fw-normal mx-auto" style="max-width: 700px;">
@@ -35,7 +41,7 @@
                 </div>
 
                 <h2 class="display-5 fw-extrabold text-dark mb-4 lh-sm">
-                    Nuestra <span class="text-wellpay">historia y trayectoria</span>
+                    Nuestra <span class="text-primary-custom">historia y trayectoria</span>
                 </h2>
 
                 <!-- TODO: reemplazar por la historia real de la empresa (año de fundación, hitos, fundadores, etc.) -->
@@ -53,31 +59,13 @@
             </div>
 
             <div class="col-lg-6">
-                <div class="row g-3">
-                    <div class="col-6">
-                        <div class="value-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center">
-                            <i class="bi bi-shield-check fs-3 text-wellpay mb-2 d-block"></i>
-                            <h6 class="fw-bold text-dark mb-0">Seguridad</h6>
-                        </div>
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;"
+                     data-bs-toggle="modal" data-bs-target="#valoresModal">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
+                        <i class="bi bi-heart-fill fs-4"></i>
                     </div>
-                    <div class="col-6">
-                        <div class="value-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center">
-                            <i class="bi bi-lightning-charge-fill fs-3 text-wellpay mb-2 d-block"></i>
-                            <h6 class="fw-bold text-dark mb-0">Agilidad</h6>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="value-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center">
-                            <i class="bi bi-people-fill fs-3 text-wellpay mb-2 d-block"></i>
-                            <h6 class="fw-bold text-dark mb-0">Cercanía</h6>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="value-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center">
-                            <i class="bi bi-graph-up-arrow fs-3 text-wellpay mb-2 d-block"></i>
-                            <h6 class="fw-bold text-dark mb-0">Innovación</h6>
-                        </div>
-                    </div>
+                    <h4 class="fw-bold text-dark mb-3">Valores</h4>
+                    <p class="text-muted mb-0">Seguridad, agilidad, cercanía e innovación guían todo lo que hacemos.</p>
                 </div>
             </div>
         </div>
@@ -85,7 +73,8 @@
         <!-- MISIÓN Y VISIÓN -->
         <div id="mision" class="row g-4 row-cols-1 row-cols-md-2">
             <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;"
+                     data-bs-toggle="modal" data-bs-target="#misionModal">
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-bullseye fs-4"></i>
                     </div>
@@ -99,7 +88,8 @@
             </div>
 
             <div id="vision" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;"
+                     data-bs-toggle="modal" data-bs-target="#visionModal">
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-eye-fill fs-4"></i>
                     </div>
@@ -113,8 +103,110 @@
             </div>
         </div>
 
+
     </div>
 </section>
+
+        <!-- MODAL - MISIÓN -->
+        <div class="modal fade modal-stripe" id="misionModal" tabindex="-1" aria-labelledby="misionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
+                    <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                        <h4 class="modal-title fw-bold text-dark" id="misionModalLabel">Nuestra Misión</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-2">
+                        <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
+                            <i class="bi bi-bullseye fs-4"></i>
+                        </div>
+                        <!-- TODO: confirmar redacción oficial y ampliada de la misión -->
+                        <p class="text-secondary mb-0">
+                            Facilitar el acceso de las empresas costarricenses a herramientas de pago seguras,
+                            ágiles y en tiempo real, impulsando su crecimiento y competitividad. Trabajamos
+                            cada día para que cualquier negocio, sin importar su tamaño, pueda cobrar y pagar
+                            de forma simple, moderna y confiable.
+                        </p>
+                    </div>
+                    <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+                        <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL - VISIÓN -->
+        <div class="modal fade modal-stripe" id="visionModal" tabindex="-1" aria-labelledby="visionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
+                    <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                        <h4 class="modal-title fw-bold text-dark" id="visionModalLabel">Nuestra Visión</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-2">
+                        <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
+                            <i class="bi bi-eye-fill fs-4"></i>
+                        </div>
+                        <!-- TODO: confirmar redacción oficial y ampliada de la visión -->
+                        <p class="text-secondary mb-0">
+                            Ser la plataforma de pagos de referencia en Costa Rica, reconocida por su seguridad,
+                            innovación y cercanía con cada cliente. Aspiramos a que cada vez más negocios del
+                            país elijan a Well-Pay como su aliado de confianza para gestionar sus pagos.
+                        </p>
+                    </div>
+                    <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+                        <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL - VALORES -->
+        <div class="modal fade modal-stripe" id="valoresModal" tabindex="-1" aria-labelledby="valoresModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
+                    <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                        <h4 class="modal-title fw-bold text-dark" id="valoresModalLabel">Nuestros Valores</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-2">
+                        <!-- TODO: confirmar redacción oficial de cada valor -->
+                        <div class="row g-3">
+                            <div class="col-md-6 d-flex gap-2">
+                                <i class="bi bi-shield-check text-wellpay fs-5 mt-1"></i>
+                                <div>
+                                    <strong class="d-block text-dark">Seguridad</strong>
+                                    <span class="text-muted small">Protegemos cada operación y cada dato de nuestros clientes.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex gap-2">
+                                <i class="bi bi-lightning-charge-fill text-wellpay fs-5 mt-1"></i>
+                                <div>
+                                    <strong class="d-block text-dark">Agilidad</strong>
+                                    <span class="text-muted small">Resolvemos rápido, sin trámites innecesarios.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex gap-2">
+                                <i class="bi bi-people-fill text-wellpay fs-5 mt-1"></i>
+                                <div>
+                                    <strong class="d-block text-dark">Cercanía</strong>
+                                    <span class="text-muted small">Acompañamos a cada negocio como si fuera propio.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex gap-2">
+                                <i class="bi bi-graph-up-arrow text-wellpay fs-5 mt-1"></i>
+                                <div>
+                                    <strong class="d-block text-dark">Innovación</strong>
+                                    <span class="text-muted small">Mejoramos constantemente nuestra plataforma y servicios.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 pt-0 text-center justify-content-center">
+                        <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <!-- ============================================================
      TRABAJA CON NOSOTROS (incluye Postulación)
@@ -125,14 +217,20 @@
 
     <div class="container py-5 position-relative" style="z-index: 2;">
 
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-4 text-center">
+                <div class="security-visual-wrap" style="max-width: 420px;">
+                    <img src="~/images/logos/trabajanosotros.png" alt="Trabaja con nosotros" />
+                </div>
+            </div>
+
+            <div class="col-lg-8 text-center text-lg-start">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Trabaja con nosotros</small>
                 </div>
 
                 <h2 class="display-5 fw-extrabold text-dark mb-4 lh-sm">
-                    Construí el futuro de los <span class="text-wellpay">pagos en Costa Rica</span>
+                    Construí el futuro de los <span class="text-primary-custom">pagos en Costa Rica</span>
                 </h2>
 
                 <!-- TODO: confirmar mensaje oficial sobre cultura/beneficios de la empresa -->
@@ -243,17 +341,23 @@
 <section id="contacto" class="py-5 bg-white position-relative overflow-hidden">
     <div class="container py-3 position-relative" style="z-index: 2;">
 
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-4 text-center order-lg-2">
+                <div class="security-visual-wrap" style="max-width: 320px;">
+                    <img src="~/images/logos/RedPagos.png" alt="Red global de pagos segura" />
+                </div>
+            </div>
+
+            <div class="col-lg-8 text-center text-lg-start order-lg-1">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Contacto</small>
                 </div>
 
                 <h2 class="display-5 fw-extrabold text-dark mb-4 lh-sm">
-                    Hablemos sobre <span class="text-wellpay">tu negocio</span>
+                    Hablemos sobre <span class="text-primary-custom">tu negocio</span>
                 </h2>
 
-                <p class="lead text-secondary fs-6 fw-normal max-w-700 mx-auto">
+                <p class="lead text-secondary fs-6 fw-normal">
                     Contactanos y te ayudamos a encontrar la solución de pagos que tu empresa necesita.
                 </p>
             </div>

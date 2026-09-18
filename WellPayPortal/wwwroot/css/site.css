@@ -27,6 +27,48 @@ body {
     color: var(--wellpay-green) !important;
 }
 
+/* =========================================
+   LOGO ANIMADO (tarjeta + ondas de señal)
+   ========================================= */
+.wellpay-logo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.wellpay-logo-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.wp-wave {
+    animation: wp-wave-pulse 1.8s ease-in-out infinite;
+}
+
+.wp-wave-1 {
+    animation-delay: 0s;
+}
+
+.wp-wave-2 {
+    animation-delay: 0.3s;
+}
+
+.wp-wave-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes wp-wave-pulse {
+    0%, 100% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 .fw-extrabold {
     font-weight: 800;
 }
@@ -294,6 +336,10 @@ body {
 
 .fs-7 {
     font-size: 0.875rem;
+}
+
+.pt-6 {
+    padding-top: 6rem !important;
 }
 
 .fs-8 {
@@ -832,6 +878,27 @@ html {
     }
 }
 
+/* Variante: solo flotación, sin brillo (para imágenes tipo "nube") */
+.visual-float-wrap {
+    display: inline-block;
+    animation: cloud-float 5s ease-in-out infinite;
+}
+
+.visual-float-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes cloud-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
 @keyframes security-shine {
     0% {
         left: -60%;
@@ -847,7 +914,7 @@ html {
 /* =========================================
    IMAGEN PLANETA (HERO SEGURIDAD): EFECTO RADAR
    ========================================= */
-.security-hero-globe {
+.hero-side-visual {
     position: absolute;
     top: 50%;
     right: 70px;
@@ -860,6 +927,110 @@ html {
     position: relative;
     display: inline-block;
     width: 100%;
+}
+
+/* =========================================
+   OPCIÓN 1: BALANCEO SUAVE (hojacodigo)
+   ========================================= */
+.wp-sway-wrap {
+    display: inline-block;
+    width: 100%;
+    transform-origin: bottom center;
+    animation: wp-sway 4s ease-in-out infinite;
+}
+
+.wp-sway-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes wp-sway {
+    0%, 100% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+}
+
+/* =========================================
+   OPCIÓN 2: REBOTE VERTICAL CON ATERRIZAJE (Nube)
+   ========================================= */
+.wp-bounce-wrap {
+    display: inline-block;
+    width: 100%;
+    animation: wp-bounce 2.4s cubic-bezier(0.33, 0, 0.2, 1) infinite;
+}
+
+.wp-bounce-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes wp-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-16px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    52% {
+        transform: translateY(-6px);
+    }
+    64% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   OPCIÓN 3: PULSO DE SOMBRA (Pantalla)
+   ========================================= */
+.wp-shadow-pulse-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.wp-shadow-pulse-wrap img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.wp-shadow-pulse-wrap::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 65%;
+    height: 16px;
+    background: rgba(13, 27, 42, 0.28);
+    border-radius: 50%;
+    filter: blur(5px);
+    transform: translateX(-50%) scale(1);
+    z-index: 0;
+    animation: wp-shadow-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes wp-shadow-pulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(-50%) scale(0.7);
+        opacity: 0.25;
+    }
 }
 
 .security-visual-radar img {

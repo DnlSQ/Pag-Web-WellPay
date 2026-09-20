@@ -3,30 +3,56 @@
 }
 
 <!-- MINI HERO SEGURIDAD -->
-<section id="seguridad-wellpay" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="glow-shape glow-top-right"></div>
-    <div class="glow-shape glow-bottom-right"></div>
+<section id="seguridad-wellpay" class="py-5 bg-white position-relative overflow-hidden hero-fade-bottom">
+    <div class="container py-3 position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
+                    <i class="bi bi-shield-check"></i>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Seguridad</small>
+                </div>
 
-    <div class="hero-side-visual d-none d-lg-block">
-        <div class="security-visual-radar">
-            <img src="~/images/logos/Planeta.png" alt="Seguridad global de transacciones" />
+                <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
+                    Seguridad integrada <span class="text-primary-custom">en cada operación</span>
+                </h1>
+
+                <p class="lead text-secondary fs-6 fw-normal">
+                    La seguridad forma parte de cada proceso de Well-Pay. Aplicamos controles y estándares
+                    reconocidos internacionalmente para proteger la información y las operaciones de nuestros clientes.
+                </p>
+            </div>
+
+            <div class="col-lg-6 d-none d-lg-block position-relative">
+                <div class="glow-shape glow-top-right glow-half"></div>
+                <div class="glow-shape glow-bottom-right glow-half"></div>
+
+                <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-4 bg-white mx-auto position-relative" style="max-width: 340px; z-index: 2;">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <span class="service-icon-shape bg-light-green text-wellpay rounded-circle" style="width:44px; height:44px;">
+                            <i class="bi bi-shield-fill-check"></i>
+                        </span>
+                        <div>
+                            <small class="text-muted d-block">Transacción</small>
+                            <span class="fw-bold text-dark">Verificada</span>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                        <li class="d-flex justify-content-between align-items-center p-2 rounded-3 bg-light">
+                            <span class="small fw-bold text-dark">PCI DSS</span>
+                            <i class="bi bi-check-circle-fill text-wellpay"></i>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center p-2 rounded-3 bg-light">
+                            <span class="small fw-bold text-dark">3-D Secure</span>
+                            <i class="bi bi-check-circle-fill text-wellpay"></i>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center p-2 rounded-3 bg-light">
+                            <span class="small fw-bold text-dark">Monitoreo 24/7</span>
+                            <i class="bi bi-check-circle-fill text-wellpay"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="container py-4 position-relative text-center" style="z-index: 2;">
-        <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-            <i class="bi bi-shield-check"></i>
-            <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Seguridad</small>
-        </div>
-
-        <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-            Seguridad integrada <span class="text-primary-custom">en cada operación</span>
-        </h1>
-
-        <p class="lead text-secondary fs-6 fw-normal mx-auto" style="max-width: 700px;">
-            La seguridad forma parte de cada proceso de Well-Pay. Aplicamos controles y estándares
-            reconocidos internacionalmente para proteger la información y las operaciones de nuestros clientes.
-        </p>
     </div>
 </section>
 
@@ -34,10 +60,7 @@
      PCI DSS
      ============================================================ -->
 <section id="pci-dss" class="py-5 position-relative overflow-hidden bg-light-subtle">
-    <div class="glow-shape glow-services-top-left"></div>
-    <div class="glow-shape glow-services-bottom-right"></div>
-
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -60,26 +83,22 @@
                     lo que nos permite mantener altos estándares de protección frente a los riesgos asociados
                     al manejo de datos de pago.
                 </p>
-
-                <button type="button"
-                        class="security-more-link d-inline-flex align-items-center gap-2 border-0 bg-transparent p-0"
-                        data-bs-toggle="modal" data-bs-target="#pciDssModal">
-                    Más información sobre la certificación
-                    <i class="bi bi-arrow-right"></i>
-                </button>
             </div>
 
             <div class="col-lg-6">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#pciDssModal">
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-patch-check-fill fs-4"></i>
                     </div>
                     <h5 class="fw-bold text-dark mb-2">¿Qué protege PCI DSS?</h5>
-                    <p class="text-muted mb-0">
+                    <p class="text-muted mb-3">
                         Establece requisitos y buenas prácticas para las empresas que manejan, procesan o
                         almacenan datos de tarjetas de crédito y débito, reduciendo el riesgo de robo de
                         identidad, fraude y uso indebido de la información.
                     </p>
+                    <span class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-arrow-right"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -98,12 +117,7 @@
 
             <div class="modal-body pt-2">
                 <div class="row align-items-center g-4 mb-2">
-                    <div class="col-md-4 text-center">
-                        <div class="security-visual-wrap">
-                            <img src="~/images/logos/Candado.png" alt="Candado de seguridad digital" />
-                        </div>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-12">
                         <!-- TODO: confirmar con el equipo el año de certificación real y la periodicidad exacta de recertificación antes de publicar -->
                         <p class="text-secondary mb-3">
                             PCI DSS (Payment Card Industry Data Security Standard) es el estándar creado por el
@@ -176,9 +190,11 @@
         </div>
     </div>
 </div>
-
+<!-- ============================================================
+     3d-secure
+     ============================================================ -->
 <section id="3d-secure" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -201,26 +217,22 @@
                     contra los datos ingresados por el usuario, para luego verificar el código de autenticación
                     enviado y confirmar que la transacción es legítima.
                 </p>
-
-                <button type="button"
-                        class="security-more-link d-inline-flex align-items-center gap-2 border-0 bg-transparent p-0"
-                        data-bs-toggle="modal" data-bs-target="#tresDSecureModal">
-                    Más información sobre 3-D Secure
-                    <i class="bi bi-arrow-right"></i>
-                </button>
             </div>
 
             <div class="col-lg-6 order-lg-1">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#tresDSecureModal">
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-key-fill fs-4"></i>
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Beneficio para tu negocio</h5>
-                    <p class="text-muted mb-0">
+                    <p class="text-muted mb-3">
                         Al verificar la identidad del tarjetahabiente en tiempo real, 3DS reduce el riesgo de
                         transacciones no autorizadas, aportando una capa adicional de confianza tanto para el
                         comercio como para el cliente final.
                     </p>
+                    <span class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-arrow-right"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -239,12 +251,7 @@
 
             <div class="modal-body pt-2">
                 <div class="row align-items-center g-4 mb-2">
-                    <div class="col-md-4 text-center">
-                        <div class="security-visual-wrap">
-                            <img src="~/images/logos/Huella.png" alt="Autenticación biométrica" />
-                        </div>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-12">
                         <p class="text-secondary mb-0">
                             3-D Secure es un protocolo diseñado para reducir el fraude en las compras en
                             línea, agregando un mecanismo adicional de autenticación durante la transacción.
@@ -321,10 +328,7 @@
      SUGEF
      ============================================================ -->
 <section id="sugef" class="py-5 position-relative overflow-hidden bg-light-subtle">
-    <div class="glow-shape glow-services-top-right"></div>
-    <div class="glow-shape glow-services-bottom-left"></div>
-
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row justify-content-center text-center mb-4">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -339,7 +343,7 @@
 
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="service-card bg-white p-4 p-lg-5 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card bg-white p-4 p-lg-5 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#sugefModal">
                     <p class="text-secondary fs-6 fw-normal mb-0">
                         Well-Pay se encuentra inscrito como <strong>APNFD</strong> (Actividad o Profesión No
                         Financiera Designada) bajo el <strong>Artículo 15 y 15 bis</strong> de la Ley N.° 7786,
@@ -355,12 +359,9 @@
                     </p>
 
                     <div class="text-center">
-                        <button type="button"
-                                class="security-more-link d-inline-flex align-items-center gap-2 border-0 bg-transparent p-0"
-                                data-bs-toggle="modal" data-bs-target="#sugefModal">
-                            Más información
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
+                        <span class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1">
+                            Más información <i class="bi bi-arrow-right"></i>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -380,12 +381,7 @@
 
             <div class="modal-body pt-2">
                 <div class="row align-items-center g-4 mb-2">
-                    <div class="col-md-4 text-center">
-                        <div class="security-visual-wrap">
-                            <img src="~/images/logos/sello.png" alt="Sello de cumplimiento regulatorio" />
-                        </div>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-12">
                         <p class="text-secondary mb-0">
                             La <strong>SUGEF</strong> (Superintendencia General de Entidades Financieras) es
                             el ente que supervisa a las entidades financieras en Costa Rica, con el objetivo
@@ -456,7 +452,7 @@
      PROTECCIÓN DE DATOS
      ============================================================ -->
 <section id="proteccion-datos" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -475,25 +471,21 @@
                 </p>
 
                 <!-- TODO: ampliar con el detalle oficial de controles/mecanismos de protección de datos -->
-
-                <button type="button"
-                        class="security-more-link d-inline-flex align-items-center gap-2 border-0 bg-transparent p-0"
-                        data-bs-toggle="modal" data-bs-target="#proteccionDatosModal">
-                    Más información
-                    <i class="bi bi-arrow-right"></i>
-                </button>
             </div>
 
             <div class="col-lg-6">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#proteccionDatosModal">
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-lock-fill fs-4"></i>
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Cero almacenamiento</h5>
-                    <p class="text-muted mb-0">
+                    <p class="text-muted mb-3">
                         Al no almacenar datos sensibles, eliminamos uno de los principales puntos de riesgo
                         en el manejo de información de pagos: una base de datos que pueda ser vulnerada.
                     </p>
+                    <span class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1">
+                        Más información <i class="bi bi-arrow-right"></i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -512,12 +504,7 @@
 
             <div class="modal-body pt-2">
                 <div class="row align-items-center g-4 mb-2">
-                    <div class="col-md-4 text-center">
-                        <div class="security-visual-wrap">
-                            <img src="~/images/logos/Tarjeta.png" alt="Tarjeta protegida" />
-                        </div>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-12">
                         <p class="text-secondary mb-0">
                             El principio central de Well-Pay en materia de protección de datos es simple:
                             <strong>no almacenamos información sensible de tarjetahabientes</strong> (número
@@ -587,17 +574,8 @@
      SEGURIDAD DE LAS TRANSACCIONES
      ============================================================ -->
 <section id="seguridad-transacciones" class="py-5 position-relative overflow-hidden bg-light-subtle">
-    <div class="glow-shape glow-services-top-left"></div>
-    <div class="glow-shape glow-services-bottom-right"></div>
-
-    <div class="container py-3 position-relative" style="z-index: 2;">
-        <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-4 text-center">
-                <div class="security-visual-wrap">
-                    <img src="~/images/logos/Nodo.png" alt="Monitoreo inteligente de transacciones" />
-                </div>
-            </div>
-
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
+        <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Seguridad de las transacciones</small>

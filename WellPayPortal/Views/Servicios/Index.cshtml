@@ -2,25 +2,82 @@
     ViewData["Title"] = "Servicios";
 }
 
-<!-- MINI HERO SERVICIOS -->
-<section id="servicios" class="py-5 bg-white position-relative overflow-hidden">
+<!-- ============================================================
+     HERO SERVICIOS
+     ============================================================ -->
+<section id="servicios" class="py-5 bg-white position-relative overflow-hidden hero-fade-bottom">
+    <div class="container pt-3 pb-1 position-relative" style="z-index: 2;">
     <div class="glow-shape glow-top-right"></div>
     <div class="glow-shape glow-bottom-right"></div>
 
-    <div class="container py-4 position-relative text-center" style="z-index: 2;">
-        <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-            <i class="bi bi-grid-1x2-fill"></i>
-            <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Servicios</small>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <small>Servicios</small>
+                </div>
+
+                <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
+                    Cuentas, pagos y cobros <span class="text-primary-custom">para tu empresa, en un solo lugar</span>
+                </h1>
+
+                <p class="lead text-secondary fs-6 fw-normal mb-4">
+                    Cuentas, transferencias, cobros masivos, pagos con tarjeta y datáfonos físicos,
+                    integrados en una sola cuenta Well-Pay.
+                </p>
+
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        Solicitar afiliación
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark btn-lg px-4 py-2 fs-6 fw-bold rounded-3 btn-full-mobile d-inline-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-whatsapp"></i> Hablar con un asesor
+                    </a>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success"><i class="bi bi-lightning-charge-fill fs-6"></i></div>
+                        <small class="fw-semibold text-dark">Tiempo real</small>
+                    </div>
+                    <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success"><i class="bi bi-shield-check fs-6"></i></div>
+                        <small class="fw-semibold text-dark">Seguro</small>
+                    </div>
+                    <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success"><i class="bi bi-code-slash fs-6"></i></div>
+                        <small class="fw-semibold text-dark">Fácil integración</small>
+                    </div>
+                    <div class="col-6 col-md-3 d-flex align-items-center gap-2">
+                        <div class="icon-shape bg-light rounded-3 p-2 text-success"><i class="bi bi-headset fs-6"></i></div>
+                        <small class="fw-semibold text-dark">Soporte local</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="hero-mockup-stack">
+                    <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-3 bg-white hero-mockup-back">
+                        <small class="fw-bold text-dark d-block mb-2">Saldo disponible</small>
+                        <strong class="fs-4 fw-extrabold text-dark">₡12.458.750,00</strong>
+                        <div class="mt-2"><span class="badge bg-success-subtle text-success">+ ₡300.000,00 hoy</span></div>
+                    </div>
+                    <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-3 bg-white hero-mockup-front">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="fw-bold text-dark">Último cobro</small>
+                            <span class="badge bg-success-subtle text-success">Aprobado</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-light">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-check-lg"></i></span>
+                                <small class="fw-bold text-dark">SINPE Móvil - Cliente F</small>
+                            </div>
+                            <small class="fw-bold text-success">+ ₡65.000,00</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-            Todos los servicios financieros <span class="text-primary-custom">desde una sola plataforma</span>
-        </h1>
-
-        <p class="lead text-secondary fs-6 fw-normal mx-auto" style="max-width: 700px;">
-            Cuentas, transferencias, cobros masivos, pagos con tarjeta y datáfonos físicos,
-            integrados en una sola cuenta Well-Pay.
-        </p>
     </div>
 </section>
 
@@ -28,83 +85,96 @@
      CUENTAS Y TRANSFERENCIAS
      ============================================================ -->
 <section class="py-5 position-relative overflow-hidden bg-light-subtle">
-
-    <div class="container pt-6 pb-5 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-1 position-relative" style="z-index: 2;">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Cuentas y transferencias</small>
+                    <small>Cuentas y transferencias</small>
                 </div>
-
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
                     Movimiento de fondos <span class="text-primary-custom">en tiempo real</span>
                 </h2>
             </div>
         </div>
 
-        <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
-            <div id="creacion-cuentas-iban" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px;">
+        <!-- Fila destacada: IBAN + Verificador SINPE -->
+        <div class="row g-4 mb-4">
+            <div id="creacion-cuentas-iban" class="col-md-6">
+                <div class="service-card-v2 h-100">
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-bank fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Creación de cuentas IBAN</h6>
+                    <h5 class="fw-bold text-dark mb-2">Cuenta IBAN</h5>
+                    <p class="fw-semibold text-dark mb-1">Centralizá tus fondos en una sola cuenta.</p>
                     <!-- TODO: confirmar detalles operativos exactos con el equipo -->
-                    <p class="text-muted mb-0 small">
-                        Abrí una cuenta IBAN para tu empresa y centralizá tus fondos con un número
-                        de cuenta listo para recibir transferencias locales e internacionales.
+                    <p class="service-card-text mb-0">
+                        Abrí una cuenta IBAN para tu empresa, lista para recibir transferencias
+                        locales e internacionales.
                     </p>
                 </div>
             </div>
 
+            <div id="verificador-sinpe" class="col-md-6">
+                <div class="service-card-v2 h-100">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 flex-shrink-0">
+                            <i class="bi bi-patch-check-fill fs-4"></i>
+                        </div>
+                        <div class="verificador-mini-receipt flex-shrink-0 d-none d-sm-block">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Comprobante válido</span>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Verificador SINPE</h5>
+                    <p class="fw-semibold text-dark mb-1">Evitá fraudes con comprobantes falsos.</p>
+                    <p class="service-card-text mb-0">
+                        Confirmá al instante si un comprobante de SINPE Móvil es válido antes de
+                        entregar tu producto o servicio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila de 3 tarjetas iguales -->
+        <div class="row g-4 row-cols-1 row-cols-sm-3">
             <div id="pago-inmediato-pin" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px;">
+                <div class="service-card-v2 h-100">
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-lightning-charge-fill fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Pago Inmediato (PIN)</h6>
-                    <p class="text-muted mb-0 small">
-                        Recibí transferencias interbancarias que se acreditan al instante,
-                        disponibles de inmediato para tu operación diaria.
+                    <h6 class="fw-bold text-dark mb-2">Pago inmediato (PIN)</h6>
+                    <p class="fw-semibold text-dark mb-1 small">Transferencias interbancarias al instante.</p>
+                    <p class="service-card-text mb-0 small">
+                        Recibí transferencias que se acreditan de inmediato, disponibles para tu
+                        operación diaria.
                     </p>
                 </div>
             </div>
 
             <div id="debito-tiempo-real-dtr" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px;">
+                <div class="service-card-v2 h-100">
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-arrow-left-right fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Débito en Tiempo Real (DTR)</h6>
-                    <p class="text-muted mb-0 small">
-                        Debitá la cuenta de tu cliente en tiempo real con su autorización previa,
-                        ideal para cobros recurrentes o consumos inmediatos.
+                    <h6 class="fw-bold text-dark mb-2">Débito en tiempo real (DTR)</h6>
+                    <p class="fw-semibold text-dark mb-1 small">Cobros recurrentes con autorización previa.</p>
+                    <p class="service-card-text mb-0 small">
+                        Debitá la cuenta de tu cliente en tiempo real, ideal para consumos
+                        recurrentes o inmediatos.
                     </p>
                 </div>
             </div>
 
             <div id="sinpe-movil" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px;">
+                <div class="service-card-v2 h-100">
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-phone-fill fs-4"></i>
                     </div>
                     <h6 class="fw-bold text-dark mb-2">SINPE Móvil</h6>
-                    <p class="text-muted mb-0 small">
-                        Aceptá y realizá pagos usando solo el número de teléfono de tu cliente,
-                        a través del sistema SINPE Móvil del Banco Central de Costa Rica.
-                    </p>
-                </div>
-            </div>
-
-            <div id="verificador-sinpe" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px;">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
-                        <i class="bi bi-patch-check-fill fs-4"></i>
-                    </div>
-                    <h6 class="fw-bold text-dark mb-2">Verificador SINPE</h6>
-                    <p class="text-muted mb-0 small">
-                        Confirmá al instante si un comprobante de SINPE Móvil es válido antes de
-                        entregar tu producto o servicio, evitando fraudes con capturas falsas.
+                    <p class="fw-semibold text-dark mb-1 small">Pagos con solo el número de teléfono.</p>
+                    <p class="service-card-text mb-0 small">
+                        Aceptá y realizá pagos usando el teléfono de tu cliente, vía el sistema
+                        del Banco Central de Costa Rica.
                     </p>
                 </div>
             </div>
@@ -116,111 +186,141 @@
      PAGOS Y COBROS MASIVOS
      ============================================================ -->
 <section class="py-5 bg-white position-relative overflow-hidden">
-    <div class="glow-shape glow-services-top-right"></div>
-    <div class="glow-shape glow-services-bottom-left"></div>
-
-    <div class="container pt-6 pb-5 position-relative" style="z-index: 2;">
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
+    <div class="container pt-3 pb-1 position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-5 mb-4">
+            <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Pagos y cobros masivos</small>
+                    <small>Pagos y cobros masivos</small>
                 </div>
-
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Operá a <span class="text-primary-custom">escala, sin fricción</span>
+                    Pagá y cobrá a <span class="text-primary-custom">muchos a la vez</span>
                 </h2>
+                <p class="text-secondary fs-6">
+                    Programá pagos a proveedores o empleados, y generá cobros recurrentes a
+                    muchos clientes, sin hacer transferencias una por una.
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-3 bg-white">
+                    <small class="fw-bold text-dark d-block mb-2">Lote de pagos - Planilla marzo</small>
+                    <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-light mb-2">
+                        <small class="fw-bold text-dark">Proveedor A</small>
+                        <span class="badge bg-success-subtle text-success">Pagado</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-light mb-2">
+                        <small class="fw-bold text-dark">Proveedor B</small>
+                        <span class="badge bg-success-subtle text-success">Pagado</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-light">
+                        <small class="fw-bold text-dark">Proveedor C</small>
+                        <span class="badge bg-warning-subtle text-warning">Pendiente</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row g-4 row-cols-1 row-cols-md-2 justify-content-center">
+        <div class="row g-4 row-cols-1 row-cols-md-2 justify-content-center mb-4">
             <div id="pagos-masivos" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card-v2 h-100">
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-send-check-fill fs-4"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Pagos Masivos</h5>
-                    <p class="text-muted mb-0">
+                    <h5 class="fw-bold text-dark mb-2">Pagos masivos</h5>
+                    <p class="service-card-text mb-0">
                         Programá el pago a múltiples proveedores, empleados o beneficiarios en
-                        un solo lote, sin hacer transferencias una por una.
+                        un solo lote.
                     </p>
                 </div>
             </div>
 
             <div id="cobros-masivos" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
+                <div class="service-card-v2 h-100">
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-collection-fill fs-4"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Cobros Masivos</h5>
-                    <p class="text-muted mb-0">
-                        Generá cobros recurrentes a muchos clientes a la vez (cuotas, membresías,
-                        suscripciones) y llevá el control de quién ya pagó.
+                    <h5 class="fw-bold text-dark mb-2">Cobros masivos</h5>
+                    <p class="service-card-text mb-0">
+                        Generá cobros recurrentes a muchos clientes a la vez y llevá el control
+                        de quién ya pagó.
                     </p>
                 </div>
             </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="fw-bold d-inline-flex align-items-center gap-2 pci-link-arrow">
+                Hablar con un asesor sobre pagos masivos <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     PAGOS CON TARJETA
+     COBROS CON TARJETA
      ============================================================ -->
 <section id="pagos-con-tarjeta" class="py-5 position-relative overflow-hidden bg-light-subtle">
-
-    <div class="container pt-6 pb-5 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-1 position-relative" style="z-index: 2;">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Pagos con tarjeta</small>
+                    <small>Cobros con tarjeta</small>
                 </div>
-
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
                     Tres formas de <span class="text-primary-custom">cobrar con tarjeta</span>
                 </h2>
-
                 <p class="lead text-secondary fs-6 fw-normal">
                     Elegí la que mejor se adapte a tu negocio, o combiná varias.
                 </p>
             </div>
         </div>
 
-        <div class="row g-4 row-cols-1 row-cols-md-3">
+        <div class="row g-4 row-cols-1 row-cols-md-3 mb-4">
             <div id="checkout" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center" style="border-radius: 32px;">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 mx-auto">
+                <div class="service-card-v2 h-100">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-window fs-4"></i>
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Checkout</h5>
-                    <p class="text-muted mb-0 small">
-                        Un formulario de pago seguro para incrustar en tu sitio web y cobrar con
-                        tarjeta sin que tu cliente salga de tu página.
+                    <p class="fw-semibold text-dark mb-1 small">Ideal para: tiendas en línea propias.</p>
+                    <p class="service-card-text mb-3 small">
+                        Un formulario de pago seguro para incrustar en tu sitio web.
                     </p>
+                    <a asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion" class="fw-bold small pci-link-arrow d-inline-flex align-items-center gap-1">
+                        Ver documentación <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
             <div id="link-de-pagos" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center" style="border-radius: 32px;">
-                    <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3 mx-auto">
+                <div class="service-card-v2 h-100">
+                    <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-link-45deg fs-4"></i>
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Link de pagos</h5>
-                    <p class="text-muted mb-0 small">
-                        Generá un link de cobro y compartilo por WhatsApp, correo o redes sociales,
-                        sin necesidad de tener una tienda en línea.
+                    <p class="fw-semibold text-dark mb-1 small">Ideal para: ventas por redes o WhatsApp.</p>
+                    <p class="service-card-text mb-3 small">
+                        Generá un link de cobro y compartilo sin tener tienda en línea.
                     </p>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="fw-bold small pci-link-arrow d-inline-flex align-items-center gap-1">
+                        Hablar con un asesor <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
             <div id="cargos-recurrentes" class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center" style="border-radius: 32px;">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 mx-auto">
+                <div class="service-card-v2 h-100">
+                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-arrow-repeat fs-4"></i>
                     </div>
                     <h5 class="fw-bold text-dark mb-2">Cargos recurrentes</h5>
-                    <p class="text-muted mb-0 small">
-                        Configurá cobros automáticos periódicos a la tarjeta de tu cliente, ideal
-                        para suscripciones o membresías.
+                    <p class="fw-semibold text-dark mb-1 small">Ideal para: suscripciones y membresías.</p>
+                    <p class="service-card-text mb-3 small">
+                        Configurá cobros automáticos periódicos a la tarjeta de tu cliente.
                     </p>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="fw-bold small pci-link-arrow d-inline-flex align-items-center gap-1">
+                        Hablar con un asesor <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -231,41 +331,85 @@
      DATÁFONOS FÍSICOS
      ============================================================ -->
 <section id="datafonos-fisicos" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="glow-shape glow-services-top-left"></div>
-    <div class="glow-shape glow-services-bottom-right"></div>
-
-    <div class="container pt-6 pb-5 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-1 position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <img src="~/images/logos/Datafono.png" alt="Datáfono Well-Pay" class="img-fluid" />
+            <div class="col-lg-4 text-center">
+                <img src="~/images/logos/Datafono.png" alt="Datáfono Well-Pay" class="img-fluid" style="max-width: 320px;" />
             </div>
 
-            <div class="col-lg-5">
+            <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Datáfonos físicos</small>
+                    <small>Datáfonos físicos</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
                     Cobrá en persona <span class="text-primary-custom">con un solo dispositivo</span>
                 </h2>
 
-                <!-- TODO: confirmar modelo(s) definitivo(s) y condiciones comerciales (compra/alquiler) del datáfono -->
-                <p class="text-secondary fs-6 fw-normal mb-3">
+                <!-- TODO: confirmar modelo(s) definitivo(s) y condiciones comerciales (compra/alquiler) del datáfono.
+                     Nota: se eliminó a propósito la mención pública del modelo/marca de terceros y de
+                     certificaciones (PCI PTS, Visa/Mastercard/Amex) hasta poder confirmarlas oficialmente. -->
+                <p class="text-secondary fs-6 fw-normal mb-4">
                     Nuestros datáfonos aceptan pagos por chip, contactless (NFC), banda magnética y
                     código QR, con pantalla táctil grande para una experiencia clara tanto para vos
                     como para tu cliente.
                 </p>
 
-                <p class="text-muted small fst-italic mb-0">
-                    Modelo de referencia: SUNMI P3 — pantalla de 6.75", sistema operativo basado
-                    en Android, certificación PCI PTS y aprobación Visa/Mastercard/American Express.
-                </p>
-            </div>
+                <h6 class="fw-bold text-dark mb-3">¿Qué podés cobrar?</h6>
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-sm-3 d-flex align-items-center gap-2">
+                        <i class="bi bi-credit-card-2-front-fill text-wellpay"></i>
+                        <span class="small fw-semibold">Chip</span>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex align-items-center gap-2">
+                        <i class="bi bi-wifi text-primary-custom"></i>
+                        <span class="small fw-semibold">Contactless</span>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex align-items-center gap-2">
+                        <i class="bi bi-credit-card-fill text-wellpay"></i>
+                        <span class="small fw-semibold">Banda magnética</span>
+                    </div>
+                    <div class="col-6 col-sm-3 d-flex align-items-center gap-2">
+                        <i class="bi bi-qr-code text-primary-custom"></i>
+                        <span class="small fw-semibold">Código QR</span>
+                    </div>
+                </div>
 
-            <div class="col-lg-4">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 32px;">
-                    <h5 class="fw-bold text-dark mb-3">Acepta todos los métodos</h5>
-                    <img src="~/images/logos/DatafonoMetodos.png" alt="Datáfono aceptando pago por QR, contactless, chip y PIN" class="img-fluid w-100" />
+                <div class="d-flex flex-wrap gap-2">
+                    <!-- TODO: conectar a un flujo/formulario propio de solicitud de datáfono cuando exista -->
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        Solicitar datáfono
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile d-inline-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-whatsapp"></i> Hablar con un asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     BANDA DE CIERRE (navy) — CTA final
+     ============================================================ -->
+<section class="py-5 position-relative overflow-hidden">
+    <div class="container">
+        <div class="closing-card-navy text-center position-relative overflow-hidden">
+            <div class="glow-shape glow-bottom-right glow-half"></div>
+            <div class="position-relative" style="z-index:2;">
+                <h2 class="display-6 fw-extrabold text-white mb-3 lh-sm">
+                    Empezá a operar con <span class="text-wellpay">Well-Pay hoy mismo</span>
+                </h2>
+                <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 560px;">
+                    Solicitá tu afiliación o hablá con un asesor para elegir los servicios que tu empresa necesita.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        Solicitar afiliación
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg px-4 py-2 fs-6 fw-bold rounded-3 btn-full-mobile d-inline-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-whatsapp"></i> Hablar con un asesor
+                    </a>
                 </div>
             </div>
         </div>

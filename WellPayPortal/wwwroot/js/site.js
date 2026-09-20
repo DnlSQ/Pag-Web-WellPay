@@ -253,4 +253,48 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- ACTIVAR PESTAÑA DE RUBRO SEGÚN EL ANCLA DE LA URL (página Soluciones) ---
+    function activarPestanaPorHash() {
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1);
+            const tabButton = document.getElementById(targetId + '-tab');
+            if (tabButton) {
+                const tab = new bootstrap.Tab(tabButton);
+                tab.show();
+            }
+        }
+    }
+    activarPestanaPorHash();
+    window.addEventListener('hashchange', activarPestanaPorHash);
+
+    // --- SINCRONIZAR LA URL AL ELEGIR UNA PESTAÑA CON CLIC (página Soluciones) ---
+    const rubrosTab = document.getElementById('rubrosTab');
+    if (rubrosTab) {
+        const tabButtons = Array.from(rubrosTab.querySelectorAll('[data-bs-toggle="pill"]'));
+
+        tabButtons.forEach(function (btn) {
+            btn.addEventListener('shown.bs.tab', function (e) {
+                const targetId = e.target.getAttribute('data-bs-target').substring(1);
+                history.replaceState(null, '', '#' + targetId);
+            });
+        });
+
+        // --- NAVEGACIÓN CON FLECHAS DEL TECLADO ENTRE PESTAÑAS ---
+        tabButtons.forEach(function (btn, index) {
+            btn.addEventListener('keydown', function (e) {
+                let newIndex = null;
+                if (e.key === 'ArrowRight') {
+                    newIndex = (index + 1) % tabButtons.length;
+                } else if (e.key === 'ArrowLeft') {
+                    newIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+                }
+                if (newIndex !== null) {
+                    e.preventDefault();
+                    tabButtons[newIndex].focus();
+                    new bootstrap.Tab(tabButtons[newIndex]).show();
+                }
+            });
+        });
+    }
+
 });

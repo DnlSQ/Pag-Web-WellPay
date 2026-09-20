@@ -11,8 +11,8 @@ body {
     --wellpay-green: #00c992;
     --wellpay-green-hover: #00b382;
     --wellpay-navy: #0d1b2a;
-    --wellpay-blue: #5b8def;
-    --wellpay-blue-hover: #4a7ce0;
+    --wellpay-blue: #3f6fe0;
+    --wellpay-blue-hover: #3660c9;
 }
 
 .bg-wellpay {
@@ -25,6 +25,711 @@ body {
 
 .text-wellpay {
     color: var(--wellpay-green) !important;
+}
+
+/* =========================================
+   FASE 2: SISTEMA DE DISEÑO BASE
+   ========================================= */
+
+/* Tipografía fluida (H1/H2 en toda la página) */
+h1.display-5 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem) !important;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+h2.display-6 {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem) !important;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+/* Subtítulo (lead): color consistente */
+p.lead {
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    color: #475569;
+}
+
+/* Etiqueta (píldora) de sección: tamaño consistente */
+.style-badge small {
+    font-size: 0.8125rem !important;
+}
+
+/* Espaciado entre secciones: 48px en móvil, 96px en escritorio */
+.pt-6 {
+    padding-top: 3rem !important;
+}
+@media (min-width: 992px) {
+    .pt-6 {
+        padding-top: 6rem !important;
+    }
+}
+
+/* Nueva superficie de fondo para alternar secciones */
+.bg-light-blue-subtle {
+    background-color: #eef3fe;
+}
+
+/* =========================================
+   BLOQUE SEGURIDAD + NOSOTROS (Home, combinado)
+   ========================================= */
+
+/* Tarjeta protagonista PCI DSS */
+.pci-hero-card {
+    background: linear-gradient(135deg, #e6faf5 0%, #eef3fe 100%);
+    border: 1px solid rgba(0, 201, 146, 0.2);
+    border-radius: 28px;
+    padding: 48px;
+}
+@media (max-width: 991.98px) {
+    .pci-hero-card {
+        padding: 28px 24px;
+    }
+}
+
+/* Insignia propia de PCI DSS (no es el logo oficial) */
+.pci-badge-own {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 6px solid rgba(0, 201, 146, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.pci-badge-own i {
+    font-size: 2.25rem;
+    color: var(--wellpay-green);
+}
+.pci-badge-own strong {
+    color: var(--wellpay-navy);
+    font-weight: 800;
+    font-size: 1rem;
+}
+.pci-badge-own span {
+    color: #64748b;
+    font-size: 0.75rem;
+}
+@media (max-width: 991.98px) {
+    .pci-badge-own {
+        width: 104px;
+        height: 104px;
+    }
+    .pci-badge-own i {
+        font-size: 1.5rem;
+    }
+    .pci-badge-own strong {
+        font-size: 0.8rem;
+    }
+}
+
+/* Enlace verde oscuro con buen contraste sobre fondo tintado */
+.pci-link-arrow {
+    color: #006b4b;
+    text-decoration: none;
+}
+.pci-link-arrow i {
+    transition: transform 0.2s ease;
+}
+.pci-link-arrow:hover {
+    color: #005038;
+}
+.pci-link-arrow:hover i {
+    transform: translateX(4px);
+}
+
+/* Pilares (Seguridad) */
+.pillar-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* Íconos pequeños (valores de Nosotros) */
+.pillar-icon-sm {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+/* Divisor entre Seguridad y Nosotros */
+.section-divider {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 56px 0;
+}
+
+/* =========================================
+   PÁGINA SERVICIOS: rediseño (auditoría)
+   ========================================= */
+
+/* Desvanece el glow del hero hacia el fondo de la sección siguiente,
+   en vez de cortarlo con una línea recta */
+.hero-fade-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f8fafc);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Mockups apilados/superpuestos del hero */
+.hero-mockup-stack {
+    position: relative;
+    min-height: 260px;
+}
+.hero-mockup-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92%;
+    z-index: 1;
+}
+.hero-mockup-front {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 95%;
+    z-index: 2;
+}
+
+/* Estilo único de tarjeta para toda la página de Servicios:
+   icono arriba a la izquierda, texto alineado a la izquierda,
+   esquinas redondeadas, borde tenue */
+.service-card-v2 {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    padding: 28px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.service-card-v2:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 201, 146, 0.4);
+    box-shadow:
+        0 12px 24px -6px rgba(0, 0, 0, 0.06),
+        0 0 25px 2px rgba(0, 201, 146, 0.25),
+        0 0 50px 10px rgba(91, 141, 239, 0.15);
+}
+.service-card-text {
+    color: #475569;
+    font-size: 1rem;
+}
+
+/* Mini comprobante del Verificador SINPE */
+.verificador-mini-receipt {
+    background: #f0fdf9;
+    border: 1px solid rgba(0, 201, 146, 0.25);
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--wellpay-green-hover);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Tarjeta navy de cierre (en vez de banda de lado a lado) */
+.closing-card-navy {
+    background: var(--wellpay-navy);
+    border-radius: 28px;
+    padding: 56px 32px;
+}
+@media (max-width: 767.98px) {
+    .closing-card-navy {
+        padding: 40px 20px;
+    }
+}
+
+/* =========================================
+   PÁGINA SOLUCIONES: rediseño (auditoría)
+   ========================================= */
+
+/* Mockup único del hero (link de pago + chip) */
+.hero-mockup-solo {
+    position: relative;
+    z-index: 2;
+    max-width: 360px;
+}
+.hero-mockup-solo .dashboard-chip-top {
+    top: -14px;
+    right: 16px;
+}
+
+/* Pestañas de rubros: estilo tipo píldora propio */
+.nav-pills-custom {
+    list-style: none;
+    padding: 0;
+}
+.nav-link-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+.nav-link-pill i {
+    font-size: 1.125rem;
+}
+.nav-link-pill:hover {
+    border-color: #cbd5e1;
+}
+.nav-link-pill:focus-visible {
+    outline: 3px solid var(--wellpay-navy);
+    outline-offset: 2px;
+}
+.nav-link-pill.active {
+    background: var(--wellpay-navy);
+    border-color: var(--wellpay-navy);
+    color: #ffffff;
+}
+.nav-link-pill.active i {
+    color: var(--wellpay-green);
+}
+
+/* Altura mínima del panel para que no salte al cambiar de pestaña */
+.rubro-tab-content {
+    min-height: 260px;
+}
+.rubro-tab-content .tab-pane {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Móvil: pestañas con scroll horizontal y ajuste al soltar */
+@media (max-width: 767.98px) {
+    .nav-pills-custom {
+        scroll-snap-type: x mandatory;
+        justify-content: flex-start !important;
+    }
+    .nav-pills-custom .nav-item {
+        scroll-snap-align: center;
+    }
+}
+
+/* Chips de "Servicios que usarías" (dentro de los popups de rubro) */
+.rubro-chip {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: var(--wellpay-navy);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+/* Posicionamiento decorativo lateral en mini-heros (mockups, imágenes) */
+.hero-side-visual {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    width: 220px;
+    z-index: 2;
+}
+
+/* =========================================
+   BLOQUE DE CÓDIGO ESTILO TERMINAL (sección API)
+   ========================================= */
+.code-card {
+    background: #0d1b2a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+}
+.code-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.code-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.code-card-title {
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8125rem;
+    font-family: "Courier New", monospace;
+}
+.code-card-body {
+    margin: 0;
+    padding: 20px;
+    color: #d5f7ec;
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Mini versión del mockup de código, para el Hero de Desarrolladores */
+.hero-code-mockup {
+    position: relative;
+    z-index: 2;
+    background: #0d1b2a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.35);
+    text-align: left;
+}
+.hero-code-mockup-bar {
+    display: flex;
+    gap: 6px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.hero-code-mockup-bar span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+}
+.hero-code-mockup-body {
+    margin: 0;
+    padding: 16px;
+    color: #d5f7ec;
+    font-family: "Courier New", monospace;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.code-comment {
+    color: rgba(255, 255, 255, 0.4);
+}
+.code-key {
+    color: #73edd1;
+}
+.code-str {
+    color: #f5c26b;
+}
+.code-num {
+    color: #7bb8ff;
+}
+
+/* Menú vertical de pestañas (sección Documentación) */
+.nav-pills-vertical {
+    gap: 8px;
+}
+.nav-link-pill-v {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+.nav-link-pill-v i {
+    font-size: 1.125rem;
+    flex-shrink: 0;
+}
+.nav-link-pill-v:hover {
+    border-color: #cbd5e1;
+}
+.nav-link-pill-v:focus-visible {
+    outline: 3px solid var(--wellpay-navy);
+    outline-offset: 2px;
+}
+.nav-link-pill-v.active {
+    background: var(--wellpay-navy);
+    border-color: var(--wellpay-navy);
+    color: #ffffff;
+}
+.nav-link-pill-v.active i {
+    color: var(--wellpay-green);
+}
+
+.doc-tab-content {
+    min-height: 220px;
+}
+
+.rubro-chip:hover {
+    background: #e2e8f0;
+    color: var(--wellpay-navy);
+}
+
+/* Panel completo de cada rubro */
+.rubro-panel {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    padding: 40px;
+}
+@media (max-width: 767.98px) {
+    .rubro-panel {
+        padding: 24px;
+    }
+}
+
+/* Mockup dentro del panel de rubro */
+.rubro-mockup {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 20px;
+}
+@media (max-width: 991.98px) {
+    .rubro-mockup {
+        max-height: 180px;
+        overflow: hidden;
+    }
+}
+
+/* Burbujas de chat (Profesionales independientes) */
+.rubro-mockup-chat {
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.chat-bubble {
+    background: #e2e8f0;
+    color: #1e293b;
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    align-self: flex-start;
+    max-width: 90%;
+}
+.chat-bubble-link {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    align-self: flex-end;
+}
+
+.datos-ejemplo-label {
+    font-size: 0.8125rem;
+    color: #64748b;
+}
+
+/* Etiqueta "Próximamente" */
+.badge-proximamente {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #eef3fe;
+    color: var(--wellpay-navy);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+/* Mini mockup: gráfico de barras (Reportes financieros) */
+.mini-mockup-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 90px;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 16px;
+}
+.mini-mockup-bars .bar {
+    flex: 1;
+    background: linear-gradient(to top, var(--wellpay-green), var(--wellpay-blue));
+    border-radius: 4px 4px 0 0;
+    min-height: 8px;
+}
+
+/* Mini mockup: indicador tipo semáforo (Score de riesgo) */
+.mini-mockup-gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 16px;
+}
+.gauge-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0fdf9;
+    color: var(--wellpay-green-hover);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+.gauge-alert-list {
+    text-align: left;
+    font-size: 0.8125rem;
+    color: #475569;
+}
+.gauge-alert-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 0;
+}
+.gauge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.gauge-dot-green {
+    background: var(--wellpay-green);
+}
+.gauge-dot-yellow {
+    background: #f5a623;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rubro-tab-content .tab-pane {
+        transition: none;
+    }
+}
+
+/* Menú móvil (offcanvas): destinos táctiles cómodos */
+.mobile-menu-link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 16px;
+    color: #1e293b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 8px;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:active {
+    background-color: var(--wellpay-green-hover);
+    background-color: rgba(0, 201, 146, 0.08);
+    color: var(--wellpay-navy);
+}
+
+#mobileMenu .accordion-button:not(.collapsed) {
+    background-color: rgba(0, 201, 146, 0.08);
+    color: var(--wellpay-navy);
+    box-shadow: none;
+}
+
+#mobileMenu .accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Botones a ancho completo en móvil (Fase 5) */
+.btn-full-mobile {
+    width: 100%;
+}
+@media (min-width: 576px) {
+    .btn-full-mobile {
+        width: auto;
+    }
+}
+
+/* Barra fija inferior de móvil (WhatsApp + Solicitar afiliación) */
+.mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    background: #ffffff;
+    box-shadow: 0 -4px 16px rgba(13, 27, 42, 0.1);
+}
+
+.mobile-bottom-bar .btn {
+    flex: 1;
+    min-height: 44px;
+}
+
+@media (min-width: 992px) {
+    .mobile-bottom-bar {
+        display: none;
+    }
+}
+
+/* Deja espacio al final de la página para que la barra no tape contenido */
+body {
+    padding-bottom: 72px;
+}
+@media (min-width: 992px) {
+    body {
+        padding-bottom: 0;
+    }
+}
+
+/* Chips flotantes sobre el dashboard del Hero */
+.dashboard-mockup-wrap {
+    position: relative;
+    display: block;
+}
+
+.dashboard-chip {
+    position: absolute;
+    z-index: 3;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(13, 27, 42, 0.12);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #1e293b;
+    white-space: nowrap;
+}
+
+.dashboard-chip-top {
+    top: -31px;
+    right: 15px;
+}
+
+.dashboard-chip-bottom {
+    bottom: -31px;
+    left: 15px;
 }
 
 /* =========================================
@@ -78,14 +783,15 @@ body {
    ========================================= */
 .btn-wellpay {
     background-color: var(--wellpay-green);
-    color: #ffffff;
+    color: var(--wellpay-navy);
+    font-weight: 700;
     border: none;
     transition: all 0.2s ease-in-out;
 }
 
 .btn-wellpay:hover {
     background-color: var(--wellpay-green-hover);
-    color: #ffffff;
+    color: var(--wellpay-navy);
     transform: translateY(-1px);
 }
 
@@ -195,6 +901,10 @@ body {
     animation: glow-drift-a 6s ease-in-out infinite;
 }
 
+.glow-half {
+    opacity: 0.5;
+}
+
 /* Luz Azul inferior (Hero) */
 .glow-bottom-right {
     width: 520px;
@@ -264,12 +974,12 @@ body {
 }
 
 .logo-item {
-    padding: 0 10px;
+    padding: 0 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 60px;
+    width: 160px;
+    height: 70px;
     flex-shrink: 0;
 }
 
@@ -303,6 +1013,7 @@ body {
 }
 
 .service-card {
+    position: relative;
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -338,57 +1049,14 @@ body {
     font-size: 0.875rem;
 }
 
-.pt-6 {
-    padding-top: 6rem !important;
-}
-
 .fs-8 {
     font-size: 0.75rem;
 }
 
 /* =========================================
-   9. EFECTO GLOW AMBIENTAL PARA SERVICIOS (4 ESQUINAS)
+   9. (Eliminado en rediseño Fase 1) Glow ambiental de 4 esquinas.
+   El glow ahora se reserva solo para el Hero y la banda de cierre.
    ========================================= */
-
-/* 1. Esquina Superior Derecha (Azul / Verde) */
-.glow-services-top-right {
-    width: 550px;
-    height: 550px;
-    top: -140px;
-    right: -150px;
-    background: radial-gradient(circle, rgba(91, 141, 239, 0.4) 0%, rgba(0, 201, 146, 0.26) 45%, rgba(255, 255, 255, 0) 78%);
-    filter: blur(100px);
-}
-
-/* 2. Esquina Superior Izquierda (Verde WellPay) */
-.glow-services-top-left {
-    width: 480px;
-    height: 480px;
-    top: -130px;
-    left: -150px;
-    background: radial-gradient(circle, rgba(0, 201, 146, 0.34) 0%, rgba(0, 201, 146, 0.1) 45%, rgba(255, 255, 255, 0) 78%);
-    filter: blur(105px);
-}
-
-/* 3. Esquina Inferior Derecha (Verde WellPay) */
-.glow-services-bottom-right {
-    width: 480px;
-    height: 480px;
-    bottom: -130px;
-    right: -150px;
-    background: radial-gradient(circle, rgba(0, 201, 146, 0.34) 0%, rgba(0, 201, 146, 0.1) 45%, rgba(255, 255, 255, 0) 78%);
-    filter: blur(105px);
-}
-
-/* 4. Esquina Inferior Izquierda (Azul Soft) */
-.glow-services-bottom-left {
-    width: 550px;
-    height: 550px;
-    bottom: -140px;
-    left: -150px;
-    background: radial-gradient(circle, rgba(91, 141, 239, 0.36) 0%, rgba(0, 201, 146, 0.22) 45%, rgba(255, 255, 255, 0) 78%);
-    filter: blur(100px);
-}
 
 /* Responsividad Móvil */
 @media (max-width: 575.98px) {
@@ -525,266 +1193,6 @@ body {
     }
 }
 /* =========================================
-   SEGURIDAD WELL-PAY
-========================================= */
-
-.security-section {
-    position: relative;
-    background: #f8fbfc;
-}
-
-
-/* Glow de fondo */
-
-.security-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(90px);
-    pointer-events: none;
-}
-
-.security-glow-right {
-    width: 420px;
-    height: 420px;
-    right: -180px;
-    top: 30px;
-    background: rgba(0, 190, 160, 0.13);
-}
-
-.security-glow-left {
-    width: 350px;
-    height: 350px;
-    left: -180px;
-    bottom: -100px;
-    background: rgba(48, 116, 245, 0.10);
-}
-
-
-/* Texto principal */
-
-.security-main-description {
-    max-width: 520px;
-    line-height: 1.8;
-}
-
-
-/* Link */
-
-.security-more-link {
-    color: #0b2942;
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 0.25s ease, transform 0.25s ease;
-}
-
-    .security-more-link:hover {
-        color: #00a98f;
-        transform: translateX(3px);
-    }
-
-    .security-more-link i {
-        transition: transform 0.25s ease;
-    }
-
-    .security-more-link:hover i {
-        transform: translateX(4px);
-    }
-
-
-/* =========================================
-   TARJETAS
-========================================= */
-
-.security-card {
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(11, 41, 66, 0.08);
-    border-radius: 28px;
-    box-shadow: 0 10px 35px rgba(20, 52, 74, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-
-    .security-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(0, 201, 146, 0.30);
-    box-shadow: 
-        0 20px 45px rgba(20, 52, 74, 0.10),
-        0 0 25px 2px rgba(0, 201, 146, 0.22),
-        0 0 50px 10px rgba(91, 141, 239, 0.15);
-}
-
-
-/* Iconos */
-
-.security-icon {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 22px;
-    border-radius: 18px;
-    background: linear-gradient( 135deg, rgba(0, 169, 143, 0.14), rgba(52, 120, 246, 0.10) );
-    color: #00a98f;
-    font-size: 1.55rem;
-}
-
-
-.security-card p {
-    font-size: 0.9rem;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   BLOQUE PCI DSS
-========================================= */
-
-.pci-highlight {
-    position: relative;
-    padding: 42px 46px;
-    overflow: hidden;
-    border-radius: 30px;
-    background: linear-gradient( 135deg, #0b2942 0%, #123f59 55%, #075c65 100% );
-    color: white;
-    box-shadow: 0 20px 55px rgba(11, 41, 66, 0.18);
-}
-
-
-    /* Efecto decorativo */
-
-    .pci-highlight::after {
-        content: "";
-        position: absolute;
-        width: 260px;
-        height: 260px;
-        right: -80px;
-        top: -120px;
-        border-radius: 50%;
-        background: rgba(70, 225, 195, 0.12);
-        filter: blur(10px);
-        pointer-events: none;
-    }
-
-
-.pci-label {
-    color: #5ee0c8;
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-}
-
-
-.pci-highlight h3 {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
-
-
-.pci-highlight p {
-    position: relative;
-    z-index: 2;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.75;
-    max-width: 800px;
-}
-
-
-/* Badge PCI */
-
-.pci-badge-custom {
-    position: relative;
-    z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 22px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.10);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-}
-
-
-    .pci-badge-custom i {
-        color: #5ee0c8;
-        font-size: 2rem;
-    }
-
-
-    .pci-badge-custom div {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
-
-
-    .pci-badge-custom small {
-        color: rgba(255, 255, 255, 0.65);
-        font-size: 0.72rem;
-    }
-
-
-    .pci-badge-custom strong {
-        color: white;
-        font-size: 1.15rem;
-    }
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 991.98px) {
-
-    .security-main-description {
-        max-width: 100%;
-    }
-
-    .pci-highlight {
-        padding: 36px;
-    }
-}
-
-
-@media (max-width: 767.98px) {
-
-    .security-section {
-        text-align: center;
-    }
-
-    .security-card {
-        padding: 26px;
-        text-align: left;
-    }
-
-    .security-icon {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .security-card h5 {
-        text-align: center;
-    }
-
-    .security-card p {
-        text-align: center;
-    }
-
-    .pci-highlight {
-        padding: 30px 24px;
-        text-align: center;
-    }
-
-    .pci-badge-custom {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-/* =========================================
    NAVEGACIÓN: SCROLL SUAVE + OFFSET DEL HEADER
    ========================================= */
 html {
@@ -838,285 +1246,6 @@ html {
 }
 
 /* =========================================
-   IMAGEN CANDADO (POPUP PCI DSS): FLOTACIÓN + BRILLO
-   ========================================= */
-.security-visual-wrap {
-    position: relative;
-    display: inline-block;
-    max-width: 220px;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 24px;
-    animation: security-float 6s ease-in-out infinite;
-}
-
-.security-visual-wrap img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.security-visual-wrap::after {
-    content: "";
-    position: absolute;
-    top: -60%;
-    left: -60%;
-    width: 35%;
-    height: 220%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.65), transparent);
-    transform: rotate(15deg);
-    animation: security-shine 3.5s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes security-float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Variante: solo flotación, sin brillo (para imágenes tipo "nube") */
-.visual-float-wrap {
-    display: inline-block;
-    animation: cloud-float 5s ease-in-out infinite;
-}
-
-.visual-float-wrap img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-@keyframes cloud-float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-14px);
-    }
-}
-
-@keyframes security-shine {
-    0% {
-        left: -60%;
-    }
-    45% {
-        left: 130%;
-    }
-    100% {
-        left: 130%;
-    }
-}
-
-/* =========================================
-   IMAGEN PLANETA (HERO SEGURIDAD): EFECTO RADAR
-   ========================================= */
-.hero-side-visual {
-    position: absolute;
-    top: 50%;
-    right: 70px;
-    transform: translateY(-50%);
-    width: 220px;
-    z-index: 1;
-}
-
-.security-visual-radar {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-/* =========================================
-   OPCIÓN 1: BALANCEO SUAVE (hojacodigo)
-   ========================================= */
-.wp-sway-wrap {
-    display: inline-block;
-    width: 100%;
-    transform-origin: bottom center;
-    animation: wp-sway 4s ease-in-out infinite;
-}
-
-.wp-sway-wrap img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-@keyframes wp-sway {
-    0%, 100% {
-        transform: rotate(-4deg);
-    }
-    50% {
-        transform: rotate(4deg);
-    }
-}
-
-/* =========================================
-   OPCIÓN 2: REBOTE VERTICAL CON ATERRIZAJE (Nube)
-   ========================================= */
-.wp-bounce-wrap {
-    display: inline-block;
-    width: 100%;
-    animation: wp-bounce 2.4s cubic-bezier(0.33, 0, 0.2, 1) infinite;
-}
-
-.wp-bounce-wrap img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-@keyframes wp-bounce {
-    0% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(-16px);
-    }
-    40% {
-        transform: translateY(0);
-    }
-    52% {
-        transform: translateY(-6px);
-    }
-    64% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* =========================================
-   OPCIÓN 3: PULSO DE SOMBRA (Pantalla)
-   ========================================= */
-.wp-shadow-pulse-wrap {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.wp-shadow-pulse-wrap img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.wp-shadow-pulse-wrap::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 65%;
-    height: 16px;
-    background: rgba(13, 27, 42, 0.28);
-    border-radius: 50%;
-    filter: blur(5px);
-    transform: translateX(-50%) scale(1);
-    z-index: 0;
-    animation: wp-shadow-pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes wp-shadow-pulse {
-    0%, 100% {
-        transform: translateX(-50%) scale(1);
-        opacity: 0.5;
-    }
-    50% {
-        transform: translateX(-50%) scale(0.7);
-        opacity: 0.25;
-    }
-}
-
-.security-visual-radar img {
-    position: relative;
-    z-index: 2;
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.security-visual-radar::before,
-.security-visual-radar::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 2px solid var(--wellpay-blue);
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.6;
-    z-index: 1;
-    animation: security-radar-ping 3s ease-out infinite;
-}
-
-.security-visual-radar::after {
-    animation-delay: 1.5s;
-}
-
-@keyframes security-radar-ping {
-    0% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.6;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1.6);
-        opacity: 0;
-    }
-}
-
-/* =========================================
-   BLOQUE DE CÓDIGO ESTILO TERMINAL (API)
-   ========================================= */
-.code-card {
-    background: var(--wellpay-navy);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 45px rgba(13, 27, 42, 0.25);
-}
-
-.code-card-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 18px;
-    background: rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.code-dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.code-card-title {
-    margin-left: 8px;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.8rem;
-    font-family: monospace;
-}
-
-.code-card-body {
-    margin: 0;
-    padding: 20px;
-    color: #d5f7ec;
-    font-family: "Courier New", monospace;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    word-break: break-word;
-}
-
-/* =========================================
    SECCIÓN NOSOTROS
    ========================================= */
 .bg-light-subtle {
@@ -1142,12 +1271,23 @@ html {
 .footer-link {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
     transition: color 0.2s ease;
 }
 
 .footer-link:hover {
     color: var(--wellpay-green);
+}
+
+/* Refuerzo de contraste para el botón "Iniciar sesión" del footer */
+footer .btn-outline-light {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9375rem;
+}
+footer .btn-outline-light:hover {
+    color: var(--wellpay-navy);
+    background-color: #ffffff;
 }
 
 /* =========================================
@@ -1229,5 +1369,22 @@ html {
 
     .dropdown-submenu > .dropdown-item.dropdown-toggle::after {
         transform: rotate(0deg);
+    }
+}
+
+/* =========================================
+   ACCESIBILIDAD: RESPETAR "REDUCIR MOVIMIENTO"
+   Desactiva las animaciones (glow del Hero, pulso del
+   logo, transición de hover) para quien lo pida a nivel
+   de sistema operativo/navegador.
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+    .glow-top-right,
+    .glow-bottom-right,
+    .wp-wave,
+    .service-card,
+    .value-card {
+        animation: none !important;
+        transition: none !important;
     }
 }

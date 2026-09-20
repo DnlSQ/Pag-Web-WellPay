@@ -43,10 +43,9 @@
                 <!-- Botón hamburguesa para móviles -->
                 <button class="navbar-toggler border-0"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarMain"
-                        aria-controls="navbarMain"
-                        aria-expanded="false"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu"
+                        aria-controls="mobileMenu"
                         aria-label="Abrir menú">
 
                     <span class="navbar-toggler-icon"></span>
@@ -220,6 +219,142 @@
         </nav>
     </header>
 
+    <!-- ============================================================
+         MENÚ MÓVIL (offcanvas) — submenús aplanados a un solo nivel
+         ============================================================ -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <span class="offcanvas-title fw-extrabold fs-5" id="mobileMenuLabel">WELL-PAY</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column p-0">
+
+            <div class="accordion accordion-flush flex-grow-1" id="mobileMenuAccordion">
+
+                <!-- Servicios -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-servicios">
+                            Servicios
+                        </button>
+                    </h2>
+                    <div id="mm-servicios" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                        <div class="accordion-body pt-0">
+                            <ul class="list-unstyled mb-0">
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" data-bs-dismiss="offcanvas">Creación de cuentas IBAN</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin" data-bs-dismiss="offcanvas">Pago Inmediato (PIN)</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr" data-bs-dismiss="offcanvas">Débito en Tiempo Real (DTR)</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" data-bs-dismiss="offcanvas">SINPE Móvil</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe" data-bs-dismiss="offcanvas">Verificador SINPE</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" data-bs-dismiss="offcanvas">Pagos Masivos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" data-bs-dismiss="offcanvas">Cobros Masivos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" data-bs-dismiss="offcanvas">Checkout</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" data-bs-dismiss="offcanvas">Link de pagos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" data-bs-dismiss="offcanvas">Cargos recurrentes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" data-bs-dismiss="offcanvas">Datáfonos físicos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soluciones -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-soluciones">
+                            Soluciones
+                        </button>
+                    </h2>
+                    <div id="mm-soluciones" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                        <div class="accordion-body pt-0">
+                            <ul class="list-unstyled mb-0">
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="medicos" data-bs-dismiss="offcanvas">Médicos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="dentistas" data-bs-dismiss="offcanvas">Dentistas</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="comercios" data-bs-dismiss="offcanvas">Comercios</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="restaurantes" data-bs-dismiss="offcanvas">Restaurantes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes" data-bs-dismiss="offcanvas">Profesionales independientes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros" data-bs-dismiss="offcanvas">Reportes financieros</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo" data-bs-dismiss="offcanvas">Score de riesgo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desarrolladores -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-desarrolladores">
+                            Desarrolladores
+                        </button>
+                    </h2>
+                    <div id="mm-desarrolladores" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                        <div class="accordion-body pt-0">
+                            <ul class="list-unstyled mb-0">
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion" data-bs-dismiss="offcanvas">Documentación</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="integracion-servicios" data-bs-dismiss="offcanvas">Integración de servicios</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="api" data-bs-dismiss="offcanvas">API</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="sandbox" data-bs-dismiss="offcanvas">Sandbox / Ambiente de pruebas</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="guias-integracion" data-bs-dismiss="offcanvas">Guías de integración</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seguridad -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-seguridad">
+                            Seguridad
+                        </button>
+                    </h2>
+                    <div id="mm-seguridad" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                        <div class="accordion-body pt-0">
+                            <ul class="list-unstyled mb-0">
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay" data-bs-dismiss="offcanvas">Seguridad en Well-Pay</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss" data-bs-dismiss="offcanvas">PCI DSS</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="3d-secure" data-bs-dismiss="offcanvas">3-D Secure (3DS)</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="sugef" data-bs-dismiss="offcanvas">SUGEF</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="proteccion-datos" data-bs-dismiss="offcanvas">Protección de datos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-transacciones" data-bs-dismiss="offcanvas">Seguridad de las transacciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nosotros -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-nosotros">
+                            Nosotros
+                        </button>
+                    </h2>
+                    <div id="mm-nosotros" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
+                        <div class="accordion-body pt-0">
+                            <ul class="list-unstyled mb-0">
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="quienes-somos" data-bs-dismiss="offcanvas">Quiénes somos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="mision" data-bs-dismiss="offcanvas">Misión</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="vision" data-bs-dismiss="offcanvas">Visión</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="postulacion" data-bs-dismiss="offcanvas">Postulación</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Acciones -->
+            <div class="d-flex flex-column gap-2 p-3 border-top">
+                <a href="https://qa.paymentpower.net/wellpay/portal/login" class="btn btn-outline-dark rounded-pill fw-bold">
+                    Iniciar sesión
+                </a>
+                <button type="button" class="btn btn-wellpay fw-bold rounded-pill shadow-sm" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                    Solicitar afiliación
+                </button>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Contenido de cada página -->
     <main role="main">
         @RenderBody()
@@ -263,7 +398,7 @@
                     <ul class="list-unstyled d-flex flex-column gap-2">
                         <!-- TODO: reemplazar por los datos reales -->
                         <li><a class="footer-link" href="mailto:contacto@well-pay.com"><i class="bi bi-envelope-fill me-2"></i>contacto@well-pay.com</a></li>
-                        <li><a class="footer-link" href="tel:+50600000000"><i class="bi bi-telephone-fill me-2"></i>+506 0000-0000</a></li>
+                        <!-- TODO: agregar el teléfono real de la empresa aquí cuando se confirme -->
                         <li class="text-secondary"><i class="bi bi-geo-alt-fill me-2"></i>San José, Costa Rica</li>
                     </ul>
                 </div>
@@ -285,6 +420,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Barra fija inferior (solo móvil): WhatsApp + Solicitar afiliación -->
+    <!-- TODO: reemplazar por el número de WhatsApp real de la empresa -->
+    <div class="mobile-bottom-bar d-lg-none">
+        <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+        <button type="button" class="btn btn-wellpay rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+            Solicitar afiliación
+        </button>
+    </div>
+
     <!-- MODAL FLOTANTE ESTILO STRIPE - SOLICITAR AFILIACIÓN (compartido en todas las páginas) -->
 <div class="modal fade modal-stripe" id="afiliacionModal" tabindex="-1" aria-labelledby="afiliacionModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">

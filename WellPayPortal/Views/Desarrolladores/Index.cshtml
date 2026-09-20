@@ -3,30 +3,48 @@
 }
 
 <!-- MINI HERO DESARROLLADORES -->
-<section id="desarrolladores" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="glow-shape glow-top-right"></div>
-    <div class="glow-shape glow-bottom-right"></div>
+<section id="desarrolladores" class="py-5 bg-white position-relative overflow-hidden hero-fade-bottom">
+    <div class="container py-3 position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
+                    <i class="bi bi-code-slash"></i>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Desarrolladores</small>
+                </div>
 
-    <div class="hero-side-visual d-none d-lg-block" style="width: 160px; right: 90px;">
-        <div class="wp-sway-wrap">
-            <img src="~/images/logos/hojacodigo.png" alt="Documentación técnica Well-Pay" />
+                <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
+                    Todo lo que necesitás para <span class="text-primary-custom">integrar Well-Pay</span>
+                </h1>
+
+                <p class="lead text-secondary fs-6 fw-normal">
+                    Documentación, API, ambiente de pruebas y guías paso a paso para conectar tu negocio
+                    a la infraestructura de pagos de Well-Pay.
+                </p>
+            </div>
+
+            <div class="col-lg-6 d-none d-lg-block position-relative">
+                <div class="glow-shape glow-top-right glow-half"></div>
+                <div class="glow-shape glow-bottom-right glow-half"></div>
+
+                <div class="hero-code-mockup">
+                    <div class="hero-code-mockup-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <pre class="hero-code-mockup-body"><code><span class="code-comment">// crear un cobro</span>
+<span class="code-key">POST</span> /v1/payment_intents
+
+{
+  <span class="code-key">"amount"</span>: <span class="code-num">45500</span>,
+  <span class="code-key">"currency"</span>: <span class="code-str">"CRC"</span>
+}
+
+<span class="code-comment">// respuesta</span>
+{
+  <span class="code-key">"status"</span>: <span class="code-str">"approved"</span>
+}</code></pre>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="container py-4 position-relative text-center" style="z-index: 2;">
-        <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-            <i class="bi bi-code-slash"></i>
-            <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Desarrolladores</small>
-        </div>
-
-        <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-            Todo lo que necesitás para <span class="text-primary-custom">integrar Well-Pay</span>
-        </h1>
-
-        <p class="lead text-secondary fs-6 fw-normal mx-auto" style="max-width: 700px;">
-            Documentación, API, ambiente de pruebas y guías paso a paso para conectar tu negocio
-            a la infraestructura de pagos de Well-Pay.
-        </p>
     </div>
 </section>
 
@@ -34,11 +52,8 @@
      DOCUMENTACIÓN
      ============================================================ -->
 <section id="documentacion" class="py-5 position-relative overflow-hidden bg-light-subtle">
-    <div class="glow-shape glow-services-top-left"></div>
-    <div class="glow-shape glow-services-bottom-right"></div>
-
-    <div class="container py-3 position-relative" style="z-index: 2;">
-        <div class="row align-items-center g-5 mb-5">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
+        <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Documentación</small>
@@ -54,52 +69,81 @@
                     webhooks y manejo de errores, organizados por tema.
                 </p>
             </div>
-
-            <div class="col-lg-4 text-center d-none d-lg-block">
-                <div class="wp-bounce-wrap" style="max-width: 170px; margin: 0 auto;">
-                    <img src="~/images/logos/Nube.png" alt="Documentación segura en la nube" />
-                </div>
-            </div>
         </div>
 
-        <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-4">
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#autenticacionModal">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
-                        <i class="bi bi-key-fill fs-4"></i>
-                    </div>
-                    <h6 class="fw-bold text-dark mb-2">Autenticación</h6>
-                    <p class="text-muted mb-0 small">Cómo generar y usar tus llaves de acceso (API keys).</p>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="nav flex-column nav-pills-vertical" id="docTab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link-pill-v active" id="doc-autenticacion-tab" data-bs-toggle="pill" data-bs-target="#doc-autenticacion" type="button" role="tab">
+                        <i class="bi bi-key-fill"></i> Autenticación
+                    </button>
+                    <button class="nav-link-pill-v" id="doc-pagoscobros-tab" data-bs-toggle="pill" data-bs-target="#doc-pagoscobros" type="button" role="tab">
+                        <i class="bi bi-credit-card-2-front"></i> Pagos y cobros
+                    </button>
+                    <button class="nav-link-pill-v" id="doc-webhooks-tab" data-bs-toggle="pill" data-bs-target="#doc-webhooks" type="button" role="tab">
+                        <i class="bi bi-arrow-repeat"></i> Webhooks
+                    </button>
+                    <button class="nav-link-pill-v" id="doc-errores-tab" data-bs-toggle="pill" data-bs-target="#doc-errores" type="button" role="tab">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Manejo de errores
+                    </button>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#pagosCobrosModal">
-                    <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
-                        <i class="bi bi-credit-card-2-front fs-4"></i>
-                    </div>
-                    <h6 class="fw-bold text-dark mb-2">Pagos y cobros</h6>
-                    <p class="text-muted mb-0 small">Referencia de los servicios de pago (SINPE Móvil, DTR, PIN).</p>
-                </div>
-            </div>
+            <div class="col-lg-8">
+                <div class="tab-content doc-tab-content h-100">
 
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#webhooksDocModal">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
-                        <i class="bi bi-arrow-repeat fs-4"></i>
+                    <div class="tab-pane fade show active h-100" id="doc-autenticacion" role="tabpanel">
+                        <div class="rubro-panel h-100">
+                            <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
+                                <i class="bi bi-key-fill fs-4"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-2">Autenticación</h4>
+                            <p class="service-card-text mb-3">Cómo generar y usar tus llaves de acceso (API keys).</p>
+                            <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#autenticacionModal">
+                                Más información <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Webhooks</h6>
-                    <p class="text-muted mb-0 small">Cómo recibir notificaciones en tiempo real de cada transacción.</p>
-                </div>
-            </div>
 
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle" style="border-radius: 28px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#erroresModal">
-                    <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
-                        <i class="bi bi-exclamation-triangle-fill fs-4"></i>
+                    <div class="tab-pane fade h-100" id="doc-pagoscobros" role="tabpanel">
+                        <div class="rubro-panel h-100">
+                            <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
+                                <i class="bi bi-credit-card-2-front fs-4"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-2">Pagos y cobros</h4>
+                            <p class="service-card-text mb-3">Referencia de los servicios de pago (SINPE Móvil, DTR, PIN).</p>
+                            <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#pagosCobrosModal">
+                                Más información <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Manejo de errores</h6>
-                    <p class="text-muted mb-0 small">Códigos de respuesta y cómo interpretarlos.</p>
+
+                    <div class="tab-pane fade h-100" id="doc-webhooks" role="tabpanel">
+                        <div class="rubro-panel h-100">
+                            <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
+                                <i class="bi bi-arrow-repeat fs-4"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-2">Webhooks</h4>
+                            <p class="service-card-text mb-3">Cómo recibir notificaciones en tiempo real de cada transacción.</p>
+                            <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#webhooksDocModal">
+                                Más información <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade h-100" id="doc-errores" role="tabpanel">
+                        <div class="rubro-panel h-100">
+                            <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
+                                <i class="bi bi-exclamation-triangle-fill fs-4"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-2">Manejo de errores</h4>
+                            <p class="service-card-text mb-3">Códigos de respuesta y cómo interpretarlos.</p>
+                            <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#erroresModal">
+                                Más información <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -110,7 +154,7 @@
      INTEGRACIÓN DE SERVICIOS
      ============================================================ -->
 <section id="integracion-servicios" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -128,37 +172,109 @@
                 </p>
             </div>
         </div>
+        <ul class="nav nav-pills-custom justify-content-center gap-2 mb-5 flex-nowrap overflow-auto pb-2" id="integracionTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link-pill active" id="int-pasarela-tab" data-bs-toggle="pill" data-bs-target="#int-pasarela" type="button" role="tab">
+                    <i class="bi bi-window"></i> Pasarela de pago
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link-pill" id="int-plugins-tab" data-bs-toggle="pill" data-bs-target="#int-plugins" type="button" role="tab">
+                    <i class="bi bi-link-45deg"></i> Plugins y links de pago
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link-pill" id="int-apimedida-tab" data-bs-toggle="pill" data-bs-target="#int-apimedida" type="button" role="tab">
+                    <i class="bi bi-code-square"></i> API a la medida
+                </button>
+            </li>
+        </ul>
 
-        <div class="row g-4 row-cols-1 row-cols-md-3">
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#pasarelaModal">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 mx-auto">
-                        <i class="bi bi-window fs-4"></i>
+        <div class="tab-content rubro-tab-content">
+
+            <div class="tab-pane fade show active" id="int-pasarela" role="tabpanel">
+                <div class="rubro-panel">
+                    <div class="row g-4 g-lg-5 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
+                                <i class="bi bi-window fs-4"></i>
+                            </div>
+                            <h3 class="fw-extrabold text-dark mb-2">Pasarela de pago</h3>
+                            <p class="service-card-text mb-0">
+                                Checkout listo para incrustar en tu sitio, sin desarrollo adicional.
+                                Vos elegís los colores y campos; nosotros nos encargamos del resto.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rubro-mockup">
+                                <small class="text-muted d-block mb-2">Checkout</small>
+                                <div class="p-2 rounded-3 bg-white border mb-2">
+                                    <small class="text-muted d-block">Número de tarjeta</small>
+                                    <small class="fw-bold text-dark">•••• •••• •••• 4242</small>
+                                </div>
+                                <button type="button" class="btn btn-wellpay btn-sm w-100 fw-bold" tabindex="-1">Pagar ₡15.000</button>
+                            </div>
+                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                        </div>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Pasarela de pago</h5>
-                    <p class="text-muted mb-0 small">Checkout listo para incrustar en tu sitio, sin desarrollo adicional.</p>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#pluginsModal">
-                    <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3 mx-auto">
-                        <i class="bi bi-link-45deg fs-4"></i>
+            <div class="tab-pane fade" id="int-plugins" role="tabpanel">
+                <div class="rubro-panel">
+                    <div class="row g-4 g-lg-5 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
+                                <i class="bi bi-link-45deg fs-4"></i>
+                            </div>
+                            <h3 class="fw-extrabold text-dark mb-2">Plugins y links de pago</h3>
+                            <p class="service-card-text mb-0">
+                                Conectá tu tienda con un plugin, o compartí un link de cobro por
+                                WhatsApp o correo, sin escribir una sola línea de código.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rubro-mockup">
+                                <small class="text-muted d-block mb-1">Link de pago</small>
+                                <h6 class="fw-bold text-dark mb-2">Pedido #1042</h6>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="small fw-bold text-dark">₡18.500</span>
+                                    <span class="badge bg-success-subtle text-success">Enlace activo</span>
+                                </div>
+                            </div>
+                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                        </div>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Plugins y links de pago</h5>
-                    <p class="text-muted mb-0 small">Conectá tu tienda o compartí un link de cobro sin escribir código.</p>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="service-card h-100 bg-white p-4 shadow-sm border border-light-subtle text-center" style="border-radius: 32px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#apiMedidaModal">
-                    <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 mx-auto">
-                        <i class="bi bi-code-square fs-4"></i>
+            <div class="tab-pane fade" id="int-apimedida" role="tabpanel">
+                <div class="rubro-panel">
+                    <div class="row g-4 g-lg-5 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
+                                <i class="bi bi-code-square fs-4"></i>
+                            </div>
+                            <h3 class="fw-extrabold text-dark mb-2">API a la medida</h3>
+                            <p class="service-card-text mb-0">
+                                Integración completa vía API REST y webhooks para construir flujos
+                                de pago totalmente personalizados a tu operación.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rubro-mockup">
+                                <small class="text-muted d-block mb-2">Webhook recibido</small>
+                                <div class="d-flex justify-content-between align-items-center p-2 rounded-3 bg-white border">
+                                    <span class="small fw-bold text-dark">payment_intent.approved</span>
+                                    <i class="bi bi-check-circle-fill text-wellpay"></i>
+                                </div>
+                            </div>
+                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                        </div>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">API a la medida</h5>
-                    <p class="text-muted mb-0 small">Integración completa vía API REST y webhooks para flujos personalizados.</p>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -167,10 +283,7 @@
      API
      ============================================================ -->
 <section id="api" class="py-5 position-relative overflow-hidden bg-light-subtle">
-    <div class="glow-shape glow-services-top-right"></div>
-    <div class="glow-shape glow-services-bottom-left"></div>
-
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -228,7 +341,7 @@ Content-Type: application/json
      SANDBOX / AMBIENTE DE PRUEBAS
      ============================================================ -->
 <section id="sandbox" class="py-5 bg-white position-relative overflow-hidden">
-    <div class="container py-3 position-relative" style="z-index: 2;">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
@@ -267,11 +380,8 @@ Content-Type: application/json
      GUÍAS DE INTEGRACIÓN
      ============================================================ -->
 <section id="guias-integracion" class="py-5 position-relative overflow-hidden bg-light-subtle">
-    <div class="glow-shape glow-services-top-left"></div>
-    <div class="glow-shape glow-services-bottom-right"></div>
-
-    <div class="container py-3 position-relative" style="z-index: 2;">
-        <div class="row align-items-center g-5 mb-5">
+    <div class="container pt-3 pb-5 position-relative" style="z-index: 2;">
+        <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Guías de integración</small>
@@ -285,12 +395,6 @@ Content-Type: application/json
                 <p class="lead text-secondary fs-6 fw-normal">
                     Guías prácticas para llevar tu integración de cero a producción.
                 </p>
-            </div>
-
-            <div class="col-lg-4 text-center d-none d-lg-block">
-                <div class="wp-shadow-pulse-wrap" style="max-width: 260px; margin: 0 auto;">
-                    <img src="~/images/logos/Pantalla.png" alt="Panel de desarrollo Well-Pay" />
-                </div>
             </div>
         </div>
 
@@ -425,75 +529,6 @@ Content-Type: application/json
                 <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
                 <p class="text-secondary mb-0">
                     Cada respuesta de la API incluye un código y una descripción clara del error (datos inválidos, fondos insuficientes, autenticación fallida, etc.), para que puedas manejarlos correctamente en tu integración.
-                </p>
-            </div>
-            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade modal-stripe" id="pasarelaModal" tabindex="-1" aria-labelledby="pasarelaModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
-            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="pasarelaModalLabel">Pasarela de pago</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body pt-2">
-                <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
-                    <i class="bi bi-window fs-4"></i>
-                </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
-                    Un checkout prediseñado y seguro que podés incrustar en tu sitio con unas pocas líneas de código, sin construir tu propio formulario de pago ni preocuparte por el cumplimiento de PCI DSS.
-                </p>
-            </div>
-            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade modal-stripe" id="pluginsModal" tabindex="-1" aria-labelledby="pluginsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
-            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="pluginsModalLabel">Plugins y links de pago</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body pt-2">
-                <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
-                    <i class="bi bi-link-45deg fs-4"></i>
-                </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
-                    Generá enlaces de cobro únicos para compartir por WhatsApp, correo o redes sociales, o conectá Well-Pay directamente a plataformas de e-commerce populares mediante plugins listos para usar.
-                </p>
-            </div>
-            <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade modal-stripe" id="apiMedidaModal" tabindex="-1" aria-labelledby="apiMedidaModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
-            <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="apiMedidaModalLabel">API a la medida</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body pt-2">
-                <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
-                    <i class="bi bi-code-square fs-4"></i>
-                </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
-                    Acceso completo a la API REST de Well-Pay para construir flujos de pago totalmente personalizados: desde un checkout propio hasta lógica de negocio específica de tu operación.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">

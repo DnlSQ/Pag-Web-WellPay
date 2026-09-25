@@ -516,6 +516,78 @@ p.lead {
     }
 }
 
+/* Envoltorio para poder flotar el ícono sobre el mockup, sin taparlo */
+.rubro-mockup-wrap {
+    position: relative;
+}
+
+/* Ícono flotante por rubro (Soluciones para negocios) */
+.rubro-mockup-icon {
+    position: absolute;
+    top: -145px;
+    right: -10px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+}
+@media (max-width: 575.98px) {
+    .rubro-mockup-icon {
+        width: 68px;
+        height: 68px;
+        top: -40px;
+        right: -4px;
+    }
+}
+
+.rubro-float-bob {
+    animation: rubro-bob 3s ease-in-out infinite;
+}
+@keyframes rubro-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.rubro-float-wobble {
+    animation: rubro-wobble 3.4s ease-in-out infinite;
+}
+@keyframes rubro-wobble {
+    0%, 100% { transform: rotate(-6deg); }
+    50% { transform: rotate(6deg); }
+}
+
+.rubro-float-sway {
+    animation: rubro-sway 3.8s ease-in-out infinite;
+}
+@keyframes rubro-sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+}
+
+.rubro-float-pulse {
+    animation: rubro-pulse 2.6s ease-in-out infinite;
+}
+@keyframes rubro-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+.rubro-float-drift {
+    animation: rubro-drift 4.2s ease-in-out infinite;
+}
+@keyframes rubro-drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-8px, -8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rubro-mockup-icon {
+        animation: none !important;
+    }
+}
+
 /* Burbujas de chat (Profesionales independientes) */
 .rubro-mockup-chat {
     background: #f8fafc;

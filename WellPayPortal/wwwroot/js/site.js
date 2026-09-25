@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- 1. RESTRICCIONES DE ENTRADA EN TIEMPO REAL ---
 
     // Campos de Texto: Solo letras y espacios (Nombre y Apellidos)
-    const inputsSoloLetras = document.querySelectorAll('#nombre, #apellidos');
+    const inputsSoloLetras = document.querySelectorAll('#nombre, #apellidos, #representanteNombre');
     inputsSoloLetras.forEach(input => {
         if (input) {
             input.addEventListener('input', function () {
@@ -24,11 +24,107 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Campo Cédula: Solo números
+    // Campo Cédula/Identificación: solo números y detección automática del tipo
     const inputCedula = document.getElementById('cedula');
+    const inputTipoIdentificacion = document.getElementById('tipoIdentificacion');
+    const textoTipoDetectado = document.getElementById('cedulaTipoDetectado');
+    const bloqueRepresentante = document.getElementById('bloqueRepresentanteLegal');
+    const inputRepresentanteNombre = document.getElementById('representanteNombre');
+    const selectRepresentanteTipo = document.getElementById('representanteTipoIdentificacion');
+    const inputRepresentanteId = document.getElementById('representanteIdentificacion');
+
+    // Detecta el tipo de identificación según el formato costarricense
+    function detectarTipoCedula(valor) {
+        const limpio = (valor || '').replace(/\D/g, '');
+        if (/^3\d{9}$/.test(limpio)) return 'Juridica';   // 10 dígitos, inicia en 3
+        if (/^[1-9]\d{8}$/.test(limpio)) return 'Fisica'; // 9 dígitos, no inicia en 0
+        if (/^\d{11,12}$/.test(limpio)) return 'Dimex';   // 11 o 12 dígitos
+        return '';
+    }
+
+    const etiquetasTipo = {
+        Fisica: 'Cédula física detectada',
+        Juridica: 'Cédula jurídica detectada — completá los datos del representante legal',
+        Dimex: 'DIMEX detectado'
+    };
+
+    function alternarRepresentanteLegal(esJuridica) {
+        if (!bloqueRepresentante) return;
+
+        bloqueRepresentante.classList.toggle('d-none', !esJuridica);
+
+        [inputRepresentanteNombre, selectRepresentanteTipo, inputRepresentanteId].forEach(function (campo) {
+            if (!campo) return;
+            if (esJuridica) {
+                campo.setAttribute('required', 'required');
+            } else {
+                campo.removeAttribute('required');
+                campo.value = '';
+                campo.classList.remove('is-invalid');
+                campo.setCustomValidity('');
+            }
+        });
+    }
+
     if (inputCedula) {
         inputCedula.addEventListener('input', function () {
-            this.value = this.value.replace(/[^0-9]/g, '');
+            // Solo dígitos, máximo 12 (cubre DIMEX)
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 12);
+
+            const tipo = detectarTipoCedula(this.value);
+            if (inputTipoIdentificacion) inputTipoIdentificacion.value = tipo;
+
+            if (textoTipoDetectado) {
+                textoTipoDetectado.textContent = tipo ? etiquetasTipo[tipo] : '';
+                textoTipoDetectado.className = tipo ? 'form-text text-success' : 'form-text';
+            }
+
+            alternarRepresentanteLegal(tipo === 'Juridica');
+
+            // Inválido mientras el campo tenga contenido y no calce con ningún formato conocido
+            this.setCustomValidity(this.value.length > 0 && !tipo ? 'Formato de identificación no válido.' : '');
+        });
+    }
+
+    // Campo de identificación del representante legal: filtro según el tipo elegido
+    if (selectRepresentanteTipo && inputRepresentanteId) {
+        selectRepresentanteTipo.addEventListener('change', function () {
+            inputRepresentanteId.value = '';
+            inputRepresentanteId.setCustomValidity('');
+
+            if (this.value === 'Pasaporte') {
+                inputRepresentanteId.setAttribute('maxlength', '15');
+                inputRepresentanteId.placeholder = 'N.º de pasaporte';
+            } else if (this.value === 'Dimex') {
+                inputRepresentanteId.setAttribute('maxlength', '12');
+                inputRepresentanteId.placeholder = 'DIMEX (11-12 dígitos)';
+            } else if (this.value === 'Cedula') {
+                inputRepresentanteId.setAttribute('maxlength', '9');
+                inputRepresentanteId.placeholder = 'Cédula física (9 dígitos)';
+            } else {
+                inputRepresentanteId.removeAttribute('maxlength');
+                inputRepresentanteId.placeholder = '';
+            }
+        });
+
+        inputRepresentanteId.addEventListener('input', function () {
+            const tipo = selectRepresentanteTipo.value;
+
+            if (tipo === 'Pasaporte') {
+                this.value = this.value.replace(/[^A-Za-z0-9]/g, '');
+                this.setCustomValidity(this.value.length > 0 && !/^[A-Za-z0-9]{6,15}$/.test(this.value)
+                    ? 'El pasaporte debe tener entre 6 y 15 caracteres alfanuméricos.' : '');
+            } else if (tipo === 'Dimex') {
+                this.value = this.value.replace(/[^0-9]/g, '').slice(0, 12);
+                this.setCustomValidity(this.value.length > 0 && !/^\d{11,12}$/.test(this.value)
+                    ? 'El DIMEX debe tener 11 o 12 dígitos.' : '');
+            } else if (tipo === 'Cedula') {
+                this.value = this.value.replace(/[^0-9]/g, '').slice(0, 9);
+                this.setCustomValidity(this.value.length > 0 && !/^[1-9]\d{8}$/.test(this.value)
+                    ? 'La cédula debe tener 9 dígitos y no iniciar en 0.' : '');
+            } else {
+                this.value = this.value.replace(/[^A-Za-z0-9]/g, '');
+            }
         });
     }
 

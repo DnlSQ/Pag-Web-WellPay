@@ -27,13 +27,23 @@ namespace WellPayPortal.Controllers
                 return BadRequest(new { ok = false, mensaje = "Hay campos incompletos o inválidos." });
             }
 
+            var esJuridica = modelo.TipoIdentificacion == "Juridica";
+
             var cuerpo = $@"
                 <h2>Nueva solicitud de afiliación</h2>
                 <p><strong>Nombre:</strong> {modelo.Nombre} {modelo.Apellidos}</p>
-                <p><strong>Cédula:</strong> {modelo.Cedula}</p>
+                <p><strong>Tipo de identificación:</strong> {modelo.TipoIdentificacion}</p>
+                <p><strong>Cédula/Identificación:</strong> {modelo.Cedula}</p>
                 <p><strong>Teléfono:</strong> {modelo.Telefono}</p>
                 <p><strong>Correo:</strong> {modelo.Correo}</p>
                 <p><strong>Dirección:</strong> {modelo.Direccion}</p>
+                {(esJuridica ? $@"
+                <hr />
+                <h3>Representante legal</h3>
+                <p><strong>Nombre:</strong> {modelo.RepresentanteNombre}</p>
+                <p><strong>Tipo de identificación:</strong> {modelo.RepresentanteTipoIdentificacion}</p>
+                <p><strong>Identificación:</strong> {modelo.RepresentanteIdentificacion}</p>
+                " : "")}
             ";
 
             try

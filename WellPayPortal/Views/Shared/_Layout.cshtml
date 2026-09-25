@@ -82,7 +82,15 @@
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
                                         <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout">Checkout</a></li>
                                         <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos">Link de pagos</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Cargos recurrentes</a>
+                                    <ul class="dropdown-menu border-0 shadow-sm rounded-3">
                                         <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes">Cargos recurrentes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-sinpe">Cuenta SINPE</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-tarjeta">Tarjeta crédito / débito</a></li>
                                     </ul>
                                 </li>
 
@@ -118,6 +126,7 @@
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
                                         <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros">Reportes financieros</a></li>
                                         <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo">Score de riesgo</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="metadatos">Metadatos</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -251,6 +260,8 @@
                                 <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" data-bs-dismiss="offcanvas">Checkout</a></li>
                                 <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" data-bs-dismiss="offcanvas">Link de pagos</a></li>
                                 <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" data-bs-dismiss="offcanvas">Cargos recurrentes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-sinpe" data-bs-dismiss="offcanvas">Cuenta SINPE</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-tarjeta" data-bs-dismiss="offcanvas">Tarjeta crédito / débito</a></li>
                                 <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" data-bs-dismiss="offcanvas">Datáfonos físicos</a></li>
                             </ul>
                         </div>
@@ -274,6 +285,7 @@
                                 <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes" data-bs-dismiss="offcanvas">Profesionales independientes</a></li>
                                 <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros" data-bs-dismiss="offcanvas">Reportes financieros</a></li>
                                 <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo" data-bs-dismiss="offcanvas">Score de riesgo</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="metadatos" data-bs-dismiss="offcanvas">Metadatos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -470,10 +482,13 @@
                             <input type="text" name="Apellidos" class="form-control form-control-stripe" id="apellidos" required />
                         </div>
 
-                        <!-- Cédula -->
+                        <!-- Cédula / Identificación -->
                         <div class="col-md-6">
-                            <label for="cedula" class="form-label-custom">Cédula / Identificación</label>
-                            <input type="text" name="Cedula" class="form-control form-control-stripe" id="cedula"  required />
+                            <label for="cedula" class="form-label-custom">Cédula Física / Jurídica / DIMEX</label>
+                            <input type="text" name="Cedula" class="form-control form-control-stripe" id="cedula"
+                                   inputmode="numeric" maxlength="12" placeholder="Solo números" required />
+                            <input type="hidden" name="TipoIdentificacion" id="tipoIdentificacion" value="" />
+                            <small class="form-text" id="cedulaTipoDetectado"></small>
                         </div>
 
                         <!-- Teléfono -->
@@ -493,6 +508,33 @@
                             <label for="direccion" class="form-label-custom">Dirección física</label>
                             <textarea name="Direccion" class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
                         </div>
+                        <!-- Representante legal (solo si la identificación es Cédula Jurídica) -->
+                        <div class="col-12 d-none" id="bloqueRepresentanteLegal">
+                            <hr class="my-2" />
+                            <p class="fw-bold text-dark mb-2 fs-7">
+                                <i class="bi bi-person-badge text-wellpay me-1"></i> Representante legal
+                            </p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="representanteNombre" class="form-label-custom">Nombre completo</label>
+                                    <input type="text" name="RepresentanteNombre" class="form-control form-control-stripe" id="representanteNombre" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="representanteTipoIdentificacion" class="form-label-custom">Tipo de identificación</label>
+                                    <select name="RepresentanteTipoIdentificacion" class="form-select form-control-stripe" id="representanteTipoIdentificacion">
+                                        <option value="">Seleccionar...</option>
+                                        <option value="Cedula">Cédula física</option>
+                                        <option value="Dimex">DIMEX</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="representanteIdentificacion" class="form-label-custom">Número de identificación</label>
+                                    <input type="text" name="RepresentanteIdentificacion" class="form-control form-control-stripe" id="representanteIdentificacion" placeholder="N.º de identificación" />
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Botón Enviar -->

@@ -1,4 +1,4 @@
-@{
+</div>@{
     ViewData["Title"] = "Soluciones";
 }
 
@@ -96,50 +96,40 @@
         <div class="tab-content rubro-tab-content">
 
             <!-- MÉDICOS -->
-            <div class="tab-pane fade show active" id="medicos" role="tabpanel">
-                <div class="rubro-panel">
-                    <img src="~/images/logos/bannermedico.png" alt="Integrá tus cobros y facturas en un solo sistema" class="rubro-banner rounded-4 mb-4" />
-                    <div class="row g-4 g-lg-5 align-items-center">
-                        <div class="col-lg-7">
-                            <h3 class="fw-extrabold text-dark mb-2">Para médicos</h3>
-                            <!-- TODO: confirmar cada beneficio con el equipo comercial; "facturación electrónica"
-                                 es una función sujeta a normativa, confirmar si existe antes de publicar -->
-                            <p class="service-card-text mb-3">
-                                Cobrá consultas y tratamientos con links de pago y facturación electrónica
-                                lista para enviar a tus pacientes.
-                            </p>
-                            <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
-                                <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>El paciente paga desde su celular con un link</span></li>
-                                <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Cobro confirmado al instante</span></li>
-                                <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Facturación electrónica lista para enviar</span></li>
-                            </ul>
-                            <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
-                            <div class="d-flex flex-wrap gap-2 mb-4">
-                                <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip">Link de pagos</a>
-                                <a asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" class="rubro-chip">Cargos recurrentes</a>
-                                <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip">Datáfonos</a>
-                            </div>
-                            <div class="d-flex flex-wrap gap-2">
-                                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
-                                <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="rubro-mockup">
-                                <small class="text-muted d-block mb-1">Link de pago</small>
-                                <h6 class="fw-bold text-dark mb-3">Consulta general</h6>
-                                <div class="d-flex justify-content-between align-items-center p-2 rounded-3 bg-light">
-                                    <span class="small fw-bold text-dark">Estado</span>
-                                    <span class="badge bg-success-subtle text-success">Pagado</span>
-                                </div>
-                            </div>
-                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
-                        </div>
-                    </div>
+<div class="tab-pane fade show active" id="medicos" role="tabpanel">
+    <div class="rubro-panel">
+        <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6">
+                <h3 class="fw-extrabold text-dark mb-2">Para médicos</h3>
+                <!-- TODO: confirmar cada beneficio con el equipo comercial; "facturación electrónica"
+                     es una función sujeta a normativa, confirmar si existe antes de publicar -->
+                <p class="service-card-text mb-3">
+                    Cobrá consultas y tratamientos con links de pago y facturación electrónica
+                    lista para enviar a tus pacientes.
+                </p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>El paciente paga desde su celular con un link</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Cobro confirmado al instante</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Facturación electrónica lista para enviar</span></li>
+                </ul>
+                <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip">Link de pagos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" class="rubro-chip">Cargos recurrentes</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip">Datáfonos</a>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <img src="~/images/logos/bannermedico2.png" alt="Cobrá fácil, sin complicaciones" class="rubro-side-img" />
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!-- DENTISTAS -->
 <!-- DENTISTAS -->
 <div class="tab-pane fade" id="dentistas" role="tabpanel">
     <div class="rubro-panel">

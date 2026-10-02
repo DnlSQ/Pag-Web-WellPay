@@ -27,19 +27,13 @@
         <nav class="navbar navbar-expand-lg navbar-light py-3">
             <div class="container">
 
-                <!-- Logo Well-Pay -->
-                <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold fs-4 text-dark"
-                   asp-area=""
-                   asp-controller="Home"
-                   asp-action="Index">
-
-                    <span class="wellpay-logo-badge me-1">
-                        @await Html.PartialAsync("_LogoIcon")
-                    </span>
-
-                    WELL-PAY
-                </a>
-
+    <!-- Logo Well-Pay -->
+    <a class="navbar-brand d-flex align-items-center"
+         asp-area=""
+         asp-controller="Home"
+         asp-action="Index">
+         <img src="~/images/logos/logo.png" alt="Well-Pay" class="wellpay-logo-img" />
+    </a>
                 <!-- Botón hamburguesa para móviles -->
                 <button class="navbar-toggler border-0"
                         type="button"
@@ -376,13 +370,9 @@
     <footer class="bg-navy text-white pt-5 pb-4 mt-5">
         <div class="container">
             <div class="row g-4">
-
                 <div class="col-lg-3 col-md-6">
-                    <a class="navbar-brand d-flex align-items-center gap-2 fw-extrabold fs-4 text-white mb-3" asp-area="" asp-controller="Home" asp-action="Index">
-                        <span class="wellpay-logo-badge me-1">
-                            @await Html.PartialAsync("_LogoIcon")
-                        </span>
-                        WELL-PAY
+                    <a class="navbar-brand d-flex align-items-center mb-3" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logos/logoBlanco.png" alt="Well-Pay" class="wellpay-logo-img" />
                     </a>
                     <p class="text-secondary fs-7 mb-0">
                         Soluciones financieras para conectar a tu empresa con el sistema de pagos de Costa Rica.
@@ -451,12 +441,9 @@
 
             <!-- Encabezado con Logo y Botón de Cerrar -->
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center gap-2 fw-extrabold text-dark fs-5">
-                    <span class="wellpay-logo-badge">
-                        @await Html.PartialAsync("_LogoIcon")
-                    </span>
-                    <span>WELL-PAY</span>
-                </div>
+              <div class="d-flex align-items-center fw-extrabold text-dark fs-5">
+                 <img src="~/images/logos/logo.png" alt="Well-Pay" class="wellpay-logo-img" />
+              </div>
                 <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 

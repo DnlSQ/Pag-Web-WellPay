@@ -70,7 +70,17 @@ p.lead {
 .bg-light-blue-subtle {
     background-color: #eef3fe;
 }
-
+/* Logo Well-Pay (imagen) */
+.wellpay-logo-img {
+    height: 58px;
+    width: auto;
+    display: block;
+}
+@media (max-width: 575.98px) {
+    .wellpay-logo-img {
+        height: 32px;
+    }
+}
 /* =========================================
    BLOQUE SEGURIDAD + NOSOTROS (Home, combinado)
    ========================================= */
@@ -263,6 +273,23 @@ p.lead {
 /* =========================================
    PÁGINA SOLUCIONES: rediseño (auditoría)
    ========================================= */
+
+/* Imagen de rubro al lado del texto (reemplaza al mockup) */
+.rubro-side-img {
+    width: 120%;
+    max-width: 120%;
+    height: auto;
+    display: block;
+    margin-left: -10%;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, black 6%, black 94%, transparent),
+        linear-gradient(to bottom, transparent, black 6%, black 94%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, black 6%, black 94%, transparent),
+        linear-gradient(to bottom, transparent, black 6%, black 94%, transparent);
+    mask-composite: intersect;
+}
 
 /* Mockup único del hero (link de pago + chip) */
 .hero-mockup-solo {

@@ -290,7 +290,12 @@ p.lead {
         linear-gradient(to bottom, transparent, black 6%, black 94%, transparent);
     mask-composite: intersect;
 }
-
+/* Variante: imagen más grande y desplazada a la izquierda (Dentistas) */
+.rubro-side-img--left {
+    width: 135%;
+    max-width: 135%;
+    margin-left: -25%;
+}
 /* Mockup único del hero (link de pago + chip) */
 .hero-mockup-solo {
     position: relative;

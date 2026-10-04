@@ -1,0 +1,10 @@
+﻿{
+  "build": {
+    "builder": "nixpacks",
+    "buildCommand": "cd WellPayPortal && dotnet build"
+  },
+  "deploy": {
+    "startCommand": "cd WellPayPortal && dotnet WellPayPortal.dll"
+  },
+  "rootDirectory": "WellPayPortal"
+}

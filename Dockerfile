@@ -1,9 +1,8 @@
 ﻿# Stage 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
 WORKDIR /src
-COPY ["WellPayPortal/WellPayPortal.csproj", "WellPayPortal/"]
-RUN dotnet restore "WellPayPortal/WellPayPortal.csproj"
 COPY . .
+RUN dotnet restore "WellPayPortal/WellPayPortal.csproj"
 RUN dotnet publish -c Release -o /app/publish "WellPayPortal/WellPayPortal.csproj"
 
 # Stage 2: Runtime

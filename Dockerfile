@@ -10,5 +10,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=builder /app/publish .
 EXPOSE 5000
-ENV ASPNETCORE_URLS=http://+:5000
+ENV ASPNETCORE_URLS=http://+:\
 ENTRYPOINT ["dotnet", "WellPayPortal.dll"]

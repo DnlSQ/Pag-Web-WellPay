@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Inicio";
 }
 
@@ -12,24 +12,24 @@
                 <!-- Badge Verde -->
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <span class="dot-indicator"></span>
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px;">SOLUCIONES FINANCIERAS PARA EMPRESAS</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px;" data-es="SOLUCIONES FINANCIERAS PARA EMPRESAS" data-en="FINANCIAL SOLUTIONS FOR BUSINESSES">SOLUCIONES FINANCIERAS PARA EMPRESAS</small>
                 </div>
 
                 <!-- Título Principal -->
                 <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-                    Conectá tu empresa con el sistema financiero <br class="d-none d-md-inline" />
-                    <span class="text-primary-custom">de Costa Rica.</span>
+                    <span data-es="Conectá tu empresa con el sistema financiero" data-en="Connect your business with the financial system">Conectá tu empresa con el sistema financiero</span> <br class="d-none d-md-inline" />
+                    <span class="text-primary-custom" data-es="de Costa Rica." data-en="in Costa Rica.">de Costa Rica.</span>
                 </h1>
 
                 <!-- Subtítulo -->
-                <p class="lead text-secondary mb-4 fs-6 fw-normal">
+                <p class="lead text-secondary mb-4 fs-6 fw-normal" data-es="Gestioná cuentas IBAN, pagos inmediatos, SINPE, cobros con tarjeta y conciliación desde una sola plataforma." data-en="Manage IBAN accounts, immediate payments, SINPE, card collections and reconciliation from a single platform.">
                     Gestioná cuentas IBAN, pagos inmediatos, SINPE, cobros con tarjeta y conciliación
                     desde una sola plataforma.
                 </p>
 
                 <!-- Botones de Acción -->
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                    <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal" data-es="Solicitar afiliación" data-en="Request Affiliation">
                         Solicitar afiliación
                     </button>
                 </div>
@@ -41,8 +41,8 @@
                             <i class="bi bi-lightning-charge-fill fs-5"></i>
                         </div>
                         <div>
-                            <div class="fw-bold fs-7 lh-1">En tiempo real</div>
-                            <small class="text-muted" style="font-size: 0.72rem;">Operaciones 24/7</small>
+                            <div class="fw-bold fs-7 lh-1" data-es="En tiempo real" data-en="Real-time">En tiempo real</div>
+                            <small class="text-muted" style="font-size: 0.72rem;" data-es="Operaciones 24/7" data-en="24/7 Operations">Operaciones 24/7</small>
                         </div>
                     </div>
 
@@ -51,8 +51,8 @@
                             <i class="bi bi-shield-check fs-5"></i>
                         </div>
                         <div>
-                            <div class="fw-bold fs-7 lh-1">Seguro</div>
-                            <small class="text-muted" style="font-size: 0.72rem;">Infraestructura robusta</small>
+                            <div class="fw-bold fs-7 lh-1" data-es="Seguro" data-en="Secure">Seguro</div>
+                            <small class="text-muted" style="font-size: 0.72rem;" data-es="Infraestructura robusta" data-en="Robust Infrastructure">Infraestructura robusta</small>
                         </div>
                     </div>
 
@@ -61,8 +61,8 @@
                             <i class="bi bi-code-slash fs-5"></i>
                         </div>
                         <div>
-                            <div class="fw-bold fs-7 lh-1">Fácil integración</div>
-                            <small class="text-muted" style="font-size: 0.72rem;">API moderna y flexible</small>
+                            <div class="fw-bold fs-7 lh-1" data-es="Fácil integración" data-en="Easy Integration">Fácil integración</div>
+                            <small class="text-muted" style="font-size: 0.72rem;" data-es="API moderna y flexible" data-en="Modern and Flexible API">API moderna y flexible</small>
                         </div>
                     </div>
                 </div>
@@ -76,11 +76,11 @@
                     <!-- Chips flotantes: sensación de producto en vivo -->
                     <div class="dashboard-chip dashboard-chip-top d-none d-md-flex">
                         <i class="bi bi-check-circle-fill text-wellpay"></i>
-                        <span>Pago recibido</span>
+                        <span data-es="Pago recibido" data-en="Payment Received">Pago recibido</span>
                     </div>
                     <div class="dashboard-chip dashboard-chip-bottom d-none d-md-flex">
                         <i class="bi bi-check-circle-fill text-primary-custom"></i>
-                        <span>SINPE confirmado</span>
+                        <span data-es="SINPE confirmado" data-en="SINPE Confirmed">SINPE confirmado</span>
                     </div>
 
                     <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light position-relative" style="z-index: 2;">
@@ -95,25 +95,25 @@
                                 </div>
 
                                 <div class="d-grid gap-1 dashboard-buttons">
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item active text-start text-white">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item active text-start text-white" data-es="Inicio" data-en="Home">
                                         <i class="bi bi-house me-2"></i>Inicio
                                     </a>
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50" data-es="Cuentas" data-en="Accounts">
                                         <i class="bi bi-wallet2 me-2"></i>Cuentas
                                     </a>
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50" data-es="Pagos" data-en="Payments">
                                         <i class="bi bi-arrow-down-left-square me-2"></i>Pagos
                                     </a>
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50" data-es="Cobros" data-en="Collections">
                                         <i class="bi bi-arrow-up-right-square me-2"></i>Cobros
                                     </a>
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50" data-es="Reportes" data-en="Reports">
                                         <i class="bi bi-bar-chart me-2"></i>Reportes
                                     </a>
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50" data-es="Desarrollo" data-en="Development">
                                         <i class="bi bi-code-slash me-2"></i>Desarrollo
                                     </a>
-                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50">
+                                    <a asp-controller="Home" asp-action="Index" class="btn btn-dashboard-item text-start text-white-50" data-es="Ajustes" data-en="Settings">
                                         <i class="bi bi-gear me-2"></i>Ajustes
                                     </a>
                                 </div>
@@ -123,7 +123,7 @@
                         <!-- Panel Blanco -->
                         <div class="col-8 bg-white p-3">
                             <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h6 class="fw-bold m-0 text-dark">Resumen</h6>
+                                <h6 class="fw-bold m-0 text-dark" data-es="Resumen" data-en="Summary">Resumen</h6>
                                 <div class="d-flex gap-2 text-muted">
                                     <i class="bi bi-bell hover-pointer"></i>
                                     <i class="bi bi-person-circle hover-pointer"></i>
@@ -133,23 +133,23 @@
                             <div class="row g-2 mb-2">
                                 <div class="col-6">
                                     <div class="bg-light p-2 rounded-3 border border-light-subtle">
-                                        <small class="text-muted d-block" style="font-size:0.65rem;">Saldo disponible</small>
+                                        <small class="text-muted d-block" style="font-size:0.65rem;" data-es="Saldo disponible" data-en="Available Balance">Saldo disponible</small>
                                         <strong class="fs-6 fw-extrabold text-dark">₡ 12.458.750,00</strong>
-                                        <small class="d-block text-muted" style="font-size:0.6rem;">Colones</small>
+                                        <small class="d-block text-muted" style="font-size:0.6rem;" data-es="Colones" data-en="Colones">Colones</small>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="bg-light p-2 rounded-3 border border-light-subtle">
-                                        <small class="text-muted d-block" style="font-size:0.65rem;">Movimientos hoy</small>
+                                        <small class="text-muted d-block" style="font-size:0.65rem;" data-es="Movimientos hoy" data-en="Transactions Today">Movimientos hoy</small>
                                         <strong class="fs-6 fw-extrabold text-dark">28</strong>
-                                        <small class="d-block text-muted" style="font-size:0.6rem;">Transacciones</small>
+                                        <small class="d-block text-muted" style="font-size:0.6rem;" data-es="Transacciones" data-en="Transactions">Transacciones</small>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mb-2">
-                                <small class="fw-bold text-dark" style="font-size:0.75rem;">Últimas transacciones</small>
-                                <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-primary fw-semibold" style="font-size:0.65rem;">Ver todas</a>
+                                <small class="fw-bold text-dark" style="font-size:0.75rem;" data-es="Últimas transacciones" data-en="Latest Transactions">Últimas transacciones</small>
+                                <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-primary fw-semibold" style="font-size:0.65rem;" data-es="Ver todas" data-en="View All">Ver todas</a>
                             </div>
 
                             <div class="d-flex flex-column gap-1" style="font-size: 0.7rem;">
@@ -157,8 +157,8 @@
                                     <div class="d-flex align-items-center gap-2">
                                         <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-arrow-up-right"></i></span>
                                         <div>
-                                            <div class="fw-bold text-dark">Pago recibido - Cliente A</div>
-                                            <small class="text-muted" style="font-size: 0.6rem;">Hoy, 10:45 a. m.</small>
+                                            <div class="fw-bold text-dark" data-es="Pago recibido - Cliente A" data-en="Payment Received - Client A">Pago recibido - Cliente A</div>
+                                            <small class="text-muted" style="font-size: 0.6rem;" data-es="Hoy, 10:45 a. m." data-en="Today, 10:45 a.m.">Hoy, 10:45 a. m.</small>
                                         </div>
                                     </div>
                                     <span class="fw-bold text-success">+ ₡125.000,00</span>
@@ -168,8 +168,8 @@
                                     <div class="d-flex align-items-center gap-2">
                                         <span class="badge bg-danger-subtle text-danger p-1 rounded-circle"><i class="bi bi-arrow-down-left"></i></span>
                                         <div>
-                                            <div class="fw-bold text-dark">Transferencia - Proveedor B</div>
-                                            <small class="text-muted" style="font-size: 0.6rem;">Hoy, 9:30 a. m.</small>
+                                            <div class="fw-bold text-dark" data-es="Transferencia - Proveedor B" data-en="Transfer - Supplier B">Transferencia - Proveedor B</div>
+                                            <small class="text-muted" style="font-size: 0.6rem;" data-es="Hoy, 9:30 a. m." data-en="Today, 9:30 a.m.">Hoy, 9:30 a. m.</small>
                                         </div>
                                     </div>
                                     <span class="fw-bold text-danger">- ₡75.000,00</span>
@@ -179,8 +179,8 @@
                                     <div class="d-flex align-items-center gap-2">
                                         <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-arrow-up-right"></i></span>
                                         <div>
-                                            <div class="fw-bold text-dark">SINPE Móvil - Cliente C</div>
-                                            <small class="text-muted" style="font-size: 0.6rem;">Ayer, 4:15 p. m.</small>
+                                            <div class="fw-bold text-dark" data-es="SINPE Móvil - Cliente C" data-en="SINPE Mobile - Client C">SINPE Móvil - Cliente C</div>
+                                            <small class="text-muted" style="font-size: 0.6rem;" data-es="Ayer, 4:15 p. m." data-en="Yesterday, 4:15 p.m.">Ayer, 4:15 p. m.</small>
                                         </div>
                                     </div>
                                     <span class="fw-bold text-success">+ ₡300.000,00</span>
@@ -196,62 +196,7 @@
         </div>
     </div>
 </section>
-@*
-<!-- SECCIÓN DE LOGOS COMPACTA -->
-<section class="pt-4 pb-3 bg-white overflow-hidden">
-    <div class="container text-center mb-2">
-        <h3 class="fw-extrabold text-dark mb-0" style="font-size: 1.5rem;">
-            Con la confianza de:
-        </h3>
-    </div>
 
-    <div class="logo-slider">
-        <div class="logo-slide-track">
-            <!-- El grupo se repite varias veces en cada mitad para que el track siempre sea más ancho que la pantalla -->
-
-            <!-- ORIGINAL (8 repeticiones) -->
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-
-            <!-- DUPLICADO (mismas 8 repeticiones, para el loop sin cortes) -->
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-            <div class="logo-item"><img src="~/images/logos/Visa.png" alt="Visa" /></div>
-            <div class="logo-item"><img src="~/images/logos/Mastercard.png" alt="Mastercard" /></div>
-            <div class="logo-item"><img src="~/images/logos/AmericanExpress.png" alt="American Express" /></div>
-        </div>
-    </div>
-</section>
-*@
 <!-- =========================================
      SECCIÓN: NUESTROS SERVICIOS (CON GLOW DE FONDO)
      ========================================= -->
@@ -268,11 +213,11 @@
                 <!-- Badge Verde -->
                 <!-- Título Grande -->
                 <h2 class="display-5 fw-extrabold text-dark mb-4 lh-sm">
-                    Una plataforma para <span class="text-primary-custom">mover, cobrar y administrar dinero</span>
+                    <span data-es="Una plataforma para" data-en="A platform to">Una plataforma para</span> <span class="text-primary-custom" data-es="mover, cobrar y administrar dinero" data-en="move, collect and manage money">mover, cobrar y administrar dinero</span>
                 </h2>
 
                 <!-- Subtítulo -->
-                <p class="lead text-secondary fs-6 fw-normal max-w-700 mx-auto">
+                <p class="lead text-secondary fs-6 fw-normal max-w-700 mx-auto" data-es="Integre los servicios financieros que su empresa necesita mediante una única plataforma moderna, segura y preparada para operar en tiempo real." data-en="Integrate the financial services your business needs through a single modern, secure platform ready to operate in real time.">
                     Integre los servicios financieros que su empresa necesita mediante una única plataforma moderna, segura y preparada para operar en tiempo real.
                 </p>
             </div>
@@ -287,15 +232,15 @@
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
                         <i class="bi bi-bank2 fs-2"></i>
                     </div>
-                    <h4 class="fw-bold text-dark mb-2">Transferencias y cuentas</h4>
-                    <p class="text-muted mb-3">Centralizá el movimiento de dinero de tu empresa en una sola cuenta.</p>
+                    <h4 class="fw-bold text-dark mb-2" data-es="Transferencias y cuentas" data-en="Transfers and Accounts">Transferencias y cuentas</h4>
+                    <p class="text-muted mb-3" data-es="Centralizá el movimiento de dinero de tu empresa en una sola cuenta." data-en="Centralize your business's money movements in a single account.">Centralizá el movimiento de dinero de tu empresa en una sola cuenta.</p>
                     <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>Cuenta IBAN</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>Pago Inmediato (PIN)</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>Débito en Tiempo Real (DTR)</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>SINPE Móvil</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="Cuenta IBAN" data-en="IBAN Account">Cuenta IBAN</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="Pago Inmediato (PIN)" data-en="Immediate Payment (PIN)">Pago Inmediato (PIN)</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="Débito en Tiempo Real (DTR)" data-en="Real-Time Debit (RTD)">Débito en Tiempo Real (DTR)</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="SINPE Móvil" data-en="SINPE Mobile">SINPE Móvil</span></li>
                     </ul>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" class="stretched-link text-primary-custom fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" class="stretched-link text-primary-custom fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" data-es="Saber más" data-en="Learn More">
                         Saber más <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -307,14 +252,14 @@
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-4">
                         <i class="bi bi-send-check-fill fs-2"></i>
                     </div>
-                    <h4 class="fw-bold text-dark mb-2">Pagos empresariales</h4>
-                    <p class="text-muted mb-3">Pagá a proveedores y cobrá a tus clientes a cualquier escala.</p>
+                    <h4 class="fw-bold text-dark mb-2" data-es="Pagos empresariales" data-en="Business Payments">Pagos empresariales</h4>
+                    <p class="text-muted mb-3" data-es="Pagá a proveedores y cobrá a tus clientes a cualquier escala." data-en="Pay suppliers and collect from your customers at any scale.">Pagá a proveedores y cobrá a tus clientes a cualquier escala.</p>
                     <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i><span>Pagos masivos</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i><span>Cobros masivos</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i><span>Cobros con tarjeta</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i><span data-es="Pagos masivos" data-en="Bulk Payments">Pagos masivos</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i><span data-es="Cobros masivos" data-en="Bulk Collections">Cobros masivos</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i><span data-es="Cobros con tarjeta" data-en="Card Collections">Cobros con tarjeta</span></li>
                     </ul>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" class="stretched-link text-primary-custom fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" class="stretched-link text-primary-custom fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" data-es="Saber más" data-en="Learn More">
                         Saber más <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -326,14 +271,14 @@
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-4">
                         <i class="bi bi-credit-card-2-front-fill fs-2"></i>
                     </div>
-                    <h4 class="fw-bold text-dark mb-2">Pagos con tarjeta</h4>
-                    <p class="text-muted mb-3">Aceptá pagos con tarjeta de la forma que mejor se adapte a tu negocio.</p>
+                    <h4 class="fw-bold text-dark mb-2" data-es="Pagos con tarjeta" data-en="Card Payments">Pagos con tarjeta</h4>
+                    <p class="text-muted mb-3" data-es="Aceptá pagos con tarjeta de la forma que mejor se adapte a tu negocio." data-en="Accept card payments in the way that best suits your business.">Aceptá pagos con tarjeta de la forma que mejor se adapte a tu negocio.</p>
                     <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>Checkout</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>Link de pago</span></li>
-                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span>Cargos recurrentes</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="Checkout" data-en="Checkout">Checkout</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="Link de pago" data-en="Payment Link">Link de pago</span></li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i><span data-es="Cargos recurrentes" data-en="Recurring Charges">Cargos recurrentes</span></li>
                     </ul>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" class="stretched-link text-primary-custom fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none">
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" class="stretched-link text-primary-custom fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" data-es="Saber más" data-en="Learn More">
                         Saber más <i class="bi bi-chevron-right fs-8"></i>
                     </a>
                 </div>
@@ -353,10 +298,10 @@
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small>PRODUCTO</small>
+                    <small data-es="PRODUCTO" data-en="PRODUCT">PRODUCTO</small>
                 </div>
                 <h2 class="display-6 fw-extrabold text-dark mb-0 lh-sm">
-                    Un panel <span class="text-primary-custom">para todo tu negocio</span>
+                    <span data-es="Un panel" data-en="A panel">Un panel</span> <span class="text-primary-custom" data-es="para todo tu negocio" data-en="for your entire business">para todo tu negocio</span>
                 </h2>
             </div>
         </div>
@@ -364,8 +309,8 @@
         <!-- Bloque 1: texto izquierda, captura derecha -->
         <div class="row align-items-center g-5 mb-5 pb-3">
             <div class="col-lg-6">
-                <h3 class="fw-extrabold text-dark mb-3" style="font-size: 1.5rem;">Cobros que se confirman al instante</h3>
-                <p class="text-secondary fs-6">
+                <h3 class="fw-extrabold text-dark mb-3" style="font-size: 1.5rem;" data-es="Cobros que se confirman al instante" data-en="Confirmations that settle instantly">Cobros que se confirman al instante</h3>
+                <p class="text-secondary fs-6" data-es="Cada pago con tarjeta, SINPE Móvil o transferencia queda reflejado en tu cuenta en tiempo real, sin esperar cortes de caja ni conciliaciones manuales." data-en="Every card payment, SINPE Mobile transfer, or transfer is reflected in your account in real time, without waiting for settlement cuts or manual reconciliations.">
                     Cada pago con tarjeta, SINPE Móvil o transferencia queda reflejado en tu cuenta en
                     tiempo real, sin esperar cortes de caja ni conciliaciones manuales.
                 </p>
@@ -373,20 +318,20 @@
             <div class="col-lg-6">
                 <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-3 bg-white">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <small class="fw-bold text-dark">Últimas transacciones</small>
-                        <span class="badge bg-success-subtle text-success">En vivo</span>
+                        <small class="fw-bold text-dark" data-es="Últimas transacciones" data-en="Latest Transactions">Últimas transacciones</small>
+                        <span class="badge bg-success-subtle text-success" data-es="En vivo" data-en="Live">En vivo</span>
                     </div>
                     <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-light mb-2">
                         <div class="d-flex align-items-center gap-2">
                             <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-arrow-up-right"></i></span>
-                            <small class="fw-bold text-dark">SINPE Móvil - Cliente D</small>
+                            <small class="fw-bold text-dark" data-es="SINPE Móvil - Cliente D" data-en="SINPE Mobile - Client D">SINPE Móvil - Cliente D</small>
                         </div>
                         <small class="fw-bold text-success">+ ₡45.000,00</small>
                     </div>
                     <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-light">
                         <div class="d-flex align-items-center gap-2">
                             <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="bi bi-arrow-up-right"></i></span>
-                            <small class="fw-bold text-dark">Tarjeta - Cliente E</small>
+                            <small class="fw-bold text-dark" data-es="Tarjeta - Cliente E" data-en="Card - Client E">Tarjeta - Cliente E</small>
                         </div>
                         <small class="fw-bold text-success">+ ₡128.500,00</small>
                     </div>
@@ -398,17 +343,17 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-1">
                 <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-3 bg-white">
-                    <small class="fw-bold text-dark d-block mb-2">Resumen del mes</small>
+                    <small class="fw-bold text-dark d-block mb-2" data-es="Resumen del mes" data-en="Monthly Summary">Resumen del mes</small>
                     <div class="row g-2">
                         <div class="col-6">
                             <div class="bg-light p-2 rounded-3 border border-light-subtle">
-                                <small class="text-muted d-block" style="font-size:0.65rem;">Total procesado</small>
+                                <small class="text-muted d-block" style="font-size:0.65rem;" data-es="Total procesado" data-en="Total Processed">Total procesado</small>
                                 <strong class="fs-6 fw-extrabold text-dark">₡4.2M</strong>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="bg-light p-2 rounded-3 border border-light-subtle">
-                                <small class="text-muted d-block" style="font-size:0.65rem;">Tasa de aprobación</small>
+                                <small class="text-muted d-block" style="font-size:0.65rem;" data-es="Tasa de aprobación" data-en="Approval Rate">Tasa de aprobación</small>
                                 <strong class="fs-6 fw-extrabold text-dark">98.4%</strong>
                             </div>
                         </div>
@@ -416,8 +361,8 @@
                 </div>
             </div>
             <div class="col-lg-6 order-lg-2">
-                <h3 class="fw-extrabold text-dark mb-3" style="font-size: 1.5rem;">Reportes claros, sin hojas de cálculo</h3>
-                <p class="text-secondary fs-6">
+                <h3 class="fw-extrabold text-dark mb-3" style="font-size: 1.5rem;" data-es="Reportes claros, sin hojas de cálculo" data-en="Clear reports, no spreadsheets">Reportes claros, sin hojas de cálculo</h3>
+                <p class="text-secondary fs-6" data-es="Consultá el desempeño de tu negocio desde un solo panel: volumen procesado, tasa de aprobación y el detalle de cada transacción, sin exportar nada a Excel." data-en="Check your business performance from a single dashboard: processed volume, approval rate and details of each transaction, without exporting anything to Excel.">
                     Consultá el desempeño de tu negocio desde un solo panel: volumen procesado, tasa de
                     aprobación y el detalle de cada transacción, sin exportar nada a Excel.
                 </p>
@@ -442,12 +387,12 @@
             <div class="col-lg-7 mx-auto">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <i class="bi bi-shield-check"></i>
-                    <small>Seguridad</small>
+                    <small data-es="Seguridad" data-en="Security">Seguridad</small>
                 </div>
                 <h2 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-                    Seguridad <span class="text-primary-custom">en cada operación</span>
+                    <span data-es="Seguridad" data-en="Security">Seguridad</span> <span class="text-primary-custom" data-es="en cada operación" data-en="in every transaction">en cada operación</span>
                 </h2>
-                <p class="lead text-secondary fs-6 fw-normal">
+                <p class="lead text-secondary fs-6 fw-normal" data-es="Protegemos cada cobro con estándares internacionales y monitoreo continuo." data-en="We protect every collection with international standards and continuous monitoring.">
                     Protegemos cada cobro con estándares internacionales y monitoreo continuo.
                 </p>
             </div>
@@ -460,15 +405,15 @@
                     <div class="pci-badge-own mx-auto">
                         <i class="bi bi-shield-fill-check"></i>
                         <strong>PCI DSS</strong>
-                        <span>Certificados</span>
+                        <span data-es="Certificados" data-en="Certified">Certificados</span>
                     </div>
                 </div>
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h3 class="fw-extrabold text-dark mb-3" style="font-size: 1.85rem;">Certificados PCI DSS</h3>
-                    <p class="text-secondary mb-3" style="font-size: 1.0625rem;">
+                    <h3 class="fw-extrabold text-dark mb-3" style="font-size: 1.85rem;" data-es="Certificados PCI DSS" data-en="PCI DSS Certified">Certificados PCI DSS</h3>
+                    <p class="text-secondary mb-3" style="font-size: 1.0625rem;" data-es="Cumplimos el estándar internacional de seguridad que protege los datos de tarjeta en cada transacción." data-en="We comply with the international security standard that protects card data in every transaction.">
                         Cumplimos el estándar internacional de seguridad que protege los datos de tarjeta en cada transacción.
                     </p>
-                    <a asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss" class="pci-link-arrow fw-bold d-inline-flex align-items-center gap-2">
+                    <a asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss" class="pci-link-arrow fw-bold d-inline-flex align-items-center gap-2" data-es="Conocé más sobre nuestra certificación" data-en="Learn more about our certification">
                         Conocé más sobre nuestra certificación <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -483,8 +428,8 @@
                         <i class="bi bi-lock-fill"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold text-dark mb-1 mt-md-3">Datos protegidos</h6>
-                        <p class="text-secondary mb-0 small">No almacenamos datos sensibles de tarjeta y usamos tokenización en cada pago.</p>
+                        <h6 class="fw-bold text-dark mb-1 mt-md-3" data-es="Datos protegidos" data-en="Protected Data">Datos protegidos</h6>
+                        <p class="text-secondary mb-0 small" data-es="No almacenamos datos sensibles de tarjeta y usamos tokenización en cada pago." data-en="We don't store sensitive card data and use tokenization on every payment.">No almacenamos datos sensibles de tarjeta y usamos tokenización en cada pago.</p>
                     </div>
                 </div>
             </div>
@@ -494,8 +439,8 @@
                         <i class="bi bi-activity"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold text-dark mb-1 mt-md-3">Monitoreo continuo</h6>
-                        <p class="text-secondary mb-0 small">Vigilamos cada transacción para detectar actividad inusual.</p>
+                        <h6 class="fw-bold text-dark mb-1 mt-md-3" data-es="Monitoreo continuo" data-en="Continuous Monitoring">Monitoreo continuo</h6>
+                        <p class="text-secondary mb-0 small" data-es="Vigilamos cada transacción para detectar actividad inusual." data-en="We monitor every transaction to detect unusual activity.">Vigilamos cada transacción para detectar actividad inusual.</p>
                     </div>
                 </div>
             </div>
@@ -505,8 +450,8 @@
                         <i class="bi bi-shield-lock-fill"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold text-dark mb-1 mt-md-3">Autenticación 3-D Secure</h6>
-                        <p class="text-secondary mb-0 small">Una verificación adicional confirma la identidad del titular en cobros con tarjeta.</p>
+                        <h6 class="fw-bold text-dark mb-1 mt-md-3" data-es="Autenticación 3-D Secure" data-en="3-D Secure Authentication">Autenticación 3-D Secure</h6>
+                        <p class="text-secondary mb-0 small" data-es="Una verificación adicional confirma la identidad del titular en cobros con tarjeta." data-en="An additional verification confirms the cardholder's identity on card collections.">Una verificación adicional confirma la identidad del titular en cobros con tarjeta.</p>
                     </div>
                 </div>
             </div>
@@ -514,7 +459,7 @@
 
         <!-- Cierre Seguridad -->
         <div class="text-center mb-5 pb-2">
-            <a asp-controller="Seguridad" asp-action="Index" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold">
+            <a asp-controller="Seguridad" asp-action="Index" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" data-es="Ver toda la seguridad de Well-Pay" data-en="View all Well-Pay Security">
                 Ver toda la seguridad de Well-Pay <i class="bi bi-arrow-right ms-1"></i>
             </a>
         </div>
@@ -526,12 +471,12 @@
         <div class="row align-items-center g-5 mt-3" id="nosotros">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small>Nosotros</small>
+                    <small data-es="Nosotros" data-en="About">Nosotros</small>
                 </div>
                 <h2 class="fw-extrabold text-dark mb-3 lh-sm" style="font-size: clamp(1.75rem, 3vw, 2rem);">
-                    Impulsamos el sistema financiero <span class="text-primary-custom">de Costa Rica</span>
+                    <span data-es="Impulsamos el sistema financiero" data-en="We drive the financial system">Impulsamos el sistema financiero</span> <span class="text-primary-custom" data-es="de Costa Rica" data-en="in Costa Rica">de Costa Rica</span>
                 </h2>
-                <p class="text-secondary fs-6 fw-normal mb-4">
+                <p class="text-secondary fs-6 fw-normal mb-4" data-es="Somos una plataforma dedicada a simplificar pagos, cobros y transferencias empresariales, con una integración ágil, segura y en tiempo real." data-en="We are a platform dedicated to simplifying business payments, collections and transfers, with agile, secure and real-time integration.">
                     Somos una plataforma dedicada a simplificar pagos, cobros y transferencias
                     empresariales, con una integración ágil, segura y en tiempo real.
                 </p>
@@ -539,20 +484,20 @@
                 <!-- TODO: reemplazar por cifras reales verificables (años operando, comercios afiliados, sede) -->
                 <div class="row g-3 mb-4">
                     <div class="col-4">
-                        <h3 class="fw-extrabold mb-0" style="color:#006B4B; font-size:2rem;">+3</h3>
-                        <small class="text-muted">Años operando</small>
+                        <h3 class="fw-extrabold mb-0" style="color:#006B4B; font-size:2rem;" data-es="+3" data-en="+3">+3</h3>
+                        <small class="text-muted" data-es="Años operando" data-en="Years Operating">Años operando</small>
                     </div>
                     <div class="col-4">
-                        <h3 class="fw-extrabold mb-0" style="color:#006B4B; font-size:2rem;">+150</h3>
-                        <small class="text-muted">Comercios afiliados</small>
+                        <h3 class="fw-extrabold mb-0" style="color:#006B4B; font-size:2rem;" data-es="+150" data-en="+150">+150</h3>
+                        <small class="text-muted" data-es="Comercios afiliados" data-en="Affiliated Merchants">Comercios afiliados</small>
                     </div>
                     <div class="col-4">
-                        <h3 class="fw-extrabold mb-0" style="color:#006B4B; font-size:2rem;">CR</h3>
-                        <small class="text-muted">Sede en Costa Rica</small>
+                        <h3 class="fw-extrabold mb-0" style="color:#006B4B; font-size:2rem;" data-es="CR" data-en="CR">CR</h3>
+                        <small class="text-muted" data-es="Sede en Costa Rica" data-en="Headquarters in Costa Rica">Sede en Costa Rica</small>
                     </div>
                 </div>
 
-                <a asp-controller="Nosotros" asp-action="Index" class="pci-link-arrow fw-bold d-inline-flex align-items-center gap-2">
+                <a asp-controller="Nosotros" asp-action="Index" class="pci-link-arrow fw-bold d-inline-flex align-items-center gap-2" data-es="Conocé Well-Pay" data-en="Know Well-Pay">
                     Conocé Well-Pay <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -562,22 +507,22 @@
                     <div class="d-flex align-items-center gap-3">
                         <div class="pillar-icon-sm bg-light-green text-wellpay flex-shrink-0"><i class="bi bi-lightning-charge-fill"></i></div>
                         <div>
-                            <h6 class="fw-bold text-dark mb-0">Agilidad</h6>
-                            <span class="text-muted small">Resolvemos rápido, sin trámites innecesarios.</span>
+                            <h6 class="fw-bold text-dark mb-0" data-es="Agilidad" data-en="Agility">Agilidad</h6>
+                            <span class="text-muted small" data-es="Resolvemos rápido, sin trámites innecesarios." data-en="We solve quickly, without unnecessary procedures.">Resolvemos rápido, sin trámites innecesarios.</span>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-3">
                         <div class="pillar-icon-sm bg-light-blue text-primary-custom flex-shrink-0"><i class="bi bi-people-fill"></i></div>
                         <div>
-                            <h6 class="fw-bold text-dark mb-0">Cercanía</h6>
-                            <span class="text-muted small">Acompañamos a cada negocio como si fuera propio.</span>
+                            <h6 class="fw-bold text-dark mb-0" data-es="Cercanía" data-en="Closeness">Cercanía</h6>
+                            <span class="text-muted small" data-es="Acompañamos a cada negocio como si fuera propio." data-en="We accompany each business as if it were our own.">Acompañamos a cada negocio como si fuera propio.</span>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-3">
                         <div class="pillar-icon-sm bg-light-green text-wellpay flex-shrink-0"><i class="bi bi-graph-up-arrow"></i></div>
                         <div>
-                            <h6 class="fw-bold text-dark mb-0">Innovación</h6>
-                            <span class="text-muted small">Mejoramos constantemente nuestra plataforma.</span>
+                            <h6 class="fw-bold text-dark mb-0" data-es="Innovación" data-en="Innovation">Innovación</h6>
+                            <span class="text-muted small" data-es="Mejoramos constantemente nuestra plataforma." data-en="We constantly improve our platform.">Mejoramos constantemente nuestra plataforma.</span>
                         </div>
                     </div>
                 </div>
@@ -595,14 +540,13 @@
     <div class="glow-shape glow-bottom-right glow-half"></div>
 
         <h2 class="display-6 fw-extrabold text-white mb-3 lh-sm">
-            Empezá a operar con <span class="text-wellpay">Well-Pay hoy mismo</span>
+            <span data-es="Empezá a operar con" data-en="Start operating with">Empezá a operar con</span> <span class="text-wellpay" data-es="Well-Pay hoy mismo" data-en="Well-Pay today">Well-Pay hoy mismo</span>
         </h2>
-        <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 560px;">
+        <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 560px;" data-es="Solicitá tu afiliación y conectá a tu empresa con el sistema de pagos de Costa Rica." data-en="Request your affiliation and connect your business to Costa Rica's payment system.">
             Solicitá tu afiliación y conectá a tu empresa con el sistema de pagos de Costa Rica.
         </p>
-        <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+        <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal" data-es="Solicitar afiliación" data-en="Request Affiliation">
             Solicitar afiliación
         </button>
     </div>
 </section>
-

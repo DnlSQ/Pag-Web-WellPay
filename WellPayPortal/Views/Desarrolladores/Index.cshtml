@@ -9,16 +9,15 @@
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <i class="bi bi-code-slash"></i>
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Desarrolladores</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Desarrolladores" data-en="Developers">Desarrolladores</small>
                 </div>
 
                 <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-                    Todo lo que necesitás para <span class="text-primary-custom">integrar Well-Pay</span>
+                    <span data-es="Todo lo que necesitás para" data-en="Everything you need to">Todo lo que necesitás para</span> <span class="text-primary-custom" data-es="integrar Well-Pay" data-en="integrate Well-Pay">integrar Well-Pay</span>
                 </h1>
 
-                <p class="lead text-secondary fs-6 fw-normal">
-                    Documentación, API, ambiente de pruebas y guías paso a paso para conectar tu negocio
-                    a la infraestructura de pagos de Well-Pay.
+                <p class="lead text-secondary fs-6 fw-normal" data-es="Documentación, API, ambiente de pruebas y guías paso a paso para conectar tu negocio a la infraestructura de pagos de Well-Pay." data-en="Documentation, API, test environment, and step-by-step guides to connect your business to Well-Pay's payment infrastructure.">
+                    Documentación, API, ambiente de pruebas y guías paso a paso para conectar tu negocio a la infraestructura de pagos de Well-Pay.
                 </p>
             </div>
 
@@ -30,7 +29,7 @@
                     <div class="hero-code-mockup-bar">
                         <span></span><span></span><span></span>
                     </div>
-                    <pre class="hero-code-mockup-body"><code><span class="code-comment">// crear un cobro</span>
+                    <pre class="hero-code-mockup-body"><code><span class="code-comment" data-es="// crear un cobro" data-en="// create a charge">// crear un cobro</span>
 <span class="code-key">POST</span> /v1/payment_intents
 
 {
@@ -38,7 +37,7 @@
   <span class="code-key">"currency"</span>: <span class="code-str">"CRC"</span>
 }
 
-<span class="code-comment">// respuesta</span>
+<span class="code-comment" data-es="// respuesta" data-en="// response">// respuesta</span>
 {
   <span class="code-key">"status"</span>: <span class="code-str">"approved"</span>
 }</code></pre>
@@ -56,17 +55,15 @@
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Documentación</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Documentación" data-en="Documentation">Documentación</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Toda la referencia <span class="text-primary-custom">en un solo lugar</span>
+                    <span data-es="Toda la referencia" data-en="All the reference">Toda la referencia</span> <span class="text-primary-custom" data-es="en un solo lugar" data-en="in one place">en un solo lugar</span>
                 </h2>
 
-                <!-- TODO: contenido real de la documentación técnica pendiente de definir -->
-                <p class="lead text-secondary fs-6 fw-normal">
-                    Consultá la documentación de cada servicio de Well-Pay: autenticación, endpoints,
-                    webhooks y manejo de errores, organizados por tema.
+                <p class="lead text-secondary fs-6 fw-normal" data-es="Consultá la documentación de cada servicio de Well-Pay: autenticación, endpoints, webhooks y manejo de errores, organizados por tema." data-en="Check out the documentation for each Well-Pay service: authentication, endpoints, webhooks, and error handling, organized by topic.">
+                    Consultá la documentación de cada servicio de Well-Pay: autenticación, endpoints, webhooks y manejo de errores, organizados por tema.
                 </p>
             </div>
         </div>
@@ -75,16 +72,16 @@
             <div class="col-lg-4">
                 <div class="nav flex-column nav-pills-vertical" id="docTab" role="tablist" aria-orientation="vertical">
                     <button class="nav-link-pill-v active" id="doc-autenticacion-tab" data-bs-toggle="pill" data-bs-target="#doc-autenticacion" type="button" role="tab">
-                        <i class="bi bi-key-fill"></i> Autenticación
+                        <i class="bi bi-key-fill"></i> <span data-es="Autenticación" data-en="Authentication">Autenticación</span>
                     </button>
                     <button class="nav-link-pill-v" id="doc-pagoscobros-tab" data-bs-toggle="pill" data-bs-target="#doc-pagoscobros" type="button" role="tab">
-                        <i class="bi bi-credit-card-2-front"></i> Pagos y cobros
+                        <i class="bi bi-credit-card-2-front"></i> <span data-es="Pagos y cobros" data-en="Payments and charges">Pagos y cobros</span>
                     </button>
                     <button class="nav-link-pill-v" id="doc-webhooks-tab" data-bs-toggle="pill" data-bs-target="#doc-webhooks" type="button" role="tab">
-                        <i class="bi bi-arrow-repeat"></i> Webhooks
+                        <i class="bi bi-arrow-repeat"></i> <span data-es="Webhooks" data-en="Webhooks">Webhooks</span>
                     </button>
                     <button class="nav-link-pill-v" id="doc-errores-tab" data-bs-toggle="pill" data-bs-target="#doc-errores" type="button" role="tab">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Manejo de errores
+                        <i class="bi bi-exclamation-triangle-fill"></i> <span data-es="Manejo de errores" data-en="Error handling">Manejo de errores</span>
                     </button>
                 </div>
             </div>
@@ -97,10 +94,10 @@
                             <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                                 <i class="bi bi-key-fill fs-4"></i>
                             </div>
-                            <h4 class="fw-bold text-dark mb-2">Autenticación</h4>
-                            <p class="service-card-text mb-3">Cómo generar y usar tus llaves de acceso (API keys).</p>
+                            <h4 class="fw-bold text-dark mb-2" data-es="Autenticación" data-en="Authentication">Autenticación</h4>
+                            <p class="service-card-text mb-3" data-es="Cómo generar y usar tus llaves de acceso (API keys)." data-en="How to generate and use your access keys (API keys).">Cómo generar y usar tus llaves de acceso (API keys).</p>
                             <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#autenticacionModal">
-                                Más información <i class="bi bi-arrow-right"></i>
+                                <span data-es="Más información" data-en="More information">Más información</span> <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -110,10 +107,10 @@
                             <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                                 <i class="bi bi-credit-card-2-front fs-4"></i>
                             </div>
-                            <h4 class="fw-bold text-dark mb-2">Pagos y cobros</h4>
-                            <p class="service-card-text mb-3">Referencia de los servicios de pago (SINPE Móvil, DTR, PIN).</p>
+                            <h4 class="fw-bold text-dark mb-2" data-es="Pagos y cobros" data-en="Payments and charges">Pagos y cobros</h4>
+                            <p class="service-card-text mb-3" data-es="Referencia de los servicios de pago (SINPE Móvil, DTR, PIN)." data-en="Reference for payment services (SINPE Móvil, DTR, PIN).">Referencia de los servicios de pago (SINPE Móvil, DTR, PIN).</p>
                             <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#pagosCobrosModal">
-                                Más información <i class="bi bi-arrow-right"></i>
+                                <span data-es="Más información" data-en="More information">Más información</span> <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -123,10 +120,10 @@
                             <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                                 <i class="bi bi-arrow-repeat fs-4"></i>
                             </div>
-                            <h4 class="fw-bold text-dark mb-2">Webhooks</h4>
-                            <p class="service-card-text mb-3">Cómo recibir notificaciones en tiempo real de cada transacción.</p>
+                            <h4 class="fw-bold text-dark mb-2" data-es="Webhooks" data-en="Webhooks">Webhooks</h4>
+                            <p class="service-card-text mb-3" data-es="Cómo recibir notificaciones en tiempo real de cada transacción." data-en="How to receive real-time notifications of each transaction.">Cómo recibir notificaciones en tiempo real de cada transacción.</p>
                             <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#webhooksDocModal">
-                                Más información <i class="bi bi-arrow-right"></i>
+                                <span data-es="Más información" data-en="More information">Más información</span> <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -136,10 +133,10 @@
                             <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                                 <i class="bi bi-exclamation-triangle-fill fs-4"></i>
                             </div>
-                            <h4 class="fw-bold text-dark mb-2">Manejo de errores</h4>
-                            <p class="service-card-text mb-3">Códigos de respuesta y cómo interpretarlos.</p>
+                            <h4 class="fw-bold text-dark mb-2" data-es="Manejo de errores" data-en="Error handling">Manejo de errores</h4>
+                            <p class="service-card-text mb-3" data-es="Códigos de respuesta y cómo interpretarlos." data-en="Response codes and how to interpret them.">Códigos de respuesta y cómo interpretarlos.</p>
                             <a href="#" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#erroresModal">
-                                Más información <i class="bi bi-arrow-right"></i>
+                                <span data-es="Más información" data-en="More information">Más información</span> <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -158,34 +155,32 @@
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Integración de servicios</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Integración de servicios" data-en="Service Integration">Integración de servicios</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Elegí la forma de <span class="text-primary-custom">integrarte</span>
+                    <span data-es="Elegí la forma de" data-en="Choose the way to">Elegí la forma de</span> <span class="text-primary-custom" data-es="integrarte" data-en="integrate">integrarte</span>
                 </h2>
 
-                <!-- TODO: confirmar qué métodos de integración estarán realmente disponibles -->
-                <p class="lead text-secondary fs-6 fw-normal">
-                    Adaptamos la integración al nivel técnico de tu equipo, desde una pasarela lista
-                    para usar hasta una integración completamente personalizada por API.
+                <p class="lead text-secondary fs-6 fw-normal" data-es="Adaptamos la integración al nivel técnico de tu equipo, desde una pasarela lista para usar hasta una integración completamente personalizada por API." data-en="We adapt the integration to your team's technical level, from a ready-to-use gateway to a fully customized API integration.">
+                    Adaptamos la integración al nivel técnico de tu equipo, desde una pasarela lista para usar hasta una integración completamente personalizada por API.
                 </p>
             </div>
         </div>
         <ul class="nav nav-pills-custom justify-content-center gap-2 mb-5 flex-nowrap overflow-auto pb-2" id="integracionTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill active" id="int-pasarela-tab" data-bs-toggle="pill" data-bs-target="#int-pasarela" type="button" role="tab">
-                    <i class="bi bi-window"></i> Pasarela de pago
+                    <i class="bi bi-window"></i> <span data-es="Pasarela de pago" data-en="Payment Gateway">Pasarela de pago</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill" id="int-plugins-tab" data-bs-toggle="pill" data-bs-target="#int-plugins" type="button" role="tab">
-                    <i class="bi bi-link-45deg"></i> Plugins y links de pago
+                    <i class="bi bi-link-45deg"></i> <span data-es="Plugins y links de pago" data-en="Plugins and payment links">Plugins y links de pago</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill" id="int-apimedida-tab" data-bs-toggle="pill" data-bs-target="#int-apimedida" type="button" role="tab">
-                    <i class="bi bi-code-square"></i> API a la medida
+                    <i class="bi bi-code-square"></i> <span data-es="API a la medida" data-en="Custom API">API a la medida</span>
                 </button>
             </li>
         </ul>
@@ -199,22 +194,21 @@
                             <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                                 <i class="bi bi-window fs-4"></i>
                             </div>
-                            <h3 class="fw-extrabold text-dark mb-2">Pasarela de pago</h3>
-                            <p class="service-card-text mb-0">
-                                Checkout listo para incrustar en tu sitio, sin desarrollo adicional.
-                                Vos elegís los colores y campos; nosotros nos encargamos del resto.
+                            <h3 class="fw-extrabold text-dark mb-2" data-es="Pasarela de pago" data-en="Payment Gateway">Pasarela de pago</h3>
+                            <p class="service-card-text mb-0" data-es="Checkout listo para incrustar en tu sitio, sin desarrollo adicional. Vos elegís los colores y campos; nosotros nos encargamos del resto." data-en="Checkout ready to embed on your site with no additional development. You choose colors and fields; we handle the rest.">
+                                Checkout listo para incrustar en tu sitio, sin desarrollo adicional. Vos elegís los colores y campos; nosotros nos encargamos del resto.
                             </p>
                         </div>
                         <div class="col-lg-5">
                             <div class="rubro-mockup">
-                                <small class="text-muted d-block mb-2">Checkout</small>
+                                <small class="text-muted d-block mb-2" data-es="Checkout" data-en="Checkout">Checkout</small>
                                 <div class="p-2 rounded-3 bg-white border mb-2">
-                                    <small class="text-muted d-block">Número de tarjeta</small>
+                                    <small class="text-muted d-block" data-es="Número de tarjeta" data-en="Card number">Número de tarjeta</small>
                                     <small class="fw-bold text-dark">•••• •••• •••• 4242</small>
                                 </div>
-                                <button type="button" class="btn btn-wellpay btn-sm w-100 fw-bold" tabindex="-1">Pagar ₡15.000</button>
+                                <button type="button" class="btn btn-wellpay btn-sm w-100 fw-bold" tabindex="-1"><span data-es="Pagar" data-en="Pay">Pagar</span> ₡15.000</button>
                             </div>
-                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                            <small class="datos-ejemplo-label d-block text-center mt-2" data-es="Datos de ejemplo" data-en="Example data">Datos de ejemplo</small>
                         </div>
                     </div>
                 </div>
@@ -227,22 +221,21 @@
                             <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                                 <i class="bi bi-link-45deg fs-4"></i>
                             </div>
-                            <h3 class="fw-extrabold text-dark mb-2">Plugins y links de pago</h3>
-                            <p class="service-card-text mb-0">
-                                Conectá tu tienda con un plugin, o compartí un link de cobro por
-                                WhatsApp o correo, sin escribir una sola línea de código.
+                            <h3 class="fw-extrabold text-dark mb-2" data-es="Plugins y links de pago" data-en="Plugins and payment links">Plugins y links de pago</h3>
+                            <p class="service-card-text mb-0" data-es="Conectá tu tienda con un plugin, o compartí un link de cobro por WhatsApp o correo, sin escribir una sola línea de código." data-en="Connect your store with a plugin, or share a payment link via WhatsApp or email without writing a single line of code.">
+                                Conectá tu tienda con un plugin, o compartí un link de cobro por WhatsApp o correo, sin escribir una sola línea de código.
                             </p>
                         </div>
                         <div class="col-lg-5">
                             <div class="rubro-mockup">
-                                <small class="text-muted d-block mb-1">Link de pago</small>
-                                <h6 class="fw-bold text-dark mb-2">Pedido #1042</h6>
+                                <small class="text-muted d-block mb-1" data-es="Link de pago" data-en="Payment link">Link de pago</small>
+                                <h6 class="fw-bold text-dark mb-2" data-es="Pedido #1042" data-en="Order #1042">Pedido #1042</h6>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="small fw-bold text-dark">₡18.500</span>
-                                    <span class="badge bg-success-subtle text-success">Enlace activo</span>
+                                    <span class="badge bg-success-subtle text-success" data-es="Enlace activo" data-en="Active link">Enlace activo</span>
                                 </div>
                             </div>
-                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                            <small class="datos-ejemplo-label d-block text-center mt-2" data-es="Datos de ejemplo" data-en="Example data">Datos de ejemplo</small>
                         </div>
                     </div>
                 </div>
@@ -255,21 +248,20 @@
                             <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                                 <i class="bi bi-code-square fs-4"></i>
                             </div>
-                            <h3 class="fw-extrabold text-dark mb-2">API a la medida</h3>
-                            <p class="service-card-text mb-0">
-                                Integración completa vía API REST y webhooks para construir flujos
-                                de pago totalmente personalizados a tu operación.
+                            <h3 class="fw-extrabold text-dark mb-2" data-es="API a la medida" data-en="Custom API">API a la medida</h3>
+                            <p class="service-card-text mb-0" data-es="Integración completa vía API REST y webhooks para construir flujos de pago totalmente personalizados a tu operación." data-en="Complete integration via REST API and webhooks to build fully customized payment flows for your operation.">
+                                Integración completa vía API REST y webhooks para construir flujos de pago totalmente personalizados a tu operación.
                             </p>
                         </div>
                         <div class="col-lg-5">
                             <div class="rubro-mockup">
-                                <small class="text-muted d-block mb-2">Webhook recibido</small>
+                                <small class="text-muted d-block mb-2" data-es="Webhook recibido" data-en="Webhook received">Webhook recibido</small>
                                 <div class="d-flex justify-content-between align-items-center p-2 rounded-3 bg-white border">
                                     <span class="small fw-bold text-dark">payment_intent.approved</span>
                                     <i class="bi bi-check-circle-fill text-wellpay"></i>
                                 </div>
                             </div>
-                            <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                            <small class="datos-ejemplo-label d-block text-center mt-2" data-es="Datos de ejemplo" data-en="Example data">Datos de ejemplo</small>
                         </div>
                     </div>
                 </div>
@@ -287,22 +279,19 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">API</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="API" data-en="API">API</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Una API <span class="text-primary-custom">simple y predecible</span>
+                    <span data-es="Una API" data-en="An API">Una API</span> <span class="text-primary-custom" data-es="simple y predecible" data-en="simple and predictable">simple y predecible</span>
                 </h2>
 
-                <p class="text-secondary fs-6 fw-normal mb-3">
-                    Nuestra API REST está pensada para que puedas crear un cobro, consultar su estado
-                    o recibir notificaciones vía webhook con solo unas líneas de código.
+                <p class="text-secondary fs-6 fw-normal mb-3" data-es="Nuestra API REST está pensada para que puedas crear un cobro, consultar su estado o recibir notificaciones vía webhook con solo unas líneas de código." data-en="Our REST API is designed so you can create a charge, check its status, or receive notifications via webhook with just a few lines of code.">
+                    Nuestra API REST está pensada para que puedas crear un cobro, consultar su estado o recibir notificaciones vía webhook con solo unas líneas de código.
                 </p>
 
-                <!-- TODO: reemplazar por la especificación real de la API cuando esté definida -->
-                <p class="text-muted small fst-italic mb-0">
-                    El ejemplo a la derecha es solo ilustrativo, para mostrar el estilo de integración
-                    que buscamos ofrecer.
+                <p class="text-muted small fst-italic mb-0" data-es="El ejemplo a la derecha es solo ilustrativo, para mostrar el estilo de integración que buscamos ofrecer." data-en="The example on the right is for illustration only, to show the integration style we're aiming for.">
+                    El ejemplo a la derecha es solo ilustrativo, para mostrar el estilo de integración que buscamos ofrecer.
                 </p>
             </div>
 
@@ -324,7 +313,7 @@ Content-Type: application/json
   "method": "sinpe_movil"
 }
 
-// Respuesta
+<span class="code-comment">// Respuesta</span>
 {
   "id": "pi_wellpay_9x7rA2k19cJ",
   "status": "approved",
@@ -345,17 +334,15 @@ Content-Type: application/json
         <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Sandbox</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Sandbox" data-en="Sandbox">Sandbox</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Probá tu integración <span class="text-primary-custom">sin riesgo</span>
+                    <span data-es="Probá tu integración" data-en="Test your integration">Probá tu integración</span> <span class="text-primary-custom" data-es="sin riesgo" data-en="without risk">sin riesgo</span>
                 </h2>
 
-                <!-- TODO: confirmar el flujo real de acceso al sandbox (registro, credenciales, tarjetas de prueba) -->
-                <p class="text-secondary fs-6 fw-normal mb-0">
-                    El ambiente de pruebas (sandbox) te permite simular transacciones completas, sin
-                    mover dinero real, para validar tu integración antes de salir a producción.
+                <p class="text-secondary fs-6 fw-normal mb-0" data-es="El ambiente de pruebas (sandbox) te permite simular transacciones completas, sin mover dinero real, para validar tu integración antes de salir a producción." data-en="The test environment (sandbox) allows you to simulate complete transactions without moving real money, to validate your integration before going to production.">
+                    El ambiente de pruebas (sandbox) te permite simular transacciones completas, sin mover dinero real, para validar tu integración antes de salir a producción.
                 </p>
             </div>
 
@@ -364,11 +351,11 @@ Content-Type: application/json
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-terminal-fill fs-4"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">¿Qué incluye el sandbox?</h5>
+                    <h5 class="fw-bold text-dark mb-2" data-es="¿Qué incluye el sandbox?" data-en="What does the sandbox include?">¿Qué incluye el sandbox?</h5>
                     <ul class="text-muted mb-0 ps-3">
-                        <li>Credenciales de prueba independientes de producción</li>
-                        <li>Tarjetas y cuentas simuladas para cada método de pago</li>
-                        <li>Webhooks de prueba para validar tus notificaciones</li>
+                        <li data-es="Credenciales de prueba independientes de producción" data-en="Test credentials independent from production">Credenciales de prueba independientes de producción</li>
+                        <li data-es="Tarjetas y cuentas simuladas para cada método de pago" data-en="Simulated cards and accounts for each payment method">Tarjetas y cuentas simuladas para cada método de pago</li>
+                        <li data-es="Webhooks de prueba para validar tus notificaciones" data-en="Test webhooks to validate your notifications">Webhooks de prueba para validar tus notificaciones</li>
                     </ul>
                 </div>
             </div>
@@ -384,15 +371,14 @@ Content-Type: application/json
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;">Guías de integración</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Guías de integración" data-en="Integration Guides">Guías de integración</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Paso a paso, <span class="text-primary-custom">sin complicaciones</span>
+                    <span data-es="Paso a paso," data-en="Step by step,">Paso a paso,</span> <span class="text-primary-custom" data-es="sin complicaciones" data-en="without complications">sin complicaciones</span>
                 </h2>
 
-                <!-- TODO: crear el contenido real de cada guía cuando la API esté definida -->
-                <p class="lead text-secondary fs-6 fw-normal">
+                <p class="lead text-secondary fs-6 fw-normal" data-es="Guías prácticas para llevar tu integración de cero a producción." data-en="Practical guides to take your integration from zero to production.">
                     Guías prácticas para llevar tu integración de cero a producción.
                 </p>
             </div>
@@ -404,8 +390,8 @@ Content-Type: application/json
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 mx-auto">
                         <i class="bi bi-1-circle-fill fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Primeros pasos</h6>
-                    <p class="text-muted mb-0 small">Crear tu cuenta y obtener tus llaves de acceso.</p>
+                    <h6 class="fw-bold text-dark mb-2" data-es="Primeros pasos" data-en="First Steps">Primeros pasos</h6>
+                    <p class="text-muted mb-0 small" data-es="Crear tu cuenta y obtener tus llaves de acceso." data-en="Create your account and get your access keys.">Crear tu cuenta y obtener tus llaves de acceso.</p>
                 </div>
             </div>
 
@@ -414,8 +400,8 @@ Content-Type: application/json
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3 mx-auto">
                         <i class="bi bi-2-circle-fill fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Tu primer cobro</h6>
-                    <p class="text-muted mb-0 small">Crear y confirmar una transacción de prueba.</p>
+                    <h6 class="fw-bold text-dark mb-2" data-es="Tu primer cobro" data-en="Your First Charge">Tu primer cobro</h6>
+                    <p class="text-muted mb-0 small" data-es="Crear y confirmar una transacción de prueba." data-en="Create and confirm a test transaction.">Crear y confirmar una transacción de prueba.</p>
                 </div>
             </div>
 
@@ -424,8 +410,8 @@ Content-Type: application/json
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3 mx-auto">
                         <i class="bi bi-3-circle-fill fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Configurar webhooks</h6>
-                    <p class="text-muted mb-0 small">Recibir notificaciones automáticas de cada evento.</p>
+                    <h6 class="fw-bold text-dark mb-2" data-es="Configurar webhooks" data-en="Configure Webhooks">Configurar webhooks</h6>
+                    <p class="text-muted mb-0 small" data-es="Recibir notificaciones automáticas de cada evento." data-en="Receive automatic notifications for each event.">Recibir notificaciones automáticas de cada evento.</p>
                 </div>
             </div>
 
@@ -434,8 +420,8 @@ Content-Type: application/json
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3 mx-auto">
                         <i class="bi bi-4-circle-fill fs-4"></i>
                     </div>
-                    <h6 class="fw-bold text-dark mb-2">Pasar a producción</h6>
-                    <p class="text-muted mb-0 small">Checklist final antes de activar cobros reales.</p>
+                    <h6 class="fw-bold text-dark mb-2" data-es="Pasar a producción" data-en="Go to Production">Pasar a producción</h6>
+                    <p class="text-muted mb-0 small" data-es="Checklist final antes de activar cobros reales." data-en="Final checklist before activating real charges.">Checklist final antes de activar cobros reales.</p>
                 </div>
             </div>
         </div>
@@ -450,20 +436,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="autenticacionModalLabel">Autenticación</h4>
+                <h4 class="modal-title fw-bold text-dark" id="autenticacionModalLabel" data-es="Autenticación" data-en="Authentication">Autenticación</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                     <i class="bi bi-key-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Cada solicitud a la API se autentica con una API key única por comercio. Estas llaves se generan desde tu panel de desarrollador y deben mantenerse privadas: nunca deben exponerse en código del lado del cliente (frontend)." data-en="Each API request is authenticated with a unique API key per merchant. These keys are generated from your developer panel and must be kept private: they should never be exposed in client-side code (frontend).">
                     Cada solicitud a la API se autentica con una API key única por comercio. Estas llaves se generan desde tu panel de desarrollador y deben mantenerse privadas: nunca deben exponerse en código del lado del cliente (frontend).
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -473,20 +458,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="pagosCobrosModalLabel">Pagos y cobros</h4>
+                <h4 class="modal-title fw-bold text-dark" id="pagosCobrosModalLabel" data-es="Pagos y cobros" data-en="Payments and charges">Pagos y cobros</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                     <i class="bi bi-credit-card-2-front fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Referencia de los endpoints para iniciar, consultar y confirmar transacciones mediante SINPE Móvil, Débito en Tiempo Real (DTR) y Pago Inmediato (PIN), incluyendo los parámetros y respuestas de cada método." data-en="Reference for the endpoints to initiate, query, and confirm transactions via SINPE Móvil, Real-Time Debit (DTR), and Immediate Payment (PIN), including parameters and responses for each method.">
                     Referencia de los endpoints para iniciar, consultar y confirmar transacciones mediante SINPE Móvil, Débito en Tiempo Real (DTR) y Pago Inmediato (PIN), incluyendo los parámetros y respuestas de cada método.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -496,20 +480,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="webhooksDocModalLabel">Webhooks</h4>
+                <h4 class="modal-title fw-bold text-dark" id="webhooksDocModalLabel" data-es="Webhooks" data-en="Webhooks">Webhooks</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                     <i class="bi bi-arrow-repeat fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Configurá una URL en tu sistema para recibir notificaciones automáticas cada vez que cambie el estado de una transacción (aprobada, rechazada, reversada), sin necesidad de consultar la API de forma constante." data-en="Set up a URL in your system to receive automatic notifications whenever a transaction status changes (approved, rejected, reversed), without needing to constantly query the API.">
                     Configurá una URL en tu sistema para recibir notificaciones automáticas cada vez que cambie el estado de una transacción (aprobada, rechazada, reversada), sin necesidad de consultar la API de forma constante.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -519,20 +502,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="erroresModalLabel">Manejo de errores</h4>
+                <h4 class="modal-title fw-bold text-dark" id="erroresModalLabel" data-es="Manejo de errores" data-en="Error handling">Manejo de errores</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                     <i class="bi bi-exclamation-triangle-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Cada respuesta de la API incluye un código y una descripción clara del error (datos inválidos, fondos insuficientes, autenticación fallida, etc.), para que puedas manejarlos correctamente en tu integración." data-en="Each API response includes a code and clear error description (invalid data, insufficient funds, failed authentication, etc.), so you can handle them correctly in your integration.">
                     Cada respuesta de la API incluye un código y una descripción clara del error (datos inválidos, fondos insuficientes, autenticación fallida, etc.), para que puedas manejarlos correctamente en tu integración.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -542,20 +524,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="sandboxDetalleModalLabel">¿Qué incluye el sandbox?</h4>
+                <h4 class="modal-title fw-bold text-dark" id="sandboxDetalleModalLabel" data-es="¿Qué incluye el sandbox?" data-en="What does the sandbox include?">¿Qué incluye el sandbox?</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                     <i class="bi bi-terminal-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="El ambiente de pruebas replica el comportamiento real de la plataforma sin mover dinero: podés simular aprobaciones, rechazos y distintos métodos de pago con credenciales y datos de prueba independientes de producción." data-en="The test environment replicates the real behavior of the platform without moving money: you can simulate approvals, rejections, and different payment methods with credentials and test data independent from production.">
                     El ambiente de pruebas replica el comportamiento real de la plataforma sin mover dinero: podés simular aprobaciones, rechazos y distintos métodos de pago con credenciales y datos de prueba independientes de producción.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -565,20 +546,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="paso1ModalLabel">Primeros pasos</h4>
+                <h4 class="modal-title fw-bold text-dark" id="paso1ModalLabel" data-es="Primeros pasos" data-en="First Steps">Primeros pasos</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                     <i class="bi bi-1-circle-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Creá tu cuenta de desarrollador, generá tus llaves de API (de prueba y de producción) y familiarizate con la estructura de la documentación antes de escribir tu primera línea de código." data-en="Create your developer account, generate your API keys (test and production), and familiarize yourself with the documentation structure before writing your first line of code.">
                     Creá tu cuenta de desarrollador, generá tus llaves de API (de prueba y de producción) y familiarizate con la estructura de la documentación antes de escribir tu primera línea de código.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -588,20 +568,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="paso2ModalLabel">Tu primer cobro</h4>
+                <h4 class="modal-title fw-bold text-dark" id="paso2ModalLabel" data-es="Tu primer cobro" data-en="Your First Charge">Tu primer cobro</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                     <i class="bi bi-2-circle-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Usá las credenciales de sandbox para simular una transacción de principio a fin: crear el cobro, procesarlo con datos de prueba y confirmar la respuesta de la API." data-en="Use the sandbox credentials to simulate a transaction from start to finish: create the charge, process it with test data, and confirm the API response.">
                     Usá las credenciales de sandbox para simular una transacción de principio a fin: crear el cobro, procesarlo con datos de prueba y confirmar la respuesta de la API.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -611,20 +590,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="paso3ModalLabel">Configurar webhooks</h4>
+                <h4 class="modal-title fw-bold text-dark" id="paso3ModalLabel" data-es="Configurar webhooks" data-en="Configure Webhooks">Configurar webhooks</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                     <i class="bi bi-3-circle-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Definí un endpoint en tu servidor que reciba las notificaciones de Well-Pay, validá la firma de cada solicitud entrante, y respondé con un código 200 para confirmar la recepción." data-en="Define an endpoint in your server to receive Well-Pay notifications, validate the signature of each incoming request, and respond with a 200 code to confirm receipt.">
                     Definí un endpoint en tu servidor que reciba las notificaciones de Well-Pay, validá la firma de cada solicitud entrante, y respondé con un código 200 para confirmar la recepción.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>
@@ -634,20 +612,19 @@ Content-Type: application/json
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden position-relative p-2 p-md-4">
             <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
-                <h4 class="modal-title fw-bold text-dark" id="paso4ModalLabel">Pasar a producción</h4>
+                <h4 class="modal-title fw-bold text-dark" id="paso4ModalLabel" data-es="Pasar a producción" data-en="Go to Production">Pasar a producción</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pt-2">
                 <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                     <i class="bi bi-4-circle-fill fs-4"></i>
                 </div>
-                <!-- TODO: contenido generico, pendiente de confirmar con contenido oficial de la empresa -->
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" data-es="Antes de aceptar cobros reales, verificá que tu integración maneje correctamente los distintos estados de una transacción, que tus webhooks respondan a tiempo, y solicitá el cambio a credenciales de producción." data-en="Before accepting real charges, verify that your integration correctly handles different transaction states, that your webhooks respond in time, and request the change to production credentials.">
                     Antes de aceptar cobros reales, verificá que tu integración maneje correctamente los distintos estados de una transacción, que tus webhooks respondan a tiempo, y solicitá el cambio a credenciales de producción.
                 </p>
             </div>
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal">Entendido</button>
+                <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill" data-bs-dismiss="modal" data-es="Entendido" data-en="Got it">Entendido</button>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-</div>@{
+@{
     ViewData["Title"] = "Soluciones";
 }
 
@@ -11,24 +11,23 @@
             <div class="col-lg-6 ps-lg-5">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
                     <i class="bi bi-lightbulb-fill"></i>
-                    <small>Soluciones</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Soluciones" data-en="Solutions">Soluciones</small>
                 </div>
 
                 <h1 class="display-5 fw-extrabold text-dark mb-3 lh-sm">
-                    Well-Pay para <span class="text-primary-custom">tu tipo de negocio</span>
+                    <span data-es="Well-Pay para " data-en="Well-Pay for ">Well-Pay para </span><span class="text-primary-custom" data-es="tu tipo de negocio" data-en="your type of business">tu tipo de negocio</span>
                 </h1>
 
-                <p class="lead text-secondary fs-6 fw-normal mb-4">
-                    Cada negocio cobra distinto. Elegí tu rubro para ver cómo Well-Pay se adapta
-                    a tu operación.
+                <p class="lead text-secondary fs-6 fw-normal mb-4" data-es="Cada negocio cobra distinto. Elegí tu rubro para ver cómo Well-Pay se adapta a tu operación." data-en="Each business charges differently. Choose your industry to see how Well-Pay adapts to your operation.">
+                    Cada negocio cobra distinto. Elegí tu rubro para ver cómo Well-Pay se adapta a tu operación.
                 </p>
 
                 <div class="d-flex flex-wrap align-items-center gap-3">
                     <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
-                        Solicitar afiliación
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
                     </button>
                     <a href="#soluciones-para-negocios" class="fw-bold pci-link-arrow d-inline-flex align-items-center gap-1">
-                        Elegí tu rubro <i class="bi bi-arrow-down"></i>
+                        <span data-es="Elegí tu rubro" data-en="Choose your industry">Elegí tu rubro</span> <i class="bi bi-arrow-down"></i>
                     </a>
                 </div>
             </div>
@@ -40,18 +39,20 @@
                 <div class="hero-mockup-solo mx-auto">
                     <div class="dashboard-chip dashboard-chip-top d-flex">
                         <i class="bi bi-check-circle-fill text-wellpay"></i>
-                        <span>Pago recibido</span>
+                        <span data-es="Pago recibido" data-en="Payment received">Pago recibido</span>
                     </div>
                     <div class="dashboard-card-mockup shadow-lg rounded-4 overflow-hidden border border-light p-4 bg-white">
-                        <small class="text-muted d-block mb-1">Link de pago</small>
-                        <h5 class="fw-bold text-dark mb-3">Consulta general</h5>
+                        <small class="text-muted d-block mb-1" data-es="Link de pago" data-en="Payment link">Link de pago</small>
+                        <h5 class="fw-bold text-dark mb-3" data-es="Consulta general" data-en="General consultation">Consulta general</h5>
                         <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-light mb-3">
-                            <span class="fw-bold text-dark">Monto</span>
+                            <span class="fw-bold text-dark" data-es="Monto" data-en="Amount">Monto</span>
                             <span class="fw-extrabold fs-5 text-dark">₡25.000</span>
                         </div>
-                        <button type="button" class="btn btn-wellpay w-100 fw-bold rounded-3" tabindex="-1">Pagar</button>
+                        <button type="button" class="btn btn-wellpay w-100 fw-bold rounded-3" tabindex="-1">
+                            <span data-es="Pagar" data-en="Pay">Pagar</span>
+                        </button>
                     </div>
-                    <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+                    <small class="datos-ejemplo-label d-block text-center mt-2" data-es="Datos de ejemplo" data-en="Sample data">Datos de ejemplo</small>
                 </div>
             </div>
         </div>
@@ -68,27 +69,27 @@
         <ul class="nav nav-pills-custom justify-content-center gap-2 mb-5 flex-nowrap overflow-auto pb-2" id="rubrosTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill active" id="medicos-tab" data-bs-toggle="pill" data-bs-target="#medicos" type="button" role="tab" aria-controls="medicos" aria-selected="true">
-                    <i class="bi bi-heart-fill"></i> Médicos
+                    <i class="bi bi-heart-fill"></i> <span data-es="Médicos" data-en="Doctors">Médicos</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill" id="dentistas-tab" data-bs-toggle="pill" data-bs-target="#dentistas" type="button" role="tab" aria-controls="dentistas" aria-selected="false">
-                    <i class="bi bi-emoji-smile-fill"></i> Dentistas
+                    <i class="bi bi-emoji-smile-fill"></i> <span data-es="Dentistas" data-en="Dentists">Dentistas</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill" id="comercios-tab" data-bs-toggle="pill" data-bs-target="#comercios" type="button" role="tab" aria-controls="comercios" aria-selected="false">
-                    <i class="bi bi-shop"></i> Comercios
+                    <i class="bi bi-shop"></i> <span data-es="Comercios" data-en="Stores">Comercios</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill" id="restaurantes-tab" data-bs-toggle="pill" data-bs-target="#restaurantes" type="button" role="tab" aria-controls="restaurantes" aria-selected="false">
-                    <i class="bi bi-cup-hot-fill"></i> Restaurantes
+                    <i class="bi bi-cup-hot-fill"></i> <span data-es="Restaurantes" data-en="Restaurants">Restaurantes</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link-pill" id="profesionales-independientes-tab" data-bs-toggle="pill" data-bs-target="#profesionales-independientes" type="button" role="tab" aria-controls="profesionales-independientes" aria-selected="false">
-                    <i class="bi bi-briefcase-fill"></i> Profesionales independientes
+                    <i class="bi bi-briefcase-fill"></i> <span data-es="Profesionales independientes" data-en="Freelancers">Profesionales independientes</span>
                 </button>
             </li>
         </ul>
@@ -100,27 +101,28 @@
     <div class="rubro-panel">
         <div class="row g-4 g-lg-5 align-items-center">
             <div class="col-lg-6">
-                <h3 class="fw-extrabold text-dark mb-2">Para médicos</h3>
-                <!-- TODO: confirmar cada beneficio con el equipo comercial; "facturación electrónica"
-                     es una función sujeta a normativa, confirmar si existe antes de publicar -->
-                <p class="service-card-text mb-3">
-                    Cobrá consultas y tratamientos con links de pago y facturación electrónica
-                    lista para enviar a tus pacientes.
+                <h3 class="fw-extrabold text-dark mb-2" data-es="Para médicos" data-en="For doctors">Para médicos</h3>
+                <p class="service-card-text mb-3" data-es="Cobrá consultas y tratamientos con links de pago y facturación electrónica lista para enviar a tus pacientes." data-en="Charge for consultations and treatments with payment links and electronic invoicing ready to send to your patients.">
+                    Cobrá consultas y tratamientos con links de pago y facturación electrónica lista para enviar a tus pacientes.
                 </p>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>El paciente paga desde su celular con un link</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Cobro confirmado al instante</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Facturación electrónica lista para enviar</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="El paciente paga desde su celular con un link" data-en="Patient pays from their phone with a link">El paciente paga desde su celular con un link</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Cobro confirmado al instante" data-en="Payment confirmed instantly">Cobro confirmado al instante</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Facturación electrónica lista para enviar" data-en="Electronic invoicing ready to send">Facturación electrónica lista para enviar</span></li>
                 </ul>
-                <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
+                <p class="fw-semibold text-dark small mb-2" data-es="Servicios que usarías" data-en="Services you would use">Servicios que usarías</p>
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip">Link de pagos</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" class="rubro-chip">Cargos recurrentes</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip">Datáfonos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip" data-es="Link de pagos" data-en="Payment links">Link de pagos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" class="rubro-chip" data-es="Cargos recurrentes" data-en="Recurring charges">Cargos recurrentes</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip" data-es="Datáfonos" data-en="Payment terminals">Datáfonos</a>
                 </div>
                 <div class="d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
-                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">
+                        <span data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</span>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -136,26 +138,28 @@
     <div class="rubro-panel">
         <div class="row g-4 g-lg-5 align-items-center">
             <div class="col-lg-6">
-                <h3 class="fw-extrabold text-dark mb-2">Para dentistas</h3>
-                <!-- TODO: confirmar cada beneficio con el equipo comercial -->
-                <p class="service-card-text mb-3">
-                    Manejá tratamientos de varias sesiones con cobros recurrentes y
-                    recordatorios de pago automáticos.
+                <h3 class="fw-extrabold text-dark mb-2" data-es="Para dentistas" data-en="For dentists">Para dentistas</h3>
+                <p class="service-card-text mb-3" data-es="Manejá tratamientos de varias sesiones con cobros recurrentes y recordatorios de pago automáticos." data-en="Manage multi-session treatments with recurring charges and automatic payment reminders.">
+                    Manejá tratamientos de varias sesiones con cobros recurrentes y recordatorios de pago automáticos.
                 </p>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span>Cobro automático en cada sesión</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span>Recordatorios de pago automáticos</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span>Control de quién está al día</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span data-es="Cobro automático en cada sesión" data-en="Automatic charging per session">Cobro automático en cada sesión</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span data-es="Recordatorios de pago automáticos" data-en="Automatic payment reminders">Recordatorios de pago automáticos</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span data-es="Control de quién está al día" data-en="Control over who is current">Control de quién está al día</span></li>
                 </ul>
-                <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
+                <p class="fw-semibold text-dark small mb-2" data-es="Servicios que usarías" data-en="Services you would use">Servicios que usarías</p>
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" class="rubro-chip">Cargos recurrentes</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip">Link de pagos</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" class="rubro-chip">Cobros masivos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" class="rubro-chip" data-es="Cargos recurrentes" data-en="Recurring charges">Cargos recurrentes</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip" data-es="Link de pagos" data-en="Payment links">Link de pagos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" class="rubro-chip" data-es="Cobros masivos" data-en="Bulk collections">Cobros masivos</a>
                 </div>
                 <div class="d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
-                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">
+                        <span data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</span>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -170,27 +174,29 @@
     <div class="rubro-panel">
         <div class="row g-4 g-lg-5 align-items-center">
             <div class="col-lg-6">
-                <h3 class="fw-extrabold text-dark mb-2">Para comercios</h3>
-                <!-- TODO: confirmar cada beneficio con el equipo comercial -->
-                <p class="service-card-text mb-3">
-                    Aceptá pagos en tu tienda física con datáfonos y en línea con checkout,
-                    desde una sola cuenta.
+                <h3 class="fw-extrabold text-dark mb-2" data-es="Para comercios" data-en="For stores">Para comercios</h3>
+                <p class="service-card-text mb-3" data-es="Aceptá pagos en tu tienda física con datáfonos y en línea con checkout, desde una sola cuenta." data-en="Accept payments in your physical store with payment terminals and online with checkout, from a single account.">
+                    Aceptá pagos en tu tienda física con datáfonos y en línea con checkout, desde una sola cuenta.
                 </p>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Tienda física y en línea con una sola cuenta</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Datáfono con chip, contactless y QR</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Ventas por canal en un solo panel</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Tienda física y en línea con una sola cuenta" data-en="Physical and online store with a single account">Tienda física y en línea con una sola cuenta</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Datáfono con chip, contactless y QR" data-en="Payment terminal with chip, contactless and QR">Datáfono con chip, contactless y QR</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Ventas por canal en un solo panel" data-en="Sales by channel in one panel">Ventas por canal en un solo panel</span></li>
                 </ul>
-                <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
+                <p class="fw-semibold text-dark small mb-2" data-es="Servicios que usarías" data-en="Services you would use">Servicios que usarías</p>
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip">Datáfonos</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" class="rubro-chip">Checkout</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip">Link de pagos</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="rubro-chip">SINPE Móvil</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip" data-es="Datáfonos" data-en="Payment terminals">Datáfonos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" class="rubro-chip" data-es="Checkout" data-en="Checkout">Checkout</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip" data-es="Link de pagos" data-en="Payment links">Link de pagos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="rubro-chip" data-es="SINPE Móvil" data-en="SINPE Mobile">SINPE Móvil</a>
                 </div>
                 <div class="d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
-                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">
+                        <span data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</span>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -205,26 +211,28 @@
     <div class="rubro-panel">
         <div class="row g-4 g-lg-5 align-items-center">
             <div class="col-lg-6">
-                <h3 class="fw-extrabold text-dark mb-2">Para restaurantes</h3>
-                <!-- TODO: confirmar cada beneficio con el equipo comercial -->
-                <p class="service-card-text mb-3">
-                    Cobrá rápido en mesa con SINPE Móvil o tarjeta, y llevá el control de
-                    las transacciones del día.
+                <h3 class="fw-extrabold text-dark mb-2" data-es="Para restaurantes" data-en="For restaurants">Para restaurantes</h3>
+                <p class="service-card-text mb-3" data-es="Cobrá rápido en mesa con SINPE Móvil o tarjeta, y llevá el control de las transacciones del día." data-en="Collect quickly at the table with SINPE Mobile or card, and keep track of the day's transactions.">
+                    Cobrá rápido en mesa con SINPE Móvil o tarjeta, y llevá el control de las transacciones del día.
                 </p>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span>Cobro en la mesa con tarjeta o SINPE Móvil</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span>Confirmación inmediata</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span>Control de las transacciones del día</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span data-es="Cobro en la mesa con tarjeta o SINPE Móvil" data-en="Table charging with card or SINPE Mobile">Cobro en la mesa con tarjeta o SINPE Móvil</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span data-es="Confirmación inmediata" data-en="Immediate confirmation">Confirmación inmediata</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom mt-1"></i><span data-es="Control de las transacciones del día" data-en="Control of the day's transactions">Control de las transacciones del día</span></li>
                 </ul>
-                <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
+                <p class="fw-semibold text-dark small mb-2" data-es="Servicios que usarías" data-en="Services you would use">Servicios que usarías</p>
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip">Datáfonos</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="rubro-chip">SINPE Móvil</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe" class="rubro-chip">Verificador SINPE</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" class="rubro-chip" data-es="Datáfonos" data-en="Payment terminals">Datáfonos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="rubro-chip" data-es="SINPE Móvil" data-en="SINPE Mobile">SINPE Móvil</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe" class="rubro-chip" data-es="Verificador SINPE" data-en="SINPE Verifier">Verificador SINPE</a>
                 </div>
                 <div class="d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
-                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">
+                        <span data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</span>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -234,49 +242,44 @@
     </div>
 </div>
 
-            <!-- PROFESIONALES INDEPENDIENTES -->
+<!-- PROFESIONALES INDEPENDIENTES -->
 <div class="tab-pane fade" id="profesionales-independientes" role="tabpanel">
     <div class="rubro-panel">
-        <img src="~/images/logos/bannerProfecional.png" alt="Compartí tu link de pago y cobrá al instante" class="rubro-banner rounded-4 mb-4" />
         <div class="row g-4 g-lg-5 align-items-center">
-            <div class="col-lg-7">
-                <h3 class="fw-extrabold text-dark mb-2">Para profesionales independientes</h3>
-                <!-- TODO: confirmar cada beneficio con el equipo comercial -->
-                <p class="service-card-text mb-3">
-                    Compartí un link de pago con tu cliente y cobrá, sin necesidad de
-                    tener una tienda en línea.
+            <div class="col-lg-6">
+                <h3 class="fw-extrabold text-dark mb-2" data-es="Para profesionales independientes" data-en="For independent professionals">Para profesionales independientes</h3>
+                <p class="service-card-text mb-3" data-es="Compartí un link de pago con tu cliente y cobrá, sin necesidad de tener una tienda en línea." data-en="Share a payment link with your client and charge without needing an online store.">
+                    Compartí un link de pago con tu cliente y cobrá, sin necesidad de tener una tienda en línea.
                 </p>
                 <ul class="list-unstyled d-flex flex-column gap-2 mb-3">
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Compartís el link por WhatsApp o correo</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Sin tienda en línea</span></li>
-                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span>Pago confirmado al instante</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Compartís el link por WhatsApp o correo" data-en="Share the link via WhatsApp or email">Compartís el link por WhatsApp o correo</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Sin tienda en línea" data-en="No online store needed">Sin tienda en línea</span></li>
+                    <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay mt-1"></i><span data-es="Pago confirmado al instante" data-en="Payment confirmed instantly">Pago confirmado al instante</span></li>
                 </ul>
-                <p class="fw-semibold text-dark small mb-2">Servicios que usarías</p>
+                <p class="fw-semibold text-dark small mb-2" data-es="Servicios que usarías" data-en="Services you would use">Servicios que usarías</p>
                 <div class="d-flex flex-wrap gap-2 mb-4">
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip">Link de pagos</a>
-                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="rubro-chip">SINPE Móvil</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" class="rubro-chip" data-es="Link de pagos" data-en="Payment links">Link de pagos</a>
+                    <a asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" class="rubro-chip" data-es="SINPE Móvil" data-en="SINPE Mobile">SINPE Móvil</a>
                 </div>
                 <div class="d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">Solicitar afiliación</button>
-                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">Hablar con un asesor</a>
+                    <button type="button" class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
+                    </button>
+                    <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill btn-full-mobile">
+                        <span data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <div class="rubro-mockup rubro-mockup-chat">
-                    <div class="chat-bubble">
-                        Aquí tenés el link de pago 👇
-                    </div>
-                    <div class="chat-bubble chat-bubble-link">
-                        <span class="small fw-bold d-block mb-1">Consulta de diseño</span>
-                        <span class="small text-muted d-block mb-2">₡40.000</span>
-                        <button type="button" class="btn btn-wellpay btn-sm w-100 fw-bold" tabindex="-1">Pagar</button>
-                    </div>
-                </div>
-                <small class="datos-ejemplo-label d-block text-center mt-2">Datos de ejemplo</small>
+            <div class="col-lg-6">
+                <img src="~/images/logos/bannerProfecional2.png" alt="Para profesionales independientes" class="rubro-side-img" />
             </div>
         </div>
     </div>
 </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- ============================================================
      INTELIGENCIA ARTIFICIAL
@@ -286,17 +289,15 @@
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success fw-bold px-3 py-1 rounded-pill mb-3 style-badge">
-                    <small>Inteligencia artificial</small>
+                    <small style="font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase;" data-es="Inteligencia artificial" data-en="Artificial Intelligence">Inteligencia artificial</small>
                 </div>
 
                 <h2 class="display-6 fw-extrabold text-dark mb-4 lh-sm">
-                    Tus datos, <span class="text-primary-custom">convertidos en decisiones</span>
+                    <span data-es="Tus datos, " data-en="Your data, ">Tus datos, </span><span class="text-primary-custom" data-es="convertidos en decisiones" data-en="turned into decisions">convertidos en decisiones</span>
                 </h2>
 
-                <!-- TODO: confirmar alcance real de esta funcionalidad; hoy no está confirmada como disponible -->
-                <p class="lead text-secondary fs-6 fw-normal">
-                    Un panel con inteligencia artificial que analiza tus ventas y te da información
-                    clara para decidir mejor.
+                <p class="lead text-secondary fs-6 fw-normal" data-es="Un panel con inteligencia artificial que analiza tus ventas y te da información clara para decidir mejor." data-en="A panel with artificial intelligence that analyzes your sales and gives you clear information to make better decisions.">
+                    Un panel con inteligencia artificial que analiza tus ventas y te da información clara para decidir mejor.
                 </p>
             </div>
         </div>
@@ -304,14 +305,13 @@
         <div class="row g-4 row-cols-1 row-cols-md-3 justify-content-center">
             <div id="reportes-financieros" class="col">
                 <div class="service-card-v2 h-100 position-relative">
-                    <span class="badge-proximamente">Próximamente</span>
+                    <span class="badge-proximamente" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-bar-chart-fill fs-4"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Reportes financieros</h5>
-                    <p class="service-card-text mb-3">
-                        Visualizá el comportamiento de tu negocio en un panel claro, con
-                        información generada automáticamente.
+                    <h5 class="fw-bold text-dark mb-2" data-es="Reportes financieros" data-en="Financial reports">Reportes financieros</h5>
+                    <p class="service-card-text mb-3" data-es="Visualizá el comportamiento de tu negocio en un panel claro, con información generada automáticamente." data-en="Visualize your business performance in a clear panel, with automatically generated information.">
+                        Visualizá el comportamiento de tu negocio en un panel claro, con información generada automáticamente.
                     </p>
 
                     <div class="mini-mockup-bars mb-3">
@@ -324,70 +324,68 @@
                         <div class="bar" style="height:70%"></div>
                     </div>
 
-                    <p class="fw-semibold text-dark small mb-1">Qué verás:</p>
+                    <p class="fw-semibold text-dark small mb-1" data-es="Qué verás:" data-en="What you'll see:">Qué verás:</p>
                     <ul class="list-unstyled service-card-text mb-0">
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> Volumen procesado</li>
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> Transacciones</li>
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> Tendencias de venta</li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> <span data-es="Volumen procesado" data-en="Volume processed">Volumen procesado</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> <span data-es="Transacciones" data-en="Transactions">Transacciones</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> <span data-es="Tendencias de venta" data-en="Sales trends">Tendencias de venta</span></li>
                     </ul>
                 </div>
             </div>
 
             <div id="score-de-riesgo" class="col">
                 <div class="service-card-v2 h-100 position-relative">
-                    <span class="badge-proximamente">Próximamente</span>
+                    <span class="badge-proximamente" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
                     <div class="service-icon-shape bg-light-blue text-primary-custom rounded-circle mb-3">
                         <i class="bi bi-speedometer2 fs-4"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Score de riesgo</h5>
-                    <p class="service-card-text mb-3">
-                        Un indicador que resume la salud de tu operación, para identificar a
-                        tiempo algo que merezca tu atención.
+                    <h5 class="fw-bold text-dark mb-2" data-es="Score de riesgo" data-en="Risk score">Score de riesgo</h5>
+                    <p class="service-card-text mb-3" data-es="Un indicador que resume la salud de tu operación, para identificar a tiempo algo que merezca tu atención." data-en="An indicator that summarizes the health of your operation, to identify in time something that deserves your attention.">
+                        Un indicador que resume la salud de tu operación, para identificar a tiempo algo que merezca tu atención.
                     </p>
 
                     <div class="mini-mockup-gauge mb-3">
                         <div class="gauge-indicator mb-2">
-                            <i class="bi bi-check-circle-fill"></i> Operación saludable
+                            <i class="bi bi-check-circle-fill"></i> <span data-es="Operación saludable" data-en="Healthy operation">Operación saludable</span>
                         </div>
                         <ul class="list-unstyled mb-0 w-100 gauge-alert-list">
-                            <li><span class="gauge-dot gauge-dot-green"></span> Sin disputas abiertas</li>
-                            <li><span class="gauge-dot gauge-dot-yellow"></span> 2 rechazos esta semana</li>
-                            <li><span class="gauge-dot gauge-dot-green"></span> Sin patrones inusuales</li>
+                            <li><span class="gauge-dot gauge-dot-green"></span> <span data-es="Sin disputas abiertas" data-en="No open disputes">Sin disputas abiertas</span></li>
+                            <li><span class="gauge-dot gauge-dot-yellow"></span> <span data-es="2 rechazos esta semana" data-en="2 rejections this week">2 rechazos esta semana</span></li>
+                            <li><span class="gauge-dot gauge-dot-green"></span> <span data-es="Sin patrones inusuales" data-en="No unusual patterns">Sin patrones inusuales</span></li>
                         </ul>
                     </div>
 
                     <ul class="list-unstyled service-card-text mb-0">
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i> Disputas</li>
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i> Rechazos</li>
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i> Patrones inusuales</li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i> <span data-es="Disputas" data-en="Disputes">Disputas</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i> <span data-es="Rechazos" data-en="Rejections">Rechazos</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary-custom"></i> <span data-es="Patrones inusuales" data-en="Unusual patterns">Patrones inusuales</span></li>
                     </ul>
                 </div>
             </div>
 
             <div id="metadatos" class="col">
                 <div class="service-card-v2 h-100 position-relative">
-                    <span class="badge-proximamente">Próximamente</span>
+                    <span class="badge-proximamente" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
                     <div class="service-icon-shape bg-light-green text-wellpay rounded-circle mb-3">
                         <i class="bi bi-tags-fill fs-4"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2">Metadatos</h5>
-                    <p class="service-card-text mb-3">
-                        Cada transacción se guarda junto con el contexto que la rodea, para que tengas
-                        el detalle completo sin tener que buscarlo manualmente.
+                    <h5 class="fw-bold text-dark mb-2" data-es="Metadatos" data-en="Metadata">Metadatos</h5>
+                    <p class="service-card-text mb-3" data-es="Cada transacción se guarda junto con el contexto que la rodea, para que tengas el detalle completo sin tener que buscarlo manualmente." data-en="Each transaction is saved along with the context surrounding it, so you have the complete details without having to search manually.">
+                        Cada transacción se guarda junto con el contexto que la rodea, para que tengas el detalle completo sin tener que buscarlo manualmente.
                     </p>
 
                     <div class="d-flex flex-wrap gap-2 mb-3">
-                        <span class="badge rounded-pill bg-light-green text-wellpay fw-semibold">Canal: App</span>
-                        <span class="badge rounded-pill bg-light-blue text-primary-custom fw-semibold">Dispositivo</span>
-                        <span class="badge rounded-pill bg-light-green text-wellpay fw-semibold">Ubicación</span>
-                        <span class="badge rounded-pill bg-light-blue text-primary-custom fw-semibold">Hora</span>
+                        <span class="badge rounded-pill bg-light-green text-wellpay fw-semibold" data-es="Canal: App" data-en="Channel: App">Canal: App</span>
+                        <span class="badge rounded-pill bg-light-blue text-primary-custom fw-semibold" data-es="Dispositivo" data-en="Device">Dispositivo</span>
+                        <span class="badge rounded-pill bg-light-green text-wellpay fw-semibold" data-es="Ubicación" data-en="Location">Ubicación</span>
+                        <span class="badge rounded-pill bg-light-blue text-primary-custom fw-semibold" data-es="Hora" data-en="Time">Hora</span>
                     </div>
 
-                    <p class="fw-semibold text-dark small mb-1">Qué verás:</p>
+                    <p class="fw-semibold text-dark small mb-1" data-es="Qué verás:" data-en="What you'll see:">Qué verás:</p>
                     <ul class="list-unstyled service-card-text mb-0">
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> Canal y dispositivo de origen</li>
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> Ubicación aproximada</li>
-                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> Historial detallado por transacción</li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> <span data-es="Canal y dispositivo de origen" data-en="Source channel and device">Canal y dispositivo de origen</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> <span data-es="Ubicación aproximada" data-en="Approximate location">Ubicación aproximada</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-wellpay"></i> <span data-es="Historial detallado por transacción" data-en="Detailed transaction history">Historial detallado por transacción</span></li>
                     </ul>
                 </div>
             </div>
@@ -404,18 +402,17 @@
             <div class="glow-shape glow-bottom-right glow-half"></div>
             <div class="position-relative" style="z-index:2;">
                 <h2 class="display-6 fw-extrabold text-white mb-3 lh-sm">
-                    Empezá a operar con <span class="text-wellpay">Well-Pay hoy mismo</span>
+                    <span data-es="Empezá a operar con " data-en="Start operating with ">Empezá a operar con </span><span class="text-wellpay" data-es="Well-Pay hoy mismo" data-en="Well-Pay today">Well-Pay hoy mismo</span>
                 </h2>
-                <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 560px;">
-                    Solicitá tu afiliación o hablá con un asesor para elegir la solución que tu
-                    negocio necesita.
+                <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 560px;" data-es="Solicitá tu afiliación o hablá con un asesor para elegir la solución que tu negocio necesita." data-en="Request your affiliation or talk to an advisor to choose the solution your business needs.">
+                    Solicitá tu afiliación o hablá con un asesor para elegir la solución que tu negocio necesita.
                 </p>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <button type="button" class="btn btn-wellpay btn-lg px-4 py-2 fs-6 fw-bold rounded-3 shadow-sm btn-full-mobile" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
-                        Solicitar afiliación
+                        <span data-es="Solicitar afiliación" data-en="Request affiliation">Solicitar afiliación</span>
                     </button>
                     <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg px-4 py-2 fs-6 fw-bold rounded-3 btn-full-mobile d-inline-flex align-items-center justify-content-center gap-2">
-                        <i class="bi bi-whatsapp"></i> Hablar con un asesor
+                        <i class="bi bi-whatsapp"></i> <span data-es="Hablar con un asesor" data-en="Talk to an advisor">Hablar con un asesor</span>
                     </a>
                 </div>
             </div>

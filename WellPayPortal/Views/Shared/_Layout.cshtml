@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -58,37 +58,39 @@
                                id="servicesDropdown"
                                role="button"
                                data-bs-toggle="dropdown"
-                               aria-expanded="false">
+                               aria-expanded="false"
+                               data-es="Servicios"
+                               data-en="Services">
                                 Servicios
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban">Creación de cuentas IBAN</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin">Pago Inmediato (PIN)</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr">Débito en Tiempo Real (DTR)</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil">SINPE Móvil</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe">Verificador SINPE</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos">Pagos Masivos</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos">Cobros Masivos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" data-es="Creación de cuentas IBAN" data-en="IBAN Account Creation">Creación de cuentas IBAN</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin" data-es="Pago Inmediato (PIN)" data-en="Immediate Payment (PIN)">Pago Inmediato (PIN)</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr" data-es="Débito en Tiempo Real (DTR)" data-en="Real-Time Debit (RTD)">Débito en Tiempo Real (DTR)</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" data-es="SINPE Móvil" data-en="SINPE Mobile">SINPE Móvil</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe" data-es="Verificador SINPE" data-en="SINPE Verifier">Verificador SINPE</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" data-es="Pagos Masivos" data-en="Bulk Payments">Pagos Masivos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" data-es="Cobros Masivos" data-en="Bulk Collections">Cobros Masivos</a></li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Pagos con tarjeta</a>
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#" data-es="Pagos con tarjeta" data-en="Card Payments">Pagos con tarjeta</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout">Checkout</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos">Link de pagos</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" data-es="Checkout" data-en="Checkout">Checkout</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" data-es="Link de pagos" data-en="Payment Link">Link de pagos</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Cargos recurrentes</a>
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#" data-es="Cargos recurrentes" data-en="Recurring Charges">Cargos recurrentes</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes">Cargos recurrentes</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-sinpe">Cuenta SINPE</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-tarjeta">Tarjeta crédito / débito</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" data-es="Cargos recurrentes" data-en="Recurring Charges">Cargos recurrentes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-sinpe" data-es="Cuenta SINPE" data-en="SINPE Account">Cuenta SINPE</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-tarjeta" data-es="Tarjeta crédito / débito" data-en="Credit / Debit Card">Tarjeta crédito / débito</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos">Datáfonos físicos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" data-es="Datáfonos físicos" data-en="Physical POS Terminals">Datáfonos físicos</a></li>
                             </ul>
                         </li>
 
@@ -99,28 +101,30 @@
                                id="solutionsDropdown"
                                role="button"
                                data-bs-toggle="dropdown"
-                               aria-expanded="false">
+                               aria-expanded="false"
+                               data-es="Soluciones"
+                               data-en="Solutions">
                                 Soluciones
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="solutionsDropdown">
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Soluciones para negocios</a>
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#" data-es="Soluciones para negocios" data-en="Business Solutions">Soluciones para negocios</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="medicos">Médicos</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="dentistas">Dentistas</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="comercios">Comercios</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="restaurantes">Restaurantes</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes">Profesionales independientes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="medicos" data-es="Médicos" data-en="Doctors">Médicos</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="dentistas" data-es="Dentistas" data-en="Dentists">Dentistas</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="comercios" data-es="Comercios" data-en="Retail">Comercios</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="restaurantes" data-es="Restaurantes" data-en="Restaurants">Restaurantes</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes" data-es="Profesionales independientes" data-en="Freelancers">Profesionales independientes</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Inteligencia Artificial</a>
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#" data-es="Inteligencia Artificial" data-en="Artificial Intelligence">Inteligencia Artificial</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros">Reportes financieros</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo">Score de riesgo</a></li>
-                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="metadatos">Metadatos</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros" data-es="Reportes financieros" data-en="Financial Reports">Reportes financieros</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo" data-es="Score de riesgo" data-en="Risk Score">Score de riesgo</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Soluciones" asp-action="Index" asp-fragment="metadatos" data-es="Metadatos" data-en="Metadata">Metadatos</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -133,16 +137,18 @@
                                id="developersDropdown"
                                role="button"
                                data-bs-toggle="dropdown"
-                               aria-expanded="false">
+                               aria-expanded="false"
+                               data-es="Desarrolladores"
+                               data-en="Developers">
                                 Desarrolladores
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="developersDropdown">
-                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion">Documentación</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="integracion-servicios">Integración de servicios</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="api">API</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="sandbox">Sandbox / Ambiente de pruebas</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="guias-integracion">Guías de integración</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion" data-es="Documentación" data-en="Documentation">Documentación</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="integracion-servicios" data-es="Integración de servicios" data-en="Service Integration">Integración de servicios</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="api" data-es="API" data-en="API">API</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="sandbox" data-es="Sandbox / Ambiente de pruebas" data-en="Sandbox / Testing Environment">Sandbox / Ambiente de pruebas</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="guias-integracion" data-es="Guías de integración" data-en="Integration Guides">Guías de integración</a></li>
                             </ul>
                         </li>
 
@@ -153,17 +159,19 @@
                                id="securityDropdown"
                                role="button"
                                data-bs-toggle="dropdown"
-                               aria-expanded="false">
+                               aria-expanded="false"
+                               data-es="Seguridad"
+                               data-en="Security">
                                 Seguridad
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="securityDropdown">
-                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay">Seguridad en Well-Pay</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss">PCI DSS</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="3d-secure">3-D Secure (3DS)</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="sugef">SUGEF</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="proteccion-datos">Protección de datos</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-transacciones">Seguridad de las transacciones</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay" data-es="Seguridad en Well-Pay" data-en="Well-Pay Security">Seguridad en Well-Pay</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss" data-es="PCI DSS" data-en="PCI DSS">PCI DSS</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="3d-secure" data-es="3-D Secure (3DS)" data-en="3-D Secure (3DS)">3-D Secure (3DS)</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="sugef" data-es="SUGEF" data-en="SUGEF">SUGEF</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="proteccion-datos" data-es="Protección de datos" data-en="Data Protection">Protección de datos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-transacciones" data-es="Seguridad de las transacciones" data-en="Transaction Security">Seguridad de las transacciones</a></li>
                             </ul>
                         </li>
 
@@ -174,23 +182,25 @@
                                id="aboutDropdown"
                                role="button"
                                data-bs-toggle="dropdown"
-                               aria-expanded="false">
+                               aria-expanded="false"
+                               data-es="Nosotros"
+                               data-en="About">
                                 Nosotros
                             </a>
 
                             <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="aboutDropdown">
-                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="quienes-somos">Quiénes somos</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="mision">Misión</a></li>
-                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="vision">Visión</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="quienes-somos" data-es="Quiénes somos" data-en="Who We Are">Quiénes somos</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="mision" data-es="Misión" data-en="Mission">Misión</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="vision" data-es="Visión" data-en="Vision">Visión</a></li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle py-2" href="#">Trabaja con nosotros</a>
+                                    <a class="dropdown-item dropdown-toggle py-2" href="#" data-es="Trabaja con nosotros" data-en="Work With Us">Trabaja con nosotros</a>
                                     <ul class="dropdown-menu border-0 shadow-sm rounded-3">
-                                        <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="postulacion">Postulación</a></li>
+                                        <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="postulacion" data-es="Postulación" data-en="Apply">Postulación</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="contacto">Contacto</a></li>
+                                <li><a class="dropdown-item py-2" asp-controller="Nosotros" asp-action="Index" asp-fragment="contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
                             </ul>
                         </li>
 
@@ -199,9 +209,18 @@
                     <!-- Acciones -->
                     <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 mt-3 mt-lg-0">
 
+                        <!-- Cambiar idioma -->
+                        <button id="langToggle" 
+                                class="btn btn-sm btn-outline-dark rounded-pill px-3" 
+                                title="Toggle language">
+                            English
+                        </button>
+
                         <!-- Iniciar sesión -->
                         <a href="https://qa.paymentpower.net/wellpay/portal/login"
-                           class="btn-login-wellpay">
+                           class="btn-login-wellpay"
+                           data-es="Iniciar sesión"
+                           data-en="Sign In">
                             Iniciar sesión
                             <i class="bi bi-arrow-right ms-1"></i>
                         </a>
@@ -210,7 +229,9 @@
                         <button type="button"
                                 class="btn btn-wellpay fw-bold px-4 py-2 rounded-pill shadow-sm"
                                 data-bs-toggle="modal"
-                                data-bs-target="#afiliacionModal">
+                                data-bs-target="#afiliacionModal"
+                                data-es="Solicitar afiliación"
+                                data-en="Request Affiliation">
 
                             Solicitar afiliación
                         </button>
@@ -227,7 +248,7 @@
          ============================================================ -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header border-bottom">
-            <span class="offcanvas-title fw-extrabold fs-5" id="mobileMenuLabel">WELL-PAY</span>
+            <span class="offcanvas-title fw-extrabold fs-5" id="mobileMenuLabel" data-es="WELL-PAY" data-en="WELL-PAY">WELL-PAY</span>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column p-0">
@@ -237,26 +258,26 @@
                 <!-- Servicios -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-servicios">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-servicios" data-es="Servicios" data-en="Services">
                             Servicios
                         </button>
                     </h2>
                     <div id="mm-servicios" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
                         <div class="accordion-body pt-0">
                             <ul class="list-unstyled mb-0">
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" data-bs-dismiss="offcanvas">Creación de cuentas IBAN</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin" data-bs-dismiss="offcanvas">Pago Inmediato (PIN)</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr" data-bs-dismiss="offcanvas">Débito en Tiempo Real (DTR)</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" data-bs-dismiss="offcanvas">SINPE Móvil</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe" data-bs-dismiss="offcanvas">Verificador SINPE</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" data-bs-dismiss="offcanvas">Pagos Masivos</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" data-bs-dismiss="offcanvas">Cobros Masivos</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" data-bs-dismiss="offcanvas">Checkout</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" data-bs-dismiss="offcanvas">Link de pagos</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" data-bs-dismiss="offcanvas">Cargos recurrentes</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-sinpe" data-bs-dismiss="offcanvas">Cuenta SINPE</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-tarjeta" data-bs-dismiss="offcanvas">Tarjeta crédito / débito</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" data-bs-dismiss="offcanvas">Datáfonos físicos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="creacion-cuentas-iban" data-bs-dismiss="offcanvas" data-es="Creación de cuentas IBAN" data-en="IBAN Account Creation">Creación de cuentas IBAN</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="pago-inmediato-pin" data-bs-dismiss="offcanvas" data-es="Pago Inmediato (PIN)" data-en="Immediate Payment (PIN)">Pago Inmediato (PIN)</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="debito-tiempo-real-dtr" data-bs-dismiss="offcanvas" data-es="Débito en Tiempo Real (DTR)" data-en="Real-Time Debit (RTD)">Débito en Tiempo Real (DTR)</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="sinpe-movil" data-bs-dismiss="offcanvas" data-es="SINPE Móvil" data-en="SINPE Mobile">SINPE Móvil</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="verificador-sinpe" data-bs-dismiss="offcanvas" data-es="Verificador SINPE" data-en="SINPE Verifier">Verificador SINPE</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="pagos-masivos" data-bs-dismiss="offcanvas" data-es="Pagos Masivos" data-en="Bulk Payments">Pagos Masivos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cobros-masivos" data-bs-dismiss="offcanvas" data-es="Cobros Masivos" data-en="Bulk Collections">Cobros Masivos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="checkout" data-bs-dismiss="offcanvas" data-es="Checkout" data-en="Checkout">Checkout</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="link-de-pagos" data-bs-dismiss="offcanvas" data-es="Link de pagos" data-en="Payment Link">Link de pagos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes" data-bs-dismiss="offcanvas" data-es="Cargos recurrentes" data-en="Recurring Charges">Cargos recurrentes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-sinpe" data-bs-dismiss="offcanvas" data-es="Cuenta SINPE" data-en="SINPE Account">Cuenta SINPE</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="cargos-recurrentes-tarjeta" data-bs-dismiss="offcanvas" data-es="Tarjeta crédito / débito" data-en="Credit / Debit Card">Tarjeta crédito / débito</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Servicios" asp-action="Index" asp-fragment="datafonos-fisicos" data-bs-dismiss="offcanvas" data-es="Datáfonos físicos" data-en="Physical POS Terminals">Datáfonos físicos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -265,21 +286,21 @@
                 <!-- Soluciones -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-soluciones">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-soluciones" data-es="Soluciones" data-en="Solutions">
                             Soluciones
                         </button>
                     </h2>
                     <div id="mm-soluciones" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
                         <div class="accordion-body pt-0">
                             <ul class="list-unstyled mb-0">
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="medicos" data-bs-dismiss="offcanvas">Médicos</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="dentistas" data-bs-dismiss="offcanvas">Dentistas</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="comercios" data-bs-dismiss="offcanvas">Comercios</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="restaurantes" data-bs-dismiss="offcanvas">Restaurantes</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes" data-bs-dismiss="offcanvas">Profesionales independientes</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros" data-bs-dismiss="offcanvas">Reportes financieros</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo" data-bs-dismiss="offcanvas">Score de riesgo</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="metadatos" data-bs-dismiss="offcanvas">Metadatos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="medicos" data-bs-dismiss="offcanvas" data-es="Médicos" data-en="Doctors">Médicos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="dentistas" data-bs-dismiss="offcanvas" data-es="Dentistas" data-en="Dentists">Dentistas</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="comercios" data-bs-dismiss="offcanvas" data-es="Comercios" data-en="Retail">Comercios</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="restaurantes" data-bs-dismiss="offcanvas" data-es="Restaurantes" data-en="Restaurants">Restaurantes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="profesionales-independientes" data-bs-dismiss="offcanvas" data-es="Profesionales independientes" data-en="Freelancers">Profesionales independientes</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="reportes-financieros" data-bs-dismiss="offcanvas" data-es="Reportes financieros" data-en="Financial Reports">Reportes financieros</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="score-de-riesgo" data-bs-dismiss="offcanvas" data-es="Score de riesgo" data-en="Risk Score">Score de riesgo</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Soluciones" asp-action="Index" asp-fragment="metadatos" data-bs-dismiss="offcanvas" data-es="Metadatos" data-en="Metadata">Metadatos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -288,18 +309,18 @@
                 <!-- Desarrolladores -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-desarrolladores">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-desarrolladores" data-es="Desarrolladores" data-en="Developers">
                             Desarrolladores
                         </button>
                     </h2>
                     <div id="mm-desarrolladores" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
                         <div class="accordion-body pt-0">
                             <ul class="list-unstyled mb-0">
-                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion" data-bs-dismiss="offcanvas">Documentación</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="integracion-servicios" data-bs-dismiss="offcanvas">Integración de servicios</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="api" data-bs-dismiss="offcanvas">API</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="sandbox" data-bs-dismiss="offcanvas">Sandbox / Ambiente de pruebas</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="guias-integracion" data-bs-dismiss="offcanvas">Guías de integración</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="documentacion" data-bs-dismiss="offcanvas" data-es="Documentación" data-en="Documentation">Documentación</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="integracion-servicios" data-bs-dismiss="offcanvas" data-es="Integración de servicios" data-en="Service Integration">Integración de servicios</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="api" data-bs-dismiss="offcanvas" data-es="API" data-en="API">API</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="sandbox" data-bs-dismiss="offcanvas" data-es="Sandbox / Ambiente de pruebas" data-en="Sandbox / Testing Environment">Sandbox / Ambiente de pruebas</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Desarrolladores" asp-action="Index" asp-fragment="guias-integracion" data-bs-dismiss="offcanvas" data-es="Guías de integración" data-en="Integration Guides">Guías de integración</a></li>
                             </ul>
                         </div>
                     </div>
@@ -308,19 +329,19 @@
                 <!-- Seguridad -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-seguridad">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-seguridad" data-es="Seguridad" data-en="Security">
                             Seguridad
                         </button>
                     </h2>
                     <div id="mm-seguridad" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
                         <div class="accordion-body pt-0">
                             <ul class="list-unstyled mb-0">
-                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay" data-bs-dismiss="offcanvas">Seguridad en Well-Pay</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss" data-bs-dismiss="offcanvas">PCI DSS</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="3d-secure" data-bs-dismiss="offcanvas">3-D Secure (3DS)</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="sugef" data-bs-dismiss="offcanvas">SUGEF</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="proteccion-datos" data-bs-dismiss="offcanvas">Protección de datos</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-transacciones" data-bs-dismiss="offcanvas">Seguridad de las transacciones</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-wellpay" data-bs-dismiss="offcanvas" data-es="Seguridad en Well-Pay" data-en="Well-Pay Security">Seguridad en Well-Pay</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="pci-dss" data-bs-dismiss="offcanvas" data-es="PCI DSS" data-en="PCI DSS">PCI DSS</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="3d-secure" data-bs-dismiss="offcanvas" data-es="3-D Secure (3DS)" data-en="3-D Secure (3DS)">3-D Secure (3DS)</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="sugef" data-bs-dismiss="offcanvas" data-es="SUGEF" data-en="SUGEF">SUGEF</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="proteccion-datos" data-bs-dismiss="offcanvas" data-es="Protección de datos" data-en="Data Protection">Protección de datos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Seguridad" asp-action="Index" asp-fragment="seguridad-transacciones" data-bs-dismiss="offcanvas" data-es="Seguridad de las transacciones" data-en="Transaction Security">Seguridad de las transacciones</a></li>
                             </ul>
                         </div>
                     </div>
@@ -329,18 +350,18 @@
                 <!-- Nosotros -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-nosotros">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#mm-nosotros" data-es="Nosotros" data-en="About">
                             Nosotros
                         </button>
                     </h2>
                     <div id="mm-nosotros" class="accordion-collapse collapse" data-bs-parent="#mobileMenuAccordion">
                         <div class="accordion-body pt-0">
                             <ul class="list-unstyled mb-0">
-                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="quienes-somos" data-bs-dismiss="offcanvas">Quiénes somos</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="mision" data-bs-dismiss="offcanvas">Misión</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="vision" data-bs-dismiss="offcanvas">Visión</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="postulacion" data-bs-dismiss="offcanvas">Postulación</a></li>
-                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="quienes-somos" data-bs-dismiss="offcanvas" data-es="Quiénes somos" data-en="Who We Are">Quiénes somos</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="mision" data-bs-dismiss="offcanvas" data-es="Misión" data-en="Mission">Misión</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="vision" data-bs-dismiss="offcanvas" data-es="Visión" data-en="Vision">Visión</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="postulacion" data-bs-dismiss="offcanvas" data-es="Postulación" data-en="Apply">Postulación</a></li>
+                                <li><a class="mobile-menu-link" asp-controller="Nosotros" asp-action="Index" asp-fragment="contacto" data-bs-dismiss="offcanvas" data-es="Contacto" data-en="Contact">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
@@ -350,10 +371,10 @@
 
             <!-- Acciones -->
             <div class="d-flex flex-column gap-2 p-3 border-top">
-                <a href="https://qa.paymentpower.net/wellpay/portal/login" class="btn btn-outline-dark rounded-pill fw-bold">
+                <a href="https://qa.paymentpower.net/wellpay/portal/login" class="btn btn-outline-dark rounded-pill fw-bold" data-es="Iniciar sesión" data-en="Sign In">
                     Iniciar sesión
                 </a>
-                <button type="button" class="btn btn-wellpay fw-bold rounded-pill shadow-sm" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+                <button type="button" class="btn btn-wellpay fw-bold rounded-pill shadow-sm" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#afiliacionModal" data-es="Solicitar afiliación" data-en="Request Affiliation">
                     Solicitar afiliación
                 </button>
             </div>
@@ -374,40 +395,38 @@
                     <a class="navbar-brand d-flex align-items-center mb-3" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logos/logoBlanco.png" alt="Well-Pay" class="wellpay-logo-img" />
                     </a>
-                    <p class="text-secondary fs-7 mb-0">
+                    <p class="text-secondary fs-7 mb-0" data-es="Soluciones financieras para conectar a tu empresa con el sistema de pagos de Costa Rica." data-en="Financial solutions to connect your business with Costa Rica's payment system.">
                         Soluciones financieras para conectar a tu empresa con el sistema de pagos de Costa Rica.
                     </p>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <h6 class="fw-bold text-white mb-3 text-center">Enlaces</h6>
+                    <h6 class="fw-bold text-white mb-3 text-center" data-es="Enlaces" data-en="Links">Enlaces</h6>
                     <div class="d-flex justify-content-center gap-5">
                         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a class="footer-link" asp-controller="Servicios" asp-action="Index">Servicios</a></li>
-                            <li><a class="footer-link" asp-controller="Soluciones" asp-action="Index">Soluciones</a></li>
-                            <li><a class="footer-link" asp-controller="Desarrolladores" asp-action="Index">Desarrolladores</a></li>
+                            <li><a class="footer-link" asp-controller="Servicios" asp-action="Index" data-es="Servicios" data-en="Services">Servicios</a></li>
+                            <li><a class="footer-link" asp-controller="Soluciones" asp-action="Index" data-es="Soluciones" data-en="Solutions">Soluciones</a></li>
+                            <li><a class="footer-link" asp-controller="Desarrolladores" asp-action="Index" data-es="Desarrolladores" data-en="Developers">Desarrolladores</a></li>
                         </ul>
                         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-                            <li><a class="footer-link" asp-controller="Seguridad" asp-action="Index">Seguridad</a></li>
-                            <li><a class="footer-link" asp-controller="Nosotros" asp-action="Index">Nosotros</a></li>
-                            <li><a class="footer-link" asp-controller="Home" asp-action="Privacy">Privacidad</a></li>
+                            <li><a class="footer-link" asp-controller="Seguridad" asp-action="Index" data-es="Seguridad" data-en="Security">Seguridad</a></li>
+                            <li><a class="footer-link" asp-controller="Nosotros" asp-action="Index" data-es="Nosotros" data-en="About">Nosotros</a></li>
+                            <li><a class="footer-link" asp-controller="Home" asp-action="Privacy" data-es="Privacidad" data-en="Privacy">Privacidad</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <h6 class="fw-bold text-white mb-3">Contacto</h6>
+                    <h6 class="fw-bold text-white mb-3" data-es="Contacto" data-en="Contact">Contacto</h6>
                     <ul class="list-unstyled d-flex flex-column gap-2">
-                        <!-- TODO: reemplazar por los datos reales -->
                         <li><a class="footer-link" href="mailto:contacto@well-pay.com"><i class="bi bi-envelope-fill me-2"></i>contacto@well-pay.com</a></li>
-                        <!-- TODO: agregar el teléfono real de la empresa aquí cuando se confirme -->
-                        <li class="text-secondary"><i class="bi bi-geo-alt-fill me-2"></i>San José, Costa Rica</li>
+                        <li class="text-secondary"><i class="bi bi-geo-alt-fill me-2"></i><span data-es="San José, Costa Rica" data-en="San José, Costa Rica">San José, Costa Rica</span></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold text-white mb-3">Acceso</h6>
-                    <a href="https://qa.paymentpower.net/wellpay/portal/login" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                    <h6 class="fw-bold text-white mb-3" data-es="Acceso" data-en="Access">Acceso</h6>
+                    <a href="https://qa.paymentpower.net/wellpay/portal/login" class="btn btn-outline-light btn-sm rounded-pill px-3" data-es="Iniciar sesión" data-en="Sign In">
                         Iniciar sesión
                         <i class="bi bi-arrow-right ms-1"></i>
                     </a>
@@ -417,19 +436,18 @@
 
             <hr class="border-secondary my-4" />
 
-            <div class="text-center text-secondary fs-8">
+            <div class="text-center text-secondary fs-8" data-es="© [YEAR] Well-Pay. Todos los derechos reservados." data-en="© [YEAR] Well-Pay. All rights reserved.">
                 &copy; @DateTime.Now.Year Well-Pay. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
     <!-- Barra fija inferior (solo móvil): WhatsApp + Solicitar afiliación -->
-    <!-- TODO: reemplazar por el número de WhatsApp real de la empresa -->
     <div class="mobile-bottom-bar d-lg-none">
-        <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2">
+        <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn btn-outline-dark rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2" data-es="WhatsApp" data-en="WhatsApp">
             <i class="bi bi-whatsapp"></i> WhatsApp
         </a>
-        <button type="button" class="btn btn-wellpay rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#afiliacionModal">
+        <button type="button" class="btn btn-wellpay rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#afiliacionModal" data-es="Solicitar afiliación" data-en="Request Affiliation">
             Solicitar afiliación
         </button>
     </div>
@@ -450,8 +468,8 @@
             <!-- Cuerpo del Formulario -->
             <div class="modal-body pt-3">
                 <div class="mb-4">
-                    <h3 class="fw-extrabold text-dark m-0 fs-4">Solicitá tu afiliación</h3>
-                    <p class="text-muted fs-7 mb-0">Completá los datos para iniciar el proceso de integración con tu empresa.</p>
+                    <h3 class="fw-extrabold text-dark m-0 fs-4" data-es="Solicitá tu afiliación" data-en="Request Your Affiliation">Solicitá tu afiliación</h3>
+                    <p class="text-muted fs-7 mb-0" data-es="Completá los datos para iniciar el proceso de integración con tu empresa." data-en="Complete your information to start the integration process with your business.">Completá los datos para iniciar el proceso de integración con tu empresa.</p>
                 </div>
 
                 <form id="formAfiliacion">
@@ -459,19 +477,19 @@
                     <div class="row g-3">
                         <!-- Nombre -->
                         <div class="col-md-6">
-                            <label for="nombre" class="form-label-custom">Nombre</label>
+                            <label for="nombre" class="form-label-custom" data-es="Nombre" data-en="Name">Nombre</label>
                             <input type="text" name="Nombre" class="form-control form-control-stripe" id="nombre" required />
                         </div>
 
                         <!-- Apellidos -->
                         <div class="col-md-6">
-                            <label for="apellidos" class="form-label-custom">Apellidos</label>
+                            <label for="apellidos" class="form-label-custom" data-es="Apellidos" data-en="Last Name">Apellidos</label>
                             <input type="text" name="Apellidos" class="form-control form-control-stripe" id="apellidos" required />
                         </div>
 
                         <!-- Cédula / Identificación -->
                         <div class="col-md-6">
-                            <label for="cedula" class="form-label-custom">Cédula Física / Jurídica / DIMEX</label>
+                            <label for="cedula" class="form-label-custom" data-es="Cédula Física / Jurídica / DIMEX" data-en="ID / Business License / DIMEX">Cédula Física / Jurídica / DIMEX</label>
                             <input type="text" name="Cedula" class="form-control form-control-stripe" id="cedula"
                                    inputmode="numeric" maxlength="12" placeholder="Solo números" required />
                             <input type="hidden" name="TipoIdentificacion" id="tipoIdentificacion" value="" />
@@ -480,43 +498,43 @@
 
                         <!-- Teléfono -->
                         <div class="col-md-6">
-                            <label for="telefono" class="form-label-custom">Teléfono</label>
+                            <label for="telefono" class="form-label-custom" data-es="Teléfono" data-en="Phone">Teléfono</label>
                             <input type="tel" name="Telefono" class="form-control form-control-stripe" id="telefono" required />
                         </div>
 
                         <!-- Correo Electrónico -->
                         <div class="col-12">
-                            <label for="correo" class="form-label-custom">Correo electrónico</label>
+                            <label for="correo" class="form-label-custom" data-es="Correo electrónico" data-en="Email">Correo electrónico</label>
                             <input type="email" name="Correo" class="form-control form-control-stripe" id="correo" required />
                         </div>
 
                         <!-- Dirección -->
                         <div class="col-12">
-                            <label for="direccion" class="form-label-custom">Dirección física</label>
+                            <label for="direccion" class="form-label-custom" data-es="Dirección física" data-en="Physical Address">Dirección física</label>
                             <textarea name="Direccion" class="form-control form-control-stripe" id="direccion" rows="2" placeholder="Provincia, Cantón, Distrito y señas exactas..." required></textarea>
                         </div>
                         <!-- Representante legal (solo si la identificación es Cédula Jurídica) -->
                         <div class="col-12 d-none" id="bloqueRepresentanteLegal">
                             <hr class="my-2" />
-                            <p class="fw-bold text-dark mb-2 fs-7">
+                            <p class="fw-bold text-dark mb-2 fs-7" data-es="Representante legal" data-en="Legal Representative">
                                 <i class="bi bi-person-badge text-wellpay me-1"></i> Representante legal
                             </p>
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="representanteNombre" class="form-label-custom">Nombre completo</label>
+                                    <label for="representanteNombre" class="form-label-custom" data-es="Nombre completo" data-en="Full Name">Nombre completo</label>
                                     <input type="text" name="RepresentanteNombre" class="form-control form-control-stripe" id="representanteNombre" />
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="representanteTipoIdentificacion" class="form-label-custom">Tipo de identificación</label>
+                                    <label for="representanteTipoIdentificacion" class="form-label-custom" data-es="Tipo de identificación" data-en="ID Type">Tipo de identificación</label>
                                     <select name="RepresentanteTipoIdentificacion" class="form-select form-control-stripe" id="representanteTipoIdentificacion">
-                                        <option value="">Seleccionar...</option>
-                                        <option value="Cedula">Cédula física</option>
-                                        <option value="Dimex">DIMEX</option>
-                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="" data-es="Seleccionar..." data-en="Select...">Seleccionar...</option>
+                                        <option value="Cedula" data-es="Cédula física" data-en="ID Card">Cédula física</option>
+                                        <option value="Dimex" data-es="DIMEX" data-en="DIMEX">DIMEX</option>
+                                        <option value="Pasaporte" data-es="Pasaporte" data-en="Passport">Pasaporte</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="representanteIdentificacion" class="form-label-custom">Número de identificación</label>
+                                    <label for="representanteIdentificacion" class="form-label-custom" data-es="Número de identificación" data-en="ID Number">Número de identificación</label>
                                     <input type="text" name="RepresentanteIdentificacion" class="form-control form-control-stripe" id="representanteIdentificacion" placeholder="N.º de identificación" />
                                 </div>
                             </div>
@@ -526,7 +544,7 @@
 
                     <!-- Botón Enviar -->
                     <div class="d-grid gap-2 mt-4">
-                        <button type="submit" class="btn btn-wellpay btn-lg fs-6 fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
+                        <button type="submit" class="btn btn-wellpay btn-lg fs-6 fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2" data-es="Enviar solicitud" data-en="Send Request">
                             <span>Enviar solicitud</span>
                             <i class="bi bi-arrow-right fs-5"></i>
                         </button>
@@ -536,7 +554,7 @@
 
             <!-- Footer con Leyenda -->
             <div class="modal-footer border-0 pt-0 text-center justify-content-center">
-                <small class="text-muted fs-8">
+                <small class="text-muted fs-8" data-es="Tus datos están protegidos con encriptación de grado bancario." data-en="Your data is protected with bank-grade encryption.">
                     <i class="bi bi-shield-lock text-wellpay me-1"></i> Tus datos están protegidos con encriptación de grado bancario.
                 </small>
             </div>
@@ -556,6 +574,9 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- i18n - Internacionalización -->
+    <script src="~/js/i18n.js" asp-append-version="true"></script>
 
     <!-- Cierra el menú móvil automáticamente al tocar un enlace de navegación -->
     <script>
